@@ -1,0 +1,15 @@
+ifeq ($(CXXFLAGS),)
+    CXXFLAGS=-O3
+endif
+
+.cpp.o:
+	$(CXX) -I . -DLINUX -c $< -o $@ $(CXXFLAGS)
+
+all: $(TARGET)
+
+$(TARGET): $(OFILES)
+	$(CXX) -o $(TARGET) $(OFILES) $(CXXFLAGS) $(LDFLAGS)
+
+clean:
+	$(RM) $(OFILES)
+	$(RM) $(TARGET)

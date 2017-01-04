@@ -1,0 +1,25 @@
+# Ice daemons
+
+allowstairs = false
+minlevel = 6
+
++-----------+
+|#######x###|
+|x.........#|
+|#######...#|
+|##..~~~~#.x|
+|##.&~~&~###|
+|#.~~~&~~&##|
+|#~&~&~~####|
+|##~1~~.$$$#|
+|###########|
++-----------+
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+~: SQUARE_ICE, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+&: SQUARE_ICE, MOB_ICEDAEMON, SQUAREFLAG_LIT
+1: SQUARE_ICE, MOB_ICEDAEMON, MOBLEVEL_UNIQUE, SQUAREFLAG_LIT, ITEMTYPE_ARTIFACT, INTRINSIC_LEADER
+(: SQUARE_FLOOR, ITEMTYPE_WEAPON, SQUAREFLAG_LIT
+[: SQUARE_FLOOR, ITEMTYPE_ARMOUR, SQUAREFLAG_LIT
+$: ITEMTYPE_ANY, SQUARE_FLOOR, SQUAREFLAG_LIT

@@ -1,0 +1,32 @@
+# The halls of the Minotaur!
+
+allowstairs = false
+minlevel = 15
+maxlevel = 15
+mandatory = 1
+
++---------------+
+|###x###x###x###|
+|##..#.....#...#|
+|#...#.....###.x|
+|x......#....###|
+|#......#......#|
+|#..#######....#|
+|#..#..)..#....x|
+|x..#..M/.#..###|
+|#..#.....#....#|
+|#..###..##..#.#|
+|#...........#.x|
+|x...........#.#|
+|#x###########.#|
+|#......#......#|
+|####x###x###x##|
++---------------+
+
+ : SQUARE_EMPTY
+x: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+M: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_CRETAN_MINOTAUR
+): SQUARE_FLOOR, SQUAREFLAG_LIT, ITEMTYPE_ARTIFACT
+/: SQUARE_FLOOR, SQUAREFLAG_LIT, ITEMTYPE_WAND

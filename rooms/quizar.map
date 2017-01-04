@@ -1,0 +1,68 @@
+# Quizar's Quest
+
+allowstairs = false
+allowgeneration = false
+allowdig = false
+allowitems = true
+allowtele = false
+quest = GOD_ROGUE
+rarity = 0
+pos = 0 0
+
++------------------------------+
+|##############################|
+|#1###   ....###....########1##|
+|#Ddd   ..B.B.#...B...AAA##AY##|
+|## d......^^^^^^^^^^^^AAyAy###|
+|#  .^.....^.B#....B...^AAy####|
+|#...^. ...^..#..B...^^^.AA.###|
+|# ..^    .^..#......^....^B.##|
+|#  .^.....^.###....^^.B.B^..##|
+|## .^   ##^^^^^^^^^^.####^####|
+|## .^ ####^#####^######..^.###|
+|#  .^^#^L^^#####^..#....B^..##|
+|# ...^#^#^######^.B#B....^...#|
+|#  ^^^^^#^^IIIFI^..#...^^^^B.#|
+|###B.^####IIIffIIB.#..B^..^^^#|
+|#.#<.^#..###IfIIII.#...^B.^>^#|
+|#.B..^#....##IIIII.#...^..^^^#|
+|#....^#.B.B.^III.^^^^^^^..^B.#|
+|# . #^#.....^.IIII.#...^^B^..#|
+|#####^#B...^^......#....^^^..#|
+|#....^^^^^^^...B..B#....^...##|
+|#.B..^##.B.^^^^.#..##...^..###|
+|#..B.^.#......^^^^^.####^#####|
+|#....^.#...B....#.^..B..^.####|
+|#.B..^^^^^^^^..##.^.B..B^BLL##|
+|#...B^..B...^^^^^^^^.LLL^LL###|
+|#WWWW^.........##..^^LLLLL####|
+|####WW.B..B...#####.LLrLL#####|
+|##WeWeW..B..####YY###LLrLrLL##|
+|##E#WW#######......########R##|
+|##1##WWWWW+AA...YY.+EE11###1##|
+|##############################|
++------------------------------+
+
+.: SQUARE_CORRIDOR
+#: SQUARE_REINFORCEDWALL
+ : SQUARE_EMPTY
+^: SQUARE_PATHPIT
++: SQUARE_BLOCKEDDOOR
+L: SQUARE_LAVA
+W: SQUARE_WATER
+A: SQUARE_ACID
+I: SQUARE_ICE
+>: SQUARE_LADDERDOWN
+<: SQUARE_LADDERUP
+1: SQUARE_CORRIDOR, ITEMTYPE_ARTIFACT
+B: SQUARE_CORRIDOR, ITEM_BOULDER
+y: SQUARE_ACID, MOB_YELLOWDRAGON
+Y: SQUARE_ACID, MOB_YELLOWDRAGON, MOBLEVEL_UNIQUE
+r: SQUARE_LAVA, MOB_REDDRAGON
+R: SQUARE_LAVA, MOB_REDDRAGON, MOBLEVEL_UNIQUE
+f: SQUARE_ICE, MOB_WHITEDRAGON
+F: SQUARE_ICE, MOB_WHITEDRAGON, MOBLEVEL_UNIQUE
+e: SQUARE_WATER, MOB_WATERELEMENTAL
+E: SQUARE_WATER, MOB_WATERELEMENTAL, MOBLEVEL_UNIQUE
+d: SQUARE_PATHPIT, MOB_EARTHELEMENTAL
+D: SQUARE_PATHPIT, MOB_EARTHELEMENTAL, MOBLEVEL_UNIQUE

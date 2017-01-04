@@ -1,0 +1,23 @@
+# An impenetrable store house - except to teleportation!
+
+allowstairs = false
+
++--------+
+|####x#  |
+|#....#  |
+|#..%%%%%|
+|#..%i^i%|
+|x..%iAi%|
+|#..%iii%|
+|##x%%%%%|
++--------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+^: SQUARE_FLOORTELEPORTER, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+%: SQUARE_REINFORCEDWALL, SQUAREFLAG_LIT
+i: ITEMTYPE_ANY, SQUARE_FLOOR, SQUAREFLAG_LIT
+A: ITEMTYPE_ARTIFACT, SQUARE_FLOOR, SQUAREFLAG_LIT
+

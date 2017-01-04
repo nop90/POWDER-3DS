@@ -1,0 +1,18 @@
+# A bigger zoo.
+# 4x5 monsters
+
+allowstairs = false
+
++------+
+|####x#|
+|#mmmm#|
+|xmmmm#|
+|#mmmmx|
+|#mmmm#|
+|#mmmm#|
+|##x###|
++------+
+
+#: SQUARE_WALL, SQUAREFLAG_LIT
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+m: SQUARE_FLOOR, SQUAREFLAG_LIT, MOBLEVEL_NORMAL, INTRINSIC_ASLEEP

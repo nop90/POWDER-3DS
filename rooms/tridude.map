@@ -1,0 +1,20 @@
+# The Tridude Breeding Grounds
+
+allowstairs = false
+
++-------+
+|#####x#|
+|#'t.~~x|
+|#ttt'.#|
+|x..'t'#|
+|#~~ttt#|
+|###x###|
++-------+
+
+ : SQUARE_EMPTY
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+t: SQUARE_FLOOR, MOB_TRIDUDE, SQUAREFLAG_LIT
+': SQUARE_FLOOR, ITEM_BOULDER, SQUAREFLAG_LIT
+~: SQUARE_WATER, SQUAREFLAG_LIT

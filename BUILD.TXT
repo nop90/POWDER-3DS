@@ -1,0 +1,182 @@
+You, brave soul, have dared to consider building POWDER?
+
+Do you not know this source is only released to taunt you?
+
+Still undeterred?
+
+Well, let us first examine your target platform.
+
+(Hint: If it is not Linux/Mac OSX you are in for a world of pain)
+
+If you just want to replace the graphics, go no farther!  Look for
+an artpack distribution on a previous release for instructions on
+how to do this with no compiling needed!
+
+=========
+= Linux =
+=========
+
+A script called buildall.sh is here.  Invoke it.  If nothing goes wrong, you
+are done.  If things go wrong?  Perhaps install sdl-dev?  Sacrifice another
+grid bug?  The signs are unclear.
+
+The tea leaves clear.  Make sure you have bash and GNU make!
+
+Do not try to run make from the source root.
+
+You may need to chmod +x some scripts.  Cygwin sucks.
+
+===========
+= Mac OSX =
+===========
+
+A script called buildall.OSX.sh is here.  Invoke it.  If nothing goes
+wrong, you are done.  If things go wrong?  Make sure you have
+installed the SDL framework in /Library/Framework.  Otherwise I don't
+know...
+
+Do not try to run make from the source root.  Do not try to run make
+from port/mac either, as it requires ARCH to be set.
+
+You may need to chmod +x some scripts.  Cygwin sucks.
+
+
+===========
+= Windows =
+===========
+
+.sln is your friend.  You need MSVC2003 or later.  Build everything in your
+support directory that has .sln.  Put them in your path.  
+
+Use those tools to build the support files - the buildall.sh contains clues.
+
+port/windows may then be loaded and build.
+
+=======
+= GBA =
+=======
+
+Purchase a copy of HAM Lib.  The free version does not work.  
+
+Use your local compiler to build all the support directory files and put them
+in your path.
+
+In gfx, run domake.bat.
+
+In the source root, run make.  
+
+======
+= DS =
+======
+
+Download devkitPro.  Thank Richard Quirk for fixing the r21
+compatibility problem, allowing you to merely use the latest version.
+
+Use your local compiler to build all the support directory and dump them in
+your path.  Again, you must manually transform the secondary files using
+buildall.sh as a clue.
+
+Finally, invoke make in your MSys devkitpro window in the port/ds directory.
+Victory shall be thine!
+
+=======
+= PSP =
+=======
+
+The PSP port is thanks to the most excellent Marvin Sanchez.  Since I
+don't have a PSP myself, I'm compiling this blindly.
+
+He reports success with Cygwin on Windows, I am building under Linux.
+In either case, you want a copy of pspdev from
+http://ps2dev.org/psp/Tools.  Download the Toolchain specified there.
+
+You also need to install/compile the SDL for the PSP.  I found this
+website intructive: http://ttyman.free.fr/?p=8
+
+Then you should be able to follow the DS instructions.
+
+========
+= GP2X =
+========
+
+The GP2X port is thanks to the most excellent David Parker.  Since I
+don't have a GP2X myself, I'm compiling this blindly.
+
+A script called buildall.gp2x.sh is here that should get you going.
+
+He used oopo's toolchain, which should work with the given Makefile,
+but if not you may need to change ports/gp2x/Makefile to the correct
+paths to your SDK/compiler.
+
+Packaging involves copying the Powder2X directory from port/gp2x to
+your SD card.  Follow that by the executable powder in port/gp2x into
+the Powder2x/pdata directory.  Finally, dump the gfx and rooms
+directories to Powder2X/pdata on the SD card.
+
+=========
+= WinCE =
+=========
+
+The Windows CE port is thanks to the most excellent Ilya Kasnacheev.
+I don't have a Windows CE device nor a build environment, so Ilya has
+been releasing the versions.
+
+In the port/wince directory there is a README should consult on how to
+get this working.  Be warned that setting up the toolchain is not
+trivial, so it is likely best if you first successfully build a normal
+Windows POWDER version before trying this.
+
+=================
+= PORTING NOTES =
+=================
+
+Compile time flags are:
+
+LINUX
+    A Un*x system is being built.  This includes Mac OSX.
+
+MACOSX
+    A specifically Mac version.
+
+WIN32
+    Built in Windows
+
+USING_DS
+    Nintendo DS build
+
+_WIN32_WCE
+    Built for Windows CE.
+
+USING_TILE10
+    Use 10x10 base tiles by default rather than 8x8.
+
+SYS_PSP
+    PSP build.  USING_SDL is also set.
+
+NO_HAM
+    A GBA build with devkitPro rather than HAM
+
+USING_SDL
+    An SDL based build.
+
+HAS_KEYBOARD
+    Keyboard input method present, hamfake_getkey() does something.
+    If not set, buttons are used for the input method.
+
+HAS_STYLUS
+    A stylus exists, enabling mouse based input
+
+HAS_XYBUTTON
+    A button based input with four normal buttons.
+
+HAS_DISKIO
+    System can save and load arbitrary files.
+
+HAS_PRINTF
+    printf and assert exist and are used.
+
+===============
+= POST SCRIPT =
+===============
+
+Please remember that this is not open source.  Thank you.

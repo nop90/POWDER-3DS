@@ -1,0 +1,2888 @@
+# This is the encyclopedia of POWDER
+# "# " prefixed lines are comments.
+# 
+# Entries should be of the form:
+#
+# MOB::FIREBEETLE fire beetle
+# 	The fire beetle spits two streams of liquid which, when
+# 	combined, ignite.
+
+GOD::AGNOSTIC - no one god
+    Gods?  Let them come to me!
+
+    Adventurers worship no one god.  This leaves them safe from their
+    meddlings, but also unable to reap the gifts that fall to the
+    faithful.
+
+    Followers have no special conducts.
+
+    Followers receive +5/+5 per level.
+
+GOD::FIGHTER - Klaskov
+    Klaskov the Ironclad is the patron deity of fighters.  He is best
+    known for the burnished set of full plate he wears into any
+    battle.
+
+    Followers are encouraged to kill, and dress well.
+    
+    Followers are discouraged from casting spells.
+    
+    Followers receive +15/+0 per level. 
+
+GOD::WIZARD - Belweir
+    Belweir the Near Sighted is the patron deity of Wizards.  Belweir
+    incorporates in the form of a large rock mole.  Belweir's
+    knowledge of mystical matters exceeds all other beings.
+
+    `Know what is in front of you before seeking that afar.'
+
+    Followers are encouraged to cast spells, identify things, and dress well.
+
+    Followers are discouraged from melee combat.
+
+    Followers receive +0/+15 per level.
+
+GOD::ROGUE - Quizar
+    Quizar the Black is the patron deity of rogues.  On the mortal
+    plane, Quizar takes the form of a large black squirrel.
+
+    Followers are encouraged to attack from afar, identify items, find
+    secrets, dress well, and strike the helpless.
+
+    Followers are discouraged from making a lot of noise.
+
+    Followers gain +10/+5 per level.
+
+GOD::NECRO - Tlosh
+    The Arch-Lich Tlosh is the patron deity of necromancers.  Though
+    not technically a god, Tlosh's power is such that few argue the
+    point.
+
+    Followers are encouraged to kill at a distance, practice death
+    magic, dress well, and strike at the helpless.
+
+    Followers are discouraged from all forms of healing and melee
+    combat.
+
+    Followers are forbidden from using healing spells.
+
+    Followers gain +5/+10 per level.
+
+GOD::BARB - H'ruth    
+    The Horselord H'ruth is the patron deity of true warriors.  To
+    those who measure civilization by cloth or scratches on parchment,
+    H'ruth's followers are called barbarians.
+
+    Followers are encouraged to kill and wade into the thick of
+    battle, ideally whilst properly garbed.
+
+    Followers are discouraged from attacking from afar.
+
+    Followers are forbidden from using any spells.
+
+    Followers gain +20/0 per level.
+
+GOD::CLERIC - Pax
+    The Principle of Pax guides every move of would-be clerics.
+    Violence is the last resort of the incompetent.
+
+    Followers are encouraged to heal, wear appropriate attire, and to destroy
+    the undead.
+
+    Followers are discouraged from initiating combat, feasting on the
+    fallen when not hungry, and striking the helpless.
+
+    Followers are forbidden from using death magic or harming those
+    who are friendly.
+
+    Followers gain +10/+10 per level.
+
+GOD::CULTIST - ><0|V|
+    Few are so foolish as to be a cultist of ><0|V|.
+
+    Their fate is either to be envied or pitied.
+
+ITEM::KNIFE - knife
+    A stout knife suitable for carving meat or throwing.
+
+ITEM::DAGGER - dagger
+    A short blade well weighted for flight.
+
+ITEM::SILVERDAGGER - silver dagger
+    A short blade made of silver.  Pretty to look at, but likely annoying
+    to keep clean.
+
+ITEM::WARHAMMER - warhammer
+    A finely crafted block of steel tops the stout handle.  This weapon
+    can easily smash through the strongest of armour.
+
+ITEM::SPEAR - spear
+    An iron-tipped wooden spear.
+
+ITEM::SILVERSPEAR - silver spear
+    A silver-tipped wooden spear.
+
+ITEM::CLUB - club    
+    Nothing more than a short piece of wood.  Still, it can get the
+    job done.
+
+ITEM::SILVERSWORD - silver sword
+    Some pompous prince thought it fit to make a long sword out of pure 
+    silver.  Surely the prince knew it would dull easily and likely
+    break in real combat?
+
+ITEM::SHORTSWORD - short sword
+    The smaller cousin of the eternally popular long sword.
+
+ITEM::LONGSWORD - long sword
+    The staple of any stylish fighter, the long sword makes an effective 
+    weapon.  Critics denounce the trend for everyone to wield a long sword,
+    citing that it leads to boring battle scenes and little originality
+    in battle gear.  Said critics likely don't have to wander dangerous
+    dungeons, however, so are best ignored.
+
+ITEM::RAPIER - rapier
+    Swashbuckling adventurers would feel naked without this sword at
+    their side.  The rapier is a long, thin, blade designed for
+    thrusting rather than cutting.  Its popularity among civilian
+    duels has led some to hold the weapon in contempt, but in more
+    practical combat it can hold its own against less stylish blades.
+
+ITEM::FLAMESWORD - flaming sword
+    This long sword has been coated with a substance that allows it
+    to burn brightly.  If the steel does not slay them, the flame will.
+
+ITEM::LIGHTNINGRAPIER - lightning rapier
+    This rapier crackles with powerful electric currents.  The
+    suppressed lightning makes the blade feel light and nimble - as if
+    it were eager to ground against a foe.
+
+ITEM::ICEMACE - ice mace
+    The metal of this mace has been chilled to the point where the
+    very air seems to condense on to its surface.  You need to be
+    careful to hold only by the leather grip or fear suffering
+    frostbite yourself.
+
+ITEM::EARTHHAMMER - earth hammer
+    Forged from living stone, this hammer seems to glow yellow in the dungeon
+    light.  It feels very heavy in your hands, but when you try swinging it you
+    find it moves swiftly and accurately.  The only odd behaviour is a slight
+    pull towards the walls, as if the hammer were eager to reunite with the
+    stone from which it was forged.
+
+ITEM::MACE - mace
+    What maces lack in subtlety, they make up for in brute power.  The mace
+    is a club which is fashioned of iron rather than mere wood.  This
+    gives it greater power in a more compact form factor.
+
+ITEM::BOW - bow
+    Fine yew wood has been placed under strain by the bowstring.  Wise
+    warriors stick their foes with arrows before they can close.
+
+ITEM::ARROW - arrow
+    A wooden arrow with a stone head.  The arrow shaft is straight
+    and true.  You have only your lack of skill to account for missing
+    with this arrow.
+
+ITEM::FIREARROW - fire arrow
+    This arrow has been dipped in some form of thick naptha.  The burning
+    liquid will splash on contact, setting any victim aflame.  This powerful
+    secondary damage is why archers are willing to tolerate both the
+    corresponding reduction in piercing damage and higher breaking rate of
+    these arrows.
+
+ITEM::HAT - floppy hat
+    A felt cap dyed a gaudy blue. It would offer only the most meager of
+    protection to your head.
+
+ITEM::LEATHERCAP - leather cap
+    Boiled leather shaped into a head piece provides some protection against
+    having your brains spilled by an unfortunate blow.
+
+ITEM::HELM - iron helm
+    A sturdy iron helm provides excellent protection against hits to
+    the head.  Unfortunately, the sound of rain on it would soon drive
+    you mad.  It is good there is no rain in the dungeon.
+
+ITEM::SANDALS - sandals
+    Mere scraps of leather with leather thongs, sandals nonetheless
+    keep your feet from being cut by the jagged rocks of less traveled
+    passages.
+
+ITEM::HIKINGBOOTS - hiking boots
+    Sturdy leather boots which provide excellent ankle support.  These
+    would help keep your balance when negotiating tough terrain.
+
+ITEM::IRONSHOES - iron shoes
+    Iron plates placed over the toes and along the sole ensure that
+    your feet will be safe from most common mishaps.
+
+ITEM::WINGEDBOOTS - winged boots
+    These leather shoes have decorative wings made of pigeon feathers 
+    attached to them.
+
+ITEM::RIDINGBOOTS - riding boots
+    These calf length leather boots would seem better suited to riding
+    a horse than clomping about a dungeon.
+
+ITEM::POINTEDSLIPPERS - pointed slippers
+    These soft cloth slippers would be excellent for lounging about
+    the fire while recounting the glory of your adventures.  Too bad
+    you are currently *in* the adventure!
+
+ITEM::WOODENSHIELD - wooden shield
+    Constructed of several pieces of wood cleverly joined, the wooden
+    shield is intended as disposable protection.
+
+ITEM::BUCKLER - buckler
+    A small iron shield designed to be strapped to the arm, the buckler
+    has the notable advantage of not encumbering your off hand.
+
+ITEM::ROUNDSHIELD - round shield
+    A medium sized iron shield.
+
+ITEM::KITESHIELD - kite shield
+    The distinctively shaped kite shield provides effective defence
+    against attack.
+
+ITEM::TOWERSHIELD - tower shield
+    The tower shield provides the best defence against attack.
+
+ITEM::REFLECTSHIELD - mirror shield
+    This silver shield has been shined to a high polish.  You can
+    easily see your reflection in its surface.
+
+ITEM::TORCH - torch
+    A torch will brightly light the dungeon around you when equipped.
+
+ITEM::BLUEPOTION - blue potion
+    The bottle is filled with a viscous blue fluid.
+
+ITEM::REDPOTION - red potion
+    The red fluid in the bottle looks disconcertingly like blood.
+
+ITEM::PURPLEPOTION - purple potion
+    While the alliteration is tempting, you cannot bring your self to call this
+    a "pleasing purple potion".  Maybe "peculiar purple potion"?
+
+ITEM::YELLOWPOTION - yellow potion
+    Everyone on the surface world knows that yellow potions are Heal potions.
+    Everyone cannot be wrong!  Drink up!
+
+ITEM::GREYPOTION - grey potion
+    The grey coloured sludge in this potion bottle seems to stick to the sides
+    of the bottle.  And seems to contain fibres.  Ugh!
+
+ITEM::WHITEPOTION - white potion
+    This bottle seems to contain some colloid whose sub-surface scattering
+    reflects evenly all wavelengths of visible light.
+
+ITEM::BLACKPOTION - black potion
+    While the general colour of this potion must be called black, looking at
+    the surface reveals an iridescent rainbow of colours.  It is really a
+    rather pretty effect.
+
+ITEM::CYANPOTION - cyan potion    
+    Even though the bottle is tightly stoppered, you can smell something like
+    the tang of metal.
+
+ITEM::GLOWINGPOTION - glowing potion    
+    "Never eat anything that glows of its own accord" - Wise Saying. 
+
+ITEM::WATER - bottle of water
+    The importance of potable water is not to be underestimated.  Not
+    only does water have obvious practical use, but it is also able to
+    to bless and curse items if it is itself so imbued.
+
+ITEM::BOTTLE - empty bottle
+    The logical consequence of emptying a bottle is this: an empty
+    bottle.  You have heard in some realms the glass blowing guild is
+    so powerful that adventurers are required by law to destroy their
+    bottles immediately after consuming the contents.  You are glad
+    you are in a realm that encourages recycling, even if that might
+    mean cluttering your backpack.
+
+ITEM::ROBE - plain robe
+    Flowing cloth robes may hide your figure, but aren't very effective
+    at blocking blows.  These robes have been dyed a gaudy blue.
+
+ITEM::LEATHERTUNIC - leather tunic
+    A boiled leather tunic deflects most edged weapons, and softens the
+    blow of blunt weapons.
+
+ITEM::STUDDEDLEATHER - studded leather tunic
+    This boiled leather tunic has had numerous metal studs riveted to
+    its surface for added protection.
+
+ITEM::CHAINMAIL - chainmail
+    Composed of many tiny loops of metal linked and riveted together,
+    chainmail provides a flexible and effective form of protection.
+
+ITEM::MITHRILMAIL - mithril chainmail
+    This chain mail is composed not of mundane iron, but of the
+    very rare metal known as mithril.
+
+ITEM::BANDEDMAIL - banded mail
+    Long strips of metal are riveted on top of a leather tunic to provide
+    more consistent protection than that afforded by studded leather
+    tunics.
+
+ITEM::SPLINTMAIL - splint mail
+    Long strips of metal are riveted on top of a leather tunic to provide
+    more consistent protection than that afforded by studded leather
+    tunics.
+    
+ITEM::PLATEMAIL - plate mail
+    Composed of solid plates of iron, platemail provides an effective,
+    if heavy, armour.
+
+ITEM::CRYSTALPLATE - crystal platemail
+    Fashioned in the manner of platemail, but with some form of hardened
+    crystal rather than iron.  One would expect it to shatter at the
+    first hit, but it seems more resilient than its nature would
+    suggest.
+
+ITEM::BOULDER - boulder
+    An immense granite boulder that practically fills the dungeon corridors.
+    Conveniently, its shape is spherical enough to permit a sufficiently strong
+    shove to roll it a few feet.
+
+ITEM::MOUNDFLESH - mound of flesh
+    A disgusting ten-foot diameter mound of unspecified-flesh.  You can only
+    hope it never belonged to a living creature.
+
+ITEM::STATUE - statue
+    It would look very pretty in your garden.  Too bad you are in a
+    dungeon.
+
+ITEM::CORPSE - corpse
+    The main form of sustenance for adventurers deep in the dungeons.
+    Many have asked why one would eat a steaming pile of raw flesh,
+    but you will soon acquire a taste for it.  It can be quite delicious
+    once you pick the gristle out.  Or so you keep telling yourself.
+
+ITEM::BONES - bones
+    Not as filling as corpses, but just as tasty.  Be careful you
+    don't get bone slivers stuck in your teeth!
+
+ITEM::ROCK - rock
+    A small stone.  Unlike most small stones that you find in a dungeon, this
+    one has the right heft and size to make an excellent missile weapon.
+
+ITEM::MEATBALL - meatball
+    Small spheroid of meat products.  One is cautioned not to investigate too
+    closely what sort of meat went into its construction.
+
+    You mouth waters briefly at the thought of Kobe-style meat balls mixed with
+    havarti cheese in a bowl of rice.  Sadly, this meatball promises to be a
+    tasteless morsel.
+
+ITEM::PEARLNECKLACE - pearl necklace
+    Numerous pearls have been threaded together to form a continuous chain.
+    While there is no catch to open the chain, the necklace is large enough to
+    fit over your head as is.
+
+ITEM::GOLDNECKLACE - gold necklace
+    A thick gold chain has one of the links engineered as a simple clasp.
+    Styling!
+
+ITEM::RUBYNECKLACE - ruby necklace
+    A clear ruby is in a delicate gold setting.  The thin gold chain that
+    supports the setting looks equally delicate, but feeling it you get the
+    impression it could withstand a stronger pull than you'd suspect.
+
+ITEM::IRONTORC - iron torc
+    A close fitting neck-piece which is composed of heavy, inflexible, pieces.
+    The clasp closes with a solid KCHUNK.  With all the creatures seeking your
+    head, the idea of applying armour to your neck suddenly seems like a good
+    idea.
+
+ITEM::STUDDEDGORGET - studded gorget
+    A boiled leather collar studded with metal spikes.  You are considering
+    wearing it for its protective value.  Not to match your spurred boots.
+    Right?
+
+ITEM::FEATHERHELM - feathered helm
+    An iron helm with a large feather stuck in it.
+
+ITEM::SILVERCIRCLET - silver circlet
+    A circlet composed of solid silver.
+
+ITEM::BLACKHEART
+    This is the black heart of Baezl'bub, carved from his still bleeding
+    corpse.  This is what the entire quest was about - now that you
+    have it, you merely must take it to the surface.
+
+ITEM::YRUNE
+    A stone the size of your hand.  On the stone's surface glows a blue
+    Y.  Like any good adventurer, you recognize something so unique
+    must have a purpose later in the dungeon, so resolve to carry it
+    with you.
+
+HELM::DRAIN
+    Experiments with trying to produce the fabled Helm of Brilliance often
+    result in creating a Helm of Draining.  Rather than amplifying the 
+    wearers magic, they instead drain it, leaving the magician bereft of
+    their usual magic regeneration.
+
+    Sadly, most people do not use spells, so enamoured by the obviously
+    magical nature of these helms, purchase them from deceptive merchants.
+    This results in Helms of Draining accumulating in the dungeons wherever
+    their last wearer died (or more hopefully, discarded it when they 
+    learned the true nature).
+
+HELM::TELEPATHY
+    Treska of the Seven Alphabets is often credited with the invention
+    of these handy helms.  It is rumoured her goal was to be able to read
+    the thoughts of her servants and thus dispatch of any with carnal
+    thoughts.  Thankfully for the rest of us, her attempt failed.  However,
+    the helm does allow one to detect the general type of thought, letting
+    one distinguish orc from troll through closed doors.
+
+    The thoughts presented are weak, however, and often overwhelmed by visual
+    sensory data.  This limitation can be overcome if the broadcaster is
+    willing.  It is an interesting footnote that Treska never discovered
+    this fact as apparently none of her servants were inclined to cooperate.
+
+HELM::WARNING
+    Helms of Warning work on an ingenious principle.  Unlike Helms of 
+    Telepathy, which seek to detect the thoughts of others, and hence 
+    are prone to sensory overload or failure to read mindless creatures,
+    helms of warning instead read *your* innermost thoughts.  They reach
+    into your innate inner self, the seat of your intuition.  Here they
+    sense those tremulous fears which the presence of foes invokes, amplify
+    them, and present them to your conscious mind.
+
+HELP::POWDER
+    Welcome to POWDER!
+
+    Your goal is simple: dive to level 25 of the dungeon to reach Baezl'bub,
+    slay him, and return to the surface with his black heart.  Plenty of
+    nasty monsters stand in your way, however.  Fortunately, the dungeon
+    is littered with useful equipment.
+
+    Check for updates at www.zincland.com/powder.
+
+HELP::POWDER_LOCKED
+    Welcome to POWDER!
+
+    Your goal is simple: dive to level 25 of the dungeon to reach Baezl'bub,
+    slay him, and return to the surface with his black heart.  Plenty of
+    nasty monsters stand in your way, however.  Fortunately, the dungeon
+    is littered with useful equipment.
+
+    Note: You must unlock to go deeper than level 15.
+
+    Check for updates at www.zincland.com/powder.
+
+HELP::KEYBOARD
+    If you are using a computer to play POWDER, you will be using the keyboard
+    entry method.
+
+    Use the arrow keys to move around.  Bumping into things will perform
+    the most likely action.  For example, bumping into a monster will
+    attack it with your weapon.  Bumping into a door will attempt to
+    open it.  You can also use hjkl or 4826 to move around.  If you press
+    control you will toggle your safe-walk options and thus not attack
+    creatures even if you step into them.  If you press shift, you
+    will try to swap places with creatures.  If you press alt, you
+    will try to jump in that direction.
+
+    Cancel menus with Escape.  Select menu entries with Enter or Space.
+
+    Hitting i will bring up your inventory screen.  You can hit enter
+    or space on an item to get a context sensitive menu of what you
+    can do with that item.  Sometimes you will have to specify a
+    second target.  For example, if you Equip a sword, you need to
+    specify you want to put it in your right hand.  You can also hit a
+    quick key to directly choose a menu item.  
+
+    Hitting O (note the capital!) will bring up the Options menu.  This
+    is where saving, loading, selecting tilesets, etc, is done.
+
+    Other key definitions are:
+    o - Open
+    c - Close
+    e - Eat
+    B - Breathe
+    W - Move
+    <, > - Climb
+    ,, g - Pick up an item
+    S - Swap
+    q - Release
+    R - Rest
+    s - search
+    ., w, 5 - Wait
+    r - Run
+    x - Look
+    z - Cast a spell
+    J - Jump
+    m, X - Mini-map
+    N - Name a creature
+    C - Command a creature
+    _ - Pray
+    O - Options
+    ? - Help
+    F - Forget something
+    f - Fire Quivered Item
+    p - Previous message
+    v - View Message History
+    V - Command Menu
+    & - Make a wish
+
+    Inventory quick keys are:
+    w - Wear or Wield
+    T - Take off
+    d - Drop
+    e - Eat or Quaff
+    r - Read
+    ! - Dip
+    z - Zap
+    f - Mark as Favorite
+    q - Put in Quiver
+    t - Throw
+    n - Name
+    s - Sort Inventory
+    S - Split Stack
+    x - Examine
+
+HELP::GAMEBOY
+    If you are using a Gameboy Advance to play POWDER, you are using the
+    button input method.
+
+    Use the directional pad to move around.  Bumping into things will
+    do the most appropriate action.  Bumping into a monster will attack it,
+    bumping into a door will open it.
+
+    Cancel menus with the B button.  Select menu entries with the A button.
+
+    When wandering the world, the A, B, L, and R (and X and Y on the DS)
+    buttons act according to their current mappings.  You can remap them by
+    hitting Start, selecting the desired action, hitting Select to activate
+    binding, and then hitting the button you want mapped there.   The status
+    line will update to reflect the new mapping.  Note you can bind immediately
+    to L and R without hitting the Select button.
+
+    Start brings up the Command Menu. The Options... selection is special
+    as it does not create a mapping, but rather brings up another menu.
+    Here you can load and save and set the tilesets.  (And get to this help)
+    A will immediately perform the selected action and B will cancel this menu.
+
+    Select brings up your inventory.  By hitting A on an item, you will
+    get a context sensitive menu which allows you to use the item.
+
+HELP::STYLUS
+    POWDER can be played entirely using only a stylus, or, equivalently, the
+    left mouse button.  This method is available in the SDL and DS versions.
+
+    When wandering the dungeon, click on the screen to move in that direction.
+    If you click more than one tile away from yourself, you will do a "safe"
+    move that won't open doors or attack creatures.  Clicking on an adjacent
+    tile will attack the creature or open the door.
+
+    You can search by clicking on yourself.
+
+    The bottom of the screen has an Action Bar.  This is a series of buttons
+    that do different actions.  An important one is the brown bag that brings
+    up the inventory menu.  When the inventory is on screen, clicking on an
+    item will give a one line description.  The action bar will update showing
+    what are valid things to do with this item.  Clicking the inventory button
+    again will close it.
+
+    The command menu (>) button brings up a very long menu.  This is a list of
+    every action that is possible.  You can scroll it by clicking outside to
+    the top or bottom.  Clicking on an action name will perform that action.
+
+    An important action on the verb list is the Options... action.  This brings
+    up the configuration menu and has the Save & Quit option.
+
+HELP::TOUCH
+    While POWDER can be played solely with on screen controls, in practice
+    one's fingers are not pointed enough to make the precision presses
+    required.  To allow precision input in times of life or death, the
+    direction pad and [A] and [B] buttons are present.
+
+    Use the directional pad to move around.  Bumping into things will
+    do the most appropriate action.  Bumping into a monster will attack it,
+    bumping into a door will open it.
+
+    Cancel menus with the B button.  Select menu entries with the A button.
+
+    POWDER can also be played by directly touching the play area.
+
+    When wandering the dungeon, press on the screen to move in that direction.
+    If you touch more than one tile away from yourself, you will do a "safe"
+    move that won't open doors or attack creatures.  Touching an adjacent
+    tile will attack the creature or open the door.
+
+    You can search by pressing on yourself.  It was with great reluctance
+    I didn't use the same verb as before in that sentence.
+
+    On the top and bottom of the screen are action buttons.  These buttons
+    are all tied to different actions.  An important one is the brown bag that
+    brings up the inventory menu.  When the inventory is on screen, touching 
+    an item will give a one line description.  You can either press an
+    action button to do something with the item, or press the [A] button
+    to open a context menu.  Clicking the inventory button again will close it.
+
+    The Command menu (>) button brings up a very long menu.  This is a list of
+    every action that is possible.  You can scroll it by clicking outside to
+    the top or bottom.  Clicking on an action name will perform that action.
+
+    The Options menu (hammer and screw driver) button raises the configuration
+    options.  Of especial note is the Buttons configuration - this allows
+    you to change the layout of the buttons and add new buttons for
+    different actions and to cast spells.
+
+HELP::STATUSLINE
+    The status line is across the bottom of the screen. It reads:
+
+    A shield icon followed by a two digit number. This is your AC, or armour
+    class. A higher number makes you harder to hit.
+
+    A heart followed by a three digit number, slash, and two digit number. The
+    three digit number is your current number of hit points. The two digit
+    number is your physical level. You usually have ten times your physical
+    level in max hitpoints. Hitpoints regenerate slowly over time.
+
+    A wizard hat (Yes, that is what that is!) followed by a three digit number,
+    a slash, and a two digit number. The three digit number is your current
+    magic points. The two digit number is your magic level. You usually have a
+    max magic of ten times the magic level. Magic points regenerate over time.
+
+    An X followed by a three digit number. This lists your experience. As soon
+    as it gets to one thousand, it resets, and you gain a level. On gaining a
+    level, you choose which god you wish to worship for your next level. The
+    choice of god determines what class you gain for that level. The number of
+    experience you get per monster is a function of the difficulty of the
+    monster and your character level (the sum of physical and magic levels)
+
+    A ladder followed by a two digit number. This gives the current dungeon
+    level you are on.
+
+    A single space.
+
+    Two character symbols. These give the current mappings of the [L] and [R]
+    buttons. The first is [L] and second [R].  If this is the SDL version,
+    instead of these mappings you will have the helpful word "Zinc".  If this
+    is the DS version, the mappings for [Y] and [X] are presented here.
+
+    A single space.
+
+    Two character symbols. These give the current mappings of the [A] and [B]
+    buttons. The first is [B] and second [A] (This may seem backwards, but [B]
+    is to the left of [A], so it makes sense in practice) 
+    
+HELP::DEATH
+    You have died.  
+    
+    You will get used to this.
+
+    In other games, you may have saved & reloaded your character to
+    get past tough battles.  This is not recommended in POWDER.  Most
+    likely, you will get yourself in a situation where no saving and
+    restoring can save you and end up frustrated.
+    
+    Instead, die often and try to learn from your deaths.  Whether it
+    is to avoid attacking some otherwise peaceful dungeon inhabitants
+    or exercising restraint in identifying items, there is a lesson in
+    almost every death.
+
+    The good news is that the random nature of the levels makes every
+    game a new adventure.
+
+SPELL::FLASH
+    A blinding white light sears the optic nerve of any unfortunates
+    targeted by this spell.  If the light doesn't kill them, their
+    temporary blindness will likely nonetheless make them easy
+    pickings.
+
+SPELL::STICKYFLAMES
+    The secret alchemy of Greek Fire is scoffed at by advanced
+    wizards.  They instead point to the ease with which they achieve
+    the same effect through sorcery.
+
+SPELL::MAGICMISSILE
+    The first attempt to project one's will at a distance is always the
+    hardest.  The Magic Missile spell is most novices first experience
+    with summoning kinetic energy, so is often scoffed at by higher
+    level mages as a cantrip for newbies.  Wise wizards learn well the
+    lessons that it teaches, and are always watching for a chance to
+    use it.
+
+SPELL::CHILL
+    The cold of the abyss is channeled into the wizard's hands.  On
+    touching a foe, this fearsome chill is transferred to it, freezing
+    flesh and draining vitality.
+
+SPELL::SPARK
+    The wild, uncontrolled nature of galvanic magic is best shown
+    with this spell.  No target is required, just cast and watch as
+    your opponents are jolted.  Not recommended for those who have
+    many friends.
+
+SPELL::FROSTBOLT
+    A chilling blast of supercooled air flies forward from the mage's
+    hands.  As it flies forward, both water and CO2 sublimate into a
+    ghostly frost which gives this spell its name.
+
+SPELL::LIVINGFROST
+    Once in a thousand years a confluence of hurricanes can result in an
+    uber-storm.  The mammoth downdraft so generated can bring super-chilled air
+    down from the stratosphere.  Unwitting ground creatures can find the
+    ambient air temperature dropping a hundred degrees within seconds, flash
+    freezing them into grisly popsicles.
+
+    The Living Frost spell seeks to mimic these horrific effects with
+    mundane magic.  Early experiments with flash freezing found a freaky
+    phenomenon.  At sufficiently low temperatures, the air seemed to acquire a
+    malignant intelligence of its own!
+
+    It was the renowned summoner Kratsbury who first added a simple compulsion
+    cantrip to the frozen air spell, thus creating the first documented
+    wizard-controlled Living Frost.
+
+SPELL::BLIZZARD
+    The power barely contained in a Living Frost can be unraveled.  The
+    resulting explosion of ice and sleet affects all in a large radius,
+    so the caster is cautioned to ensure he has retreated to a safe
+    distance first.
+
+SPELL::FIREBALL
+    The mainstay of any mage worth his salt.  What would a mage be if
+    he cannot fling balls of fire?  One is forewarned not to get too
+    carried away, or the person crisped might be oneself.
+    
+SPELL::FLAMESTRIKE
+    The most holy and devout can request a special favour from their
+    deity.  A giant pillar of flame engulfs any chosen foe within
+    sight of the mage-priest.  Study the effect well, for if you were
+    to displease your deity, you may be at the receiving end.
+
+SPELL::LIGHTNINGBOLT
+    The actinic glare of a lightning bolt searing through a darkened
+    corridor would be enough to strike terror in the most stout of
+    warrior.  One can only imagine their fear when the bolt, which
+    seemed to just miss them, bounces off a wall to strike them
+    straight on!
+
+SPELL::CHAINLIGHTNING
+    The wild-mage R'tar was said to be particularly fond of this
+    destructive spell.  While he had found a secret method to avoid
+    being hit by the resulting chain reaction, his friends had not.
+    The natural consequence is that R'tar is now friendless.
+
+SPELL::SUNFIRE
+    Some magic is just too potent for mere mortals.  None should have
+    learned the words for this spell.  If any had learned it, none
+    should have written them down.  The High Kingdom of Qwar places
+    the penalty for speaking of the spell at death by fire.
+
+    Needless to say, it is quite readily available in any well stocked
+    library.
+
+SPELL::ACIDSPLASH
+    A thick spray of highly corrosive acid is shot forth.  The massive
+    damage inflicted by this spell attracts many mages.  They soon
+    learn that the risk of backsplash hitting them tempers the
+    usefulness of this otherwise potent spell.
+
+SPELL::ACIDICMIST
+    A knowledgeable mage can combine the water droplets in the air with
+    the naturally occurring nitrogen.  By condensing the resulting nitric
+    acid into large enough particles, it forms a dense acidic mist
+    that wreaks havoc on those who breathe the noxious fumes.
+
+SPELL::CORROSIVEEXPLOSION
+    The Plane of Acid is not uninhabited.  The skilled mage can bring
+    forth one of the denizens of this plane.  The semi-living blob of
+    acid will instantly consume any items it touches.  However, it
+    doesn't last long - within moments it destabilizes and
+    explodes.  The strength and size of the explosion depends
+    on the number of items it fed on, so this spell is best cast on
+    a stack of unwanted equipment.  And best cast if you already have
+    acid resistance.
+
+SPELL::ACIDPOOL
+    A fountain of acid is summoned from the Plane of Acid and directed
+    at a specific point.  So corrosive is this acid that it almost
+    always dissolves the location entirely; leaving in its wake a
+    fuming pool of acid.
+
+SPELL::MINDACID
+    A powerful psychoactive acid is synthesized from the outer layers
+    of the skin of your hands.  By touching a foe with this acid, you
+    can disrupt their mental processes with confusing effects.  Be
+    careful you apply the acid quickly, because in time it will be
+    absorbed into your own skin, making you the victim!
+
+SPELL::DISINTEGRATE
+    The effects of disintegration care not for your strength.  All victims
+    are treated equally before the powerful magic of this spell.  The very
+    atoms of the victim's being are ripped apart, leaving behind ghastly
+    wounds.  The larger the victim, the larger the wounds.
+
+SPELL::REGENERATE
+    Some warriors scoff at this spell.  They claim it is better to
+    have the instant-gratification of a heal spell.  Wise fighters,
+    however, know that it is often easier to cast a spell before a
+    battle than during it!  Further, this spell has been specially
+    formulated to require minimal magic to cast.  It instead draws
+    power from magic the mage *would* have regenerated.  Being able to
+    borrow magic points from the future can make the difference of
+    life or death.
+
+SPELL::SLOWPOISON
+    Vile serpents and bloated spiders lurk under every rock.  It is
+    only a matter of time before one receives a sting which poisons
+    one's flesh.  While no substitute for a cure, this spell can
+    provide temporary immunity for the ongoing damage to tissue and
+    organ.  Some warriors swear by casting this spell prior to
+    becoming poisoned - they then need not worry about curing during
+    combat.
+
+SPELL::HEAL
+    The mainstay of any would-be cleric, this simple spell closes
+    wounds and restores vitality.
+
+SPELL::CUREPOISON
+    There is a reason why some poisons are called "Deadly".  Those
+    poisons are the reason why it is foolish to not have some way to
+    cure.  This simple spell instantly flushes all toxins from the
+    body, preventing any further damage.
+
+SPELL::MAJORHEAL
+    Designed for more serious wounds than Heal, the Major Heal spell
+    also boasts greater mana to health efficiency.  It does have a
+    higher base mana cost, so clerics are recommended to keep Heal
+    well practiced.
+
+SPELL::RESURRECT
+    The ultimate power for any cleric is not that of death, but that
+    of life.  This complicated ritual can, at great cost to the
+    cleric, revive any fallen creature.  The creature so restored from
+    death will be loyal to the cleric.  Be warned that one so raised
+    is very weak, and should be healed forthwith.
+
+SPELL::LIGHT
+    Let dark and dank dungeons be well-lit and dank dungeons!  The
+    light spell makes dangerous corridors into mundane hallways.
+
+SPELL::DARKNESS
+    There are certain people who prefer their deeds not be witnessed.
+    For them, it can be convenient to ensure the light of day does not
+    shine where they choose.
+
+SPELL::KNOCK
+    A sticky door giving you problems?  A locked chest won't budge?
+    The simple Knock spell can effortless open any object capable of
+    being opened.  A second application will then equally swiftly return the
+    object to a closed state.  Open.  Close.  Open.  Close.  You could do this
+    all day.  Indeed, a common punishment for misbehaving apprentices is to
+    open and close a door two hundred times.
+
+SPELL::TRACK
+    The track spell builds up a standing magic field around the target.
+    This standing wave is attached and powered by the life-essence of
+    the target, so moves with the target wherever they go.  Creatures so
+    marked can be sensed by anyone, not just the original caster.
+
+    Treska of the Seven Alphabets is said to have demanded that her
+    students submit to a Track spell.  Only then could she be satisfied
+    that her students were not going to less reputable parts of town.
+    Fortunately for Treska's students, the standing field does dissipate
+    over time if not renewed.
+
+SPELL::WIZARDSEYE
+    What better way to scout the passage ahead than a floating eyeball
+    that can move easily though stone?  The Wizard's Eye is a
+    phase-shifted version of the common floating eye summoned to do
+    the mage's spying.  It is important to remember that while one is
+    peeping in the form of the wizard's eye, one's body is lying
+    helpless where you left it.
+
+SPELL::POSSESS
+    Casters of this spell have no need to impose their will through
+    clever dialogue or the brandishing of weapons.  Instead, they
+    confront their foe on the mental plane.  If successful, they
+    subsume their target's will to their own, granting them control of
+    every action.  Note that one's own body is left defenceless during
+    the possession so it is wise to plan ahead.  If your possessed
+    creature dies you will return to your own body - but be warned the
+    shock exacts a price, so you might consider Releasing your spirit
+    before the final blow is dealt.
+
+SPELL::DIAGNOSE
+    The first step in any treatment should be to discover what the ailment is.
+    This powerful piece of divinition magic seeks to remove the guess work from
+    triage.  A quick cast will let you know not just the relative health of the
+    creature, but what its absolute health is.
+
+SPELL::PRESERVE
+    The dungeon is filled with worms, insects, and bacteria.  All of these 
+    are eager to consume any fresh carrion that falls to the floor.  
+    First time dungeon explorers are often shocked at how quickly a 
+    dead foe is stripped to the bones, and then the bones themselves are
+    carried off.  
+
+    Before he became an Arch-Lich, Tlosh was often aggravated by how 
+    quickly his research subjects decomposed.  His research resulted
+    in a localised stasis field that can arrest the decay process.  Preserve
+    has become a staple among necromancers for whom the fallen is
+    a fuel.
+    
+SPELL::MAGICMAP
+    Dungeons can be twisty, turny places.  Often one *knows* there is
+    something nearby, but cannot figure out how to get there.  This
+    spell provides a magic vision of the surroundings to the mage.
+    This vision is an accurate portrayal of the local area, including
+    areas completely inaccessible to normal travel.
+
+SPELL::DETECTCURSE
+    It is a foolish and short lived adventurer that tries on whatever is found
+    in the dungeon.  While this can serve to identify items, some items are
+    cursed so will not be so easy to take off.  In the case of certain amulets
+    that may spell certain doom.
+
+    For those not willing to go to the effort or expense to fully identify
+    every item, it is often sufficient to just separate the cursed from the
+    blessed.  This simple spell attunes the caster to their possessions;
+    allowing them to detect the status of each of their items.
+
+SPELL::IDENTIFY
+    Items found on a dungeon floor may contain great power.  The
+    trouble with great power is that it can be for both good and evil.
+    Often, even things which are made with the best of intentions, can
+    cause great harm when an ignorant Barbarian starts to toy with it.
+    This spell lets you determine the functionality and nature of one
+    item.
+
+SPELL::BLINK
+    A quick get away is 9/10ths of the law.  Blink lets you do a
+    controlled teleport anywhere in sight for a small cost.  A few
+    quick Blinks can confuse the chasers and get one to safety.
+
+SPELL::FETCH
+    Nowhere is the laziness of wizards better exemplified than in this spell.
+    Not content with being able to move mountains or burn forests with an
+    incantation, the modern mage must also be able to summon his minions or
+    retrieve his fallen pen without stirring from his desk.
+
+SPELL::TELEPORT
+    With the proper incantation and skilled direction of magical energies, 
+    one can increase the similarity of two different locations.  When the
+    two locations become the same up to 2^-20 cm, the universe itself no
+    longer can tell them apart.  The net effect is that, while to outsiders
+    the wizard has seemingly teleported from one location to the other,
+    what has actually happened is that the source location became the
+    destination location!
+
+    One must be forewarned that if an area has sufficiently high magical flux,
+    it cannot be stabilized sufficiently to achieve such levels of
+    similarity!  Also, some items, due to their essentially unique nature,
+    prevent the space around them from being similarized.
+
+SPELL::TELEWITHCONTROL
+    To choose your location for teleportation requires not only greater
+    focus, but greater power as well.  While the normal teleport spell
+    finds a location whose gradients make it easy to achieve similarity,
+    the teleport with control spell seeks to bend the gradients at
+    *any* location.
+
+    There are still limitations, however.  One cannot teleport into
+    something one can't move in normally.
+
+SPELL::DIRECTWIND
+    The power of the air is yours!  You can command a stiff breeze to blow
+    in the direction of your choosing!
+
+    Most mages discount this spell as entirely useless.  They only learn
+    it when it is forced upon them to achieve more powerful effects.
+    Wise mages, however, treasure this innocuous seeming spell.
+
+SPELL::FORCEBOLT
+    A bolt of pure force is created and slammed forward with devastating 
+    effect.  While the range is very short, it is more than made up for
+    with the power.  Many objects are instantly shattered by the
+    strength of this spell.
+
+SPELL::SUMMON_FAMILIAR
+    More than just a faithful companion, a familiar can be thought of as an
+    extension of oneself.  Much like one's own heart, if well tended the
+    familiar will grow and be a valuable ally.  Neglected, more than just the
+    familiar will suffer.
+
+SPELL::TRANSFER_KNOWLEDGE
+    It is often said that there are no shortcuts to the hard-won lessons of
+    real world experience.  This sort of thing is said by those who lack access
+    to this powerful spell.
+
+    Converting the mage's raw experience into a form of intermediary magical
+    particles, this spell then applies those particles to the designated
+    target.  As the particles decay they release the experience in the
+    recipient.
+
+SPELL::FORCEWALL
+    A wall of pure force is created and projected outwards from the caster
+    with devastating force.  Creatures struck by the wall are knocked
+    backwards, only to be hit again as the wall continues its inexorable
+    motion.  The final radius of the wall is dependent on the perimeter,
+    so wise mages note that this spell has greater range in a corridor
+    than in an open room.
+
+SPELL::DIG
+    The spell of Dig carefully controls its energies in the Plane of
+    Earth.  It focuses on the removal of dirt and stone from ones
+    path, allowing one to fashion dungeon complexes of one's own
+    design.  Care must be taken that the rock fragments blasted
+    free do not cause harm!
+
+SPELL::SANDSTORM
+    Refinements of the dig spell to have it operate at a distance from 
+    the caster encountered difficulties.  The additional energy to
+    project afar would be released at the point of impact, causing a
+    large expolsion engulfing the caster.  Research stalled until a
+    clever solution was found - generate at the same time a powerful
+    cyclone to keep the supersonic fragments trapped in a small area
+    until their velocity is dissipated by friction.  Of course, this
+    means it is all the more important to keep workers back from the
+    digging site!
+
+    Note that care must be taken in computing the safety margin to
+    factor in the current wind direction.
+
+SPELL::CREATEPIT
+    The excavating powers of the Dig spell need not be directed at walls.
+    One may instead direct them at the floor.  Ideally, the floor beneath
+    your enemies.  Even if they are not killed when they fall into the
+    resulting pit, the time it takes them to climb out of the pit is
+    time not spent attacking you!
+
+SPELL::GROWFOREST
+    When the Druids of Estan discovered that Tlosh had been funding their
+    research into this spell, they should have stopped their inquiries at once.
+    Instead they convinced themselves that this showed a change in Tlosh's
+    heart - after all, what possible ill purpose could a spell to create a
+    forest have?
+
+    The Druids of Estan have regretted their choice ever since.
+
+SPELL::ANIMATEFOREST
+    When the Druids of Estan were sent into hiding by Tlosh's undead army of
+    archers, they faced the difficult prospect of transplanting their sacred
+    groves.  Unearthing a tree and replanting it is a delicate task which can
+    often shock the tree in ways it will never recover.  It was the Druid Bazz
+    who made the breakthrough that solved this issue: why not have the trees
+    transplant themselves?  By accelerating the tree's metabolism and imbuing it
+    with a simple goal seeking mentality, the tree is able to lift itself out
+    of its soil, walk on its roots to its new location, and safely replant
+    itself there.
+
+    It is a sad commentary on the rest of "civilization" that this spell is
+    best known, not for its horticulture purposes, but merely as an efficient
+    way to acquire giant fighting trees for warfare.
+
+SPELL::DOWNPOUR
+    Originally formulated to deal with the crippling droughts that faced the
+    Western Pederbar region, downpour was never successfully used in that
+    capacity.  The intensity of the deluge ensures any parched soil targeted
+    will be washed away, defeating its use as a direct rain replacement.
+    Attempts to use it to replenish resevoirs for irrigations systems were
+    abandoned when it was realized that, unlike the version used by Water
+    Elementals, this spell actually acquires its water from the surrounding air
+    instead of the Plane of Water.  As such, it will only worsen drought
+    conditions.
+
+    Downpour is now only learned by wizards who appreciate the ability to use
+    the threat of a good soaking to keep unruly apprentices in line.
+
+SPELL::ROLLINGBOULDER
+    Rather than disintegrate all of the rock in a section of wall, one 
+    may instead crudely shape it into a large spherical boulder.  Add
+    to this a large jolt of pure force, and you can have the boulder
+    rolling towards your enemies.
+
+    Unfortunately, this spell was designed by none other than Prakal the Earth
+    mage, who is at least as renowned for his short-sightedness as his
+    skill at deriving new earth-related spells.  Do not be too surprised when
+    the resulting boulders all start rolling in your direction.
+
+SPELL::PETRIFY
+    The dread power of the Cockatrice can be yours.  Zapping a foe with this
+    spell starts a process of petrification, wherein their flesh is
+    replaced by solid stone!  Cruel mages take advantage of the high
+    black market value for such art.
+
+SPELL::STONETOFLESH
+    The grisly reversal of the Petrify Spell is not for the faint of heart.
+    While it is essential for restoring those who have become statues,
+    the process is not something one should watch closely.  Equally
+    disturbing is the effect of applying it to stone which was never
+    living.
+    
+SPELL::ENTOMB
+    It is said that Prakal, the Earth Mage, perfected a version of this
+    spell which does not require Dig as a prerequisite.  We can only
+    guess what it was.  Prakal's mummified remains, found buried in solid rock,
+    have told us nothing.
+
+SPELL::RAISE_UNDEAD
+    If bringing the dead to life is the ultimate goal of the cleric,
+    the ultimate goal of a necromancer is to bring the dead to
+    undeath.  Raise Undead allows a necromancer to infuse the fallen
+    bodies of foes with a sick parody of life.  Fresh corpses yield
+    shambling zombies, whilst a necromancer willing to wait for bones
+    will gain fleeter moving skeletons.
+
+SPELL::RECLAIM_SOUL
+    While Tlosh disapproves of all forms of healing, necromancers have found in
+    practice it is important that they keep their still-mortal frame intact.
+    The soul reclamation spell fulfills this in a Tlosh friendly way by using
+    the life energy of another to power the recuperation, thereby avoiding any
+    contact with the positive energies that traditional healing spells tap
+    into.  This spell, when targeted at an undead under one's control,
+    recovers the negative energy used to power the undead and repurposes it to
+    close one's own wounds.
+
+SPELL::DARK_RITUAL
+    One's minions can be consumed for more than just a quick heal.
+    The negative energy of undead under your control can be
+    transformed into a powerful attack to destroy your foes.  On the
+    completion of this dark ritual any adjacent undead will be so
+    converted.  
+    
+    It is rumoured that this spell is the first step in transforming
+    into a lich.
+
+SPELL::GHASTIFY
+    This ghastly spell does not wait for the foe to die.  Any creature
+    at death's gate can be the target of this cruel magic.  The
+    remaining life force is used to power a grisly transformation from
+    life into unlife.  The resulting ghast makes an excellent addition
+    to any necromancers undead army.
+
+SPELL::BINDSOUL
+    With greater control over the powers of death, necromancers can
+    extract the souls from dead corpses and use them as fuel.  This
+    can be used to transform innocent creatures into sinister pets.
+    It is also believed the soul can be consumed with this spell and
+    used to construct animated golems.  While most golems made in
+    this way soon vanish, it is rumoured that more complicated rituals
+    can make stone golems that are permanent.
+    
+SPELL::SOULSUCK
+    No matter how healthy the opponent, they have no defence against
+    this vile magic.  Their inner essence is ripped out and bound to
+    yourself.  You acquire their skills and spells while they are left
+    in an amnesic daze.  The one downside is that the binding isn't
+    permanent.
+
+SPELL::POISONITEM
+    Reaching into the Plane of Decay, this spell brings forth vile
+    fluids and binds them into a viscous mass.  This is then applied
+    to your wielded weapon, ready for you to apply to the foe of your
+    choice.
+
+SPELL::POISONBOLT
+    A physical bolt of solidified poison is shaped and then sent forth
+    with great speed.  Those struck take both the physical damage of
+    the bolt and suffer the harsh poison that it is composed of.
+
+SPELL::SUMMON_IMP
+    Why anyone would want more of these troublemakers is a question
+    often asked when this spell is taught.  However, one advantage of
+    this spell is that the imp is only summoned temporarily.  This
+    means the necromancer need not worry about conserving the imps
+    life.  Many necromancers thus swear by this spell as their
+    replacement for Fireball.
+
+SPELL::SUMMON_DEMON
+    Nine out of ten necromancers agree that daemons make much more
+    suitable companions than their smaller imps.  The tenth
+    necromancer, however, was Tlosh.  They are still finding pieces of
+    the other nine necromancers in the astral plane.
+
+    Summoned for much longer than imps, daemons have correspondingly
+    greater strength.  As a bonus, even if you like imps, you can let
+    the daemon deal with summoning such underlings for you.
+
+SPELL::CLOUDKILL
+    A truly ferocious spell.  You begin by spitting at a chosen foe.
+    As the spittle flies from your mouth, it transforms into a
+    venomous ball of green poison.  If it successfully strikes your
+    foe, it will explode into a cloud of choking poisonous fumes.
+    These will linger long after your foe has succumbed, killing
+    mercilessly any who stray within.  Even if you have the misfortune
+    of missing your foe, fear not, for the venomous ball will explode
+    wherever it terminates.
+
+SPELL::FINGEROFDEATH
+    When one considers the years of study required to learn this most
+    potent spell, one would think the users would be wise.
+    The rules of reflection governing spell bounces should be well known by
+    anyone who has cast the pre-requisite, Magic Missile.
+    Nonetheless, careless Finger of Death accidents claim dozens of
+    necromancers every year!  Do not become another statistic!
+
+SKILL::DODGE
+    Careful study has allowed you to predict most foes' moves.  Long
+    hours of practice has trained your reflexes.  You can now
+    occasionally evade enemy attacks, regardless of how skilled the
+    enemy might be.
+
+SKILL::MOVINGTARGET
+    Let the barbarians charge in straight lines.  You know the folly of
+    such bravado.  While you waste no time in closing with the enemy,
+    you wisely seek cover and sudden changes in your direction.  By
+    presenting a moving target to foes, you have a high chance of avoiding
+    ranged attacks so long as you are moving.
+
+SKILL::SEARCH
+    Diligent observation combined with experience has led you to be
+    able to readily identify secret doors and hidden traps.  A quick
+    glance around will reveal to you what others must spend many turns
+    looking for.
+
+SKILL::EVADETRAP
+    Fast reflexes and nimble feet allow you to leap safely to the pits
+    edge before falling into the spikes below.  The only way for you
+    to fall down a hole is to climb into it willingly.
+
+SKILL::ENDUREHUNGER
+    Years on the open plain have taught your body how to conserve its energy
+    in times of short ration.  Not only are you able to continue functioning
+    while hungry long after others have collapsed, but your extensive
+    knowledge of plants, animals, and fungi, ensure you can see a rich 
+    banquet where others see only an empty field.
+
+SKILL::BUTCHERY
+    While city-dwellers may believe that Barbarians eat their prey like wild
+    animals, Barbarians know that there is a lot to be gained by a more careful
+    separation of meat from sinew.  Wise Barbarians learn butchery skills so
+    they can make the most of their meals.  Knowledge of the key organs allow
+    them to extract the most out of any corpse they decide to eat.
+
+    Careful dressing of the kill does more than provide more
+    sustenance.  The separation of various organs and humours allows
+    one to avoid poisonous portions, either native to the creature or
+    inflicted prior to death.  Further, any special virtues of the
+    corpse can be acquired without relying on chance ingestion of the
+    proper portions.
+
+SKILL::CLEANKILL
+    Barbarians hunting on the steppes have learned that it does not suffice to
+    defeat one's prey.  One must defeat them in a manner that leaves their
+    corpse still salvageable, or one faces hunger as surely as if one did not
+    hunt at all.  The Clean Kill Skill represents the study of these
+    techniques.  Once mastered, creatures slain in melee combat will be much
+    more likely to leave behind a tasty corpse.
+    
+SKILL::LEAPATTACK
+    It takes more than courage to leap into the middle of a heated
+    melee,  What it takes is a certain suicidal disregard for self
+    preservation.
+
+    Would be leaping barbarians are cautioned that while the lessons
+    taught with this skill let one attack when landing from a leap, it
+    is of little help if one cannot make the heroic leap in the first
+    place.
+
+SKILL::CHARGE
+    Weapon set, blood-curdling scream on lips, the valiant warrior
+    charges into the battle!  The momentum, both physical and
+    emotional, generated by a swift charge can be translated into
+    crushing damage.
+
+SKILL::ARMOUR_HELMET
+    You realize well that your head is the most valuable location.
+    You know how to properly adjust the myriad straps and belts which
+    are used to secure a helmet in place.  Because you correctly put
+    on, and properly adjust for the size of, your helms, you derive
+    additional protection from them.
+
+SKILL::ARMOUR_SHIELD
+    It might be fine for a Barbarian to strap a shield to an arm and
+    consider training complete.  You know, however, that correctly
+    parrying attacks is an art onto itself.  You derive additional
+    protection from shields.
+
+SKILL::ARMOUR_BODY
+    Most of one's vitals lie within the torso, so it is wise indeed to
+    know how to properly protect them.  Many a fool has felt secure in
+    plate only to receive a dirk to the kidneys which ended his day.
+    You derive additional protection from body armour.
+
+SKILL::ARMOUR_BOOTS
+    Dungeon floors are uneven at best, and littered with sharp-pointy
+    things at worst.  A good pair of boots is a must, but so is
+    proper usage of the boots.  One's laces must be tight, one's
+    shoes must be adjusted to fit one's own feet, the requirements go
+    on.  From this skill, you derive additional protection from boots.
+
+SKILL::ARMOUR_CLOTH
+    You understand the care and maintenance of cloth based armours.  
+    This allows you to properly wear them and use them for maximum
+    defence.
+
+SKILL::ARMOUR_LEATHER
+    You are familiar with medium weight armours, such as those made
+    from leather or wood.  You can properly care for the items and
+    thus use them to full effect.
+
+SKILL::ARMOUR_IRON
+    This is the Iron Age, after all.  While you may not be able to smelt
+    raw ore and fashion a suit of mail from scratch, you do know enough
+    to fix the dings and scratches of a suit of iron mail.  By properly
+    repairing these items, you gain better protection value from them.
+
+SKILL::ARMOUR_EXOTIC
+    Suits of plate mail made of gold.  Helmets formed of the skull case
+    of giant beetles.  The deeps have many odd and wonderful types of 
+    armour.  You have devoted yourself to researching the myriad methods
+    of building armour from sundry scraps, and now reap the benefits
+    with your ability to properly use even the oddest of defensive
+    accruements.
+
+SKILL::WEAPON_SMALL
+    Small, light weight, weapons have their own code of usage.  One
+    cannot rely on the weight of the weapon to do your work, but
+    instead must practice finesse and precision.  This skill improves
+    your ability with all weapons sized Small and lower.
+
+SKILL::WEAPON_MEDIUM
+    Medium weapons are the mainstay of most armouries.  They require a
+    balance of finesse and brute force to wield.  This skill improves
+    your ability with all weapons sized Medium.
+
+SKILL::WEAPON_LARGE
+    Large weapons are favoured by Barbarian hordes.  Their massive
+    size means crushing damages, and also means great strength is
+    required to wield them.  Subtlety is definitely not a requirement.
+    This skill improves your ability with all weapons sized Large and
+    higher.
+
+SKILL::WEAPON_RANGED
+    Ranged weapons require you to judge distances and properly aim.
+    This skill improves your ability with all weapons that are thrown.
+
+SKILL::WEAPON_EDGED
+    Edged weapons, such as swords, rely on slashing attacks to perform
+    their damage.  As such, one must adjust one's style to gain the
+    best effect.  This skill improves your ability with all edged
+    weapons.
+
+SKILL::WEAPON_BLUNT
+    Blunt weapons cause damage by brute force.  One's targeted area
+    tends to be bigger, so different vitals may be chosen.  This skill
+    improves your ability with all blunt weapons.
+
+SKILL::WEAPON_POINTED
+    Pointed weapons, such as spears, are designed to be stabbed at
+    one's foes.  This can allow force to be applied to a
+    small area, which, provided the area is chosen correctly, can have
+    devastating results.  This skill improves your ability with all
+    pointed weapons.
+
+SKILL::WEAPON_IMPROVISE
+    To the knowledgeable assassin, anything is a weapon.  This skill
+    improves your ability to wield non-weapon objects as a weapon.
+
+SKILL::TWOWEAPON
+    Many naive warriors learn this skill thinking double the weapons 
+    means double the damage.  They then learn that it is important to
+    become skilled with both weapons that they wish to wield.  Even then,
+    one may only get an extra attack with the offhand for every two
+    attacks with the primary hand.
+
+    Those harbouring fantasies of entering battle with twin longswords should
+    be cautioned that when the weapon in the off hand is not smaller than the
+    one in the main hand it is even harder to wield.
+
+SKILL::AMBIDEXTROUS
+    Instead of concentrating on your strengths, you focused on your weaknesses.
+    Your so-called "off hand" is no longer distinguishable from your primary
+    hand.  You can use either hand equally effectively.  This means it is no
+    longer important that the second weapon be lighter than the first.
+
+SKILL::WEAPON_KNOCKOUT
+    The more light weight blunt weapons should not be discounted.
+    The increased control they afford allows a precision blow to knock
+    an enemy unconscious.  This gives the chance to escape, or for the
+    less sporting, the chance for some free hits.
+
+SKILL::WEAPON_STUN
+    While blunt weapons may not produce severed arteries, the
+    concussive force of a well placed blow can leave an opponent
+    dazed.  A stunned foe will flail randomly, as likely to hurt an
+    ally as an enemy.
+
+SKILL::WEAPON_KNOCKBACK
+    Using the momentum of large weapons to the best advantage, you can
+    send enemies flying backwards with a single hit.  The time they
+    spend regaining their ground is time you can spend readying the
+    next devastating blow.
+
+SKILL::WEAPON_BLEEDINGWOUND
+    The skilled rogue knows the weak points of any enemy.  A quick
+    dagger thrust in the right artery can inflict a heavily bleeding wound.
+    The resulting bloodloss can bring down all but the strongest of foes.
+
+SKILL::WEAPON_DISARM
+    Fencing masters can lift their opponent's weapons out of their grasp and
+    send them clattering to the floor.  Where no weapon is present, they can
+    opt instead to trip up their opponent, leaving them unable to attack
+    successfully until they regain their footing.
+
+SKILL::WEAPON_IMPALE
+    Many tales speak of strong warriors who can drive a spear right through an
+    opponent.  Fewer tales tell of the barbarians who can continue the
+    stroke with enough strength and precision to strike the next rank of foes.
+
+    Tales of the Horselord H'ruth, before he ascended to godhood, say that
+    he was known to skewer a half dozen hill orcs with a single thrust of
+    his silver spear Relattrey.
+
+SKILL::WEAPON_RICOCHET
+    Flying arrows do not need to stop when they first hit a wall.  The
+    skilled (and, if possessing allies nearby, foolhardy) archer can
+    bounce the arrows off the walls to strike those not in a clear line
+    of fire.
+
+SKILL::WEAPON_TRUEAIM
+    With sufficient practice throwing knives the skilled rogue
+    achieves uncanny abilities.  It is said that they cannot miss a
+    target that they choose.
+
+SKILL::WEAPON_RIPOSTE
+    When an adversary strikes is the best time to counterstrike.
+    Light weapons allow the practiced fighter to use the opportunity
+    of an attack to gain the chance of a counter attack.
+
+SKILL::WEAPON_PARRY
+    The skilled fighter does not rely on his armour alone to absorb 
+    the blows of an enemy.  Instead, by meeting blade with blade, one
+    can stop many attacks from falling true.
+
+MOB::AVATAR - you
+    Adventurers may start off soft and tasty, but dungeon denizens are
+    warned that they can quickly become obscenely powerful.  Single
+    adventurers have been known to slaughter every living creature in
+    a dungeon for no more reason than "because they were there".
+
+MOB::GREENDRAGON - green dragon
+    The scales of this ferocious beast are coated with a thin veneer
+    of greenish slime.  This gives more than just the name to the
+    beast - it is also the source of the green dragons feared poison.
+
+MOB::WHITEDRAGON - white dragon
+    Unlike most cold blooded creatures, which merely maintain the
+    ambient temperature, white dragons are truly cold blooded.  A
+    refrigerant process chills their blood to well below the freezing 
+    point of most liquids.
+
+MOB::REDDRAGON - red dragon
+    Red dragons are the best known example of the myriad draconian
+    species.  As such, their fireball breath need not be mentioned,
+    no?
+
+MOB::BLUEDRAGON - blue dragon
+    A nimbus of electrical arcs surrounds this fearsome beast.  The
+    crackling of these bursts of electricity can be heard for quite
+    some distance.  Be careful lest they discharge through you!
+
+MOB::YELLOWDRAGON - yellow dragon
+    Yellow dragons normally live on desolate wastelands.  There they
+    hollow out complicated lairs through the use of powerful acids
+    created in their gizzard.  Adventurers have reported that when
+    threatened, this acid can be spit to devastating effect!
+
+MOB::COCKATRICE - cockatrice
+    The odd appearance of the cockatrice - half rooster, half lizard -
+    would be a source of jokes, if it were not for its devastating
+    ability.  So deadly is this attack that most adventurers suggest
+    avoiding cockatrices at all costs.
+
+    The renowned half-thief Parkdat claims to have survived an
+    encounter with a cockatrice by clever application of items she had
+    on hand.  While she has not revealed what technique she used,
+    spies report she has been making inquiries about rings of acid
+    resistance.
+
+MOB::DAEMON - daemon
+    Hailing from the pits of hell, this minor daemon has been brought
+    to the surface to give the living a taste of what they have in
+    store.
+
+MOB::ICEDAEMON - ice daemon
+    Those who are waiting for hell to freeze may be shocked to learn
+    large portions of it are already frozen.  From these bitter
+    ice expanses come the dreaded ice daemons.
+
+MOB::BAEZLBUB - Baezl'bub
+    Known also as "He whose name cannot be spelt correctly", Baezl'bub
+    has left his stygian abyss to lay some smack down on the surface
+    world.  You guessed it: You are the only hope to stop his
+    nefarious scheme.  The task is simple: Kill him, take his heart,
+    take it to the surface.  The devil, as they say, is in the
+    details.  This is one *big* detail.
+
+MOB::CRETAN_MINOTAUR - Cretan Minotaur
+    The Minotaur, a fearsome monster half human and half bull, resides
+    at the center of a twisted maze.  Daedelus was clever to ensure
+    the passages of the maze were too narrow for the minotaur to
+    escape.  Hopefully you are equally clever and stick to small
+    passages.
+
+MOB::TRIDUDE - tridude
+    Exhibiting rare trilateral symmetry, some speculate that the
+    green skinned tridudes are not native to our plane.  This doesn't
+    stop the tridudes from killing unwary adventurers, however, so
+    save the philosophy until you have escaped the dungeon.
+
+MOB::REDTRIDUDE - red tridude
+    If you learned anything from dragons, it is that a creature in a
+    new colour skin likely has some new abilities.  
+
+MOB::BLUETRIDUDE - blue tridude
+    This blue-hued representative of the three-legged tridude kind
+    zaps and crackles with latent electricity.
+
+MOB::PURPLETRIDUDE - purple tridude
+    If Wpark the Wonderful had encountered the purple tridude he
+    likely would have dropped his studies on kobolds entirely.  Not
+    only are they a more pleasing shade of lavender, but the glint of
+    the three eyes shows considerable intelligence.
+
+    Do not let the three stubby legs fool you - the purple tridude is
+    an avid tool user who has also mastered control of the forces that
+    hold the universe together.
+
+MOB::GOLDTRIDUDE - Golden Tridude
+    A massive representative of tridude-kind towers above you.  Its
+    skin is a blinding gold that presents a shimmering mirror of the
+    surrounding dungeon.  You fervently hope that this is as big as
+    tridudes come.
+
+MOB::FIREBEETLE - fire beetle
+    The fire beetle gains its name from the self-igniting fluid it can
+    spray on those that threaten it.  Those who do not want to get
+    burned should let these beetles be.
+
+MOB::GOLDBEETLE - gold beetle
+    When the Deeper Depths Mining Company contracted Prakal the Earth
+    Mage to increase the profitability of their gold mines, they had
+    envisioned some new variant of the Dig spell that would extract
+    gold from baser metals.  What they did not expect was for Prakal
+    to instead design a living creature!
+
+    The Gold Beetle is wondrously designed.  Living on a diet of gold,
+    it is little surprise that it has a 24 carat body.  Prakal's
+    intention was that Deeper Depths could release a population of
+    beetles in their mines, wait, and then harvest the fully grown
+    beetles.
+
+    The presence of this beetle in front of you tells you that not
+    everything went according to plan.  The released beetles showed
+    little interest in hanging around the low yield gold mines - they
+    quickly migrated to dangerous dungeons where tasty golden nuggets
+    abound.  Worse yet, the mechanism used to digest gold triggers a
+    powerful allergy in flesh and blood creatures, one that makes them
+    unable to stand the presence of gold.
+
+MOB::ICESNAKE - ice snake
+    This small serpent is more at home in glaciers than a dungeon.
+    Its bite can still inflict frostbite reminiscent of such
+    glaciers, so be warned.
+
+MOB::GREENSNAKE - green snake
+    This small snake usually has smaller prey in mind than humans.
+    Nonetheless, one should be wary of its poisonous bite, and leave
+    it to live by its own whim.
+
+MOB::FIRESNAKE - fire snake
+    A snake measuring 30 to 50 centimeters in length with scales
+    coloured in an impressive red and yellow pattern.  Many people in
+    the surface world value the scales for the creation of
+    fancy-looking boots.  If it weren't for the snake's fiery bite,
+    this demand could have spelt its extinction.
+
+MOB::MOUSE - mouse
+    Small mice scurry anywhere that food scraps may be found.  To the
+    novice, their movement may seem chaotic and random.  The skilled
+    mouser learns to anticipate their every move.
+
+    As a Hero on a Great Quest, you surely don't care about becoming a
+    better mouser.
+
+MOB::RAT - rat
+    Rats live where humans live.  That doesn't stop humans from hating
+    them.  While excuses like "spreaders of filth and disease" are
+    usually provided, the cynical point out that if rats had nice
+    bushy tails rather than ugly naked tails, the cohabitation may
+    have been more peaceful.
+
+MOB::GIANTRAT - giant rat
+    This is a BIG rat.  It likely weighs as much as you do!
+
+    Giant rats generally hate humans.  While excuses like "spreaders of
+    filth and disease" are usually provided, the cynical point out that
+    if humans had nice fur covering their bodies rather than being
+    almost entirely naked, the cohabitation may have been more
+    peaceful.
+
+MOB::GRIDBUG - grid bug
+    *kzzap*
+
+    The grid bug is dismissed by most as just another type of vermin.
+    However, scholars often have wondered at the origins of these
+    purple xs.  Why is it that they crackle with electric power?  Are
+    they some form of electric elemental?  What grants them the
+    ability to move in directions unavailable to anyone else?  Do they
+    come from some higher dimension where more degrees of freedom are
+    present?  Barbarians report that the corpses are spicy if eaten
+    fresh.
+
+MOB::SHITOMI - shitomi
+    The friendly shitomi is a large rat with lavender fur.  The
+    shitomi's pleasant disposition endears most dungeon goers and only
+    the most rabid would seek to do battle.
+
+MOB::TRICERATOP - triceratops
+    The triceratops is a long extinct animal.  As such, what we know
+    about it comes from the occasional fossilized bones.  The size
+    and strength of these bones suggests a powerful creature.  No doubt 
+    it also had a cruel and barbaric demeanour - living, as it did, in 
+    the pre-civilised jungles of antiquity.
+
+    In summary: if you should see such a beast, make sure you attack 
+    first!  And do try to preseve the corpse as the scientific community
+    will appreciate the research material.
+
+MOB::LUX - lux
+    Rheo the Book Eater was named after his voracious appetite for
+    books.  He would read an entire library in a fortnight.  He soon,
+    however, became frustrated with the poor lighting afforded by
+    torches.  Light spells tended to be static to an area, not at all
+    helpful to a wandering mage like Rheo.
+
+    Being a mage of no little power, he felt there must be a better
+    solution.  He first constructed what he called a desk lamp - a
+    metal stand with an articulated arm holding a permanent light
+    source.  This could be carried about and adjusted to illuminate
+    any book.  Not satisfied, he continued tinkering.  First, he
+    granted the lamp locomotive ability so it could hop behind him and
+    carrying would no longer be necessary.  He next provided the
+    ability for the lamp to reproduce itself (thus saving on eventual
+    manufacturing costs).  Finally, he added the ability for the lamp
+    to orient itself to its master's eyes.
+
+    Sadly, a bright light oriented at your eyes tends to blind you.
+    Too late, he realized he should have had it point itself to what
+    its master was looking at.  He never got the chance to correct
+    the mistake since his only sample blinded him and hopped away
+    before he recovered.
+
+    Since then, the lux, as it has come to be known, has eked out an
+    existence in the underworld.  Despite its rather aggressive
+    nature, it is largely tolerated as a good source of light.
+
+MOB::PURPLESLUG - purple slug
+    The purple slug is both bigger and more ferocious than the brown
+    slug.  Its acid is stronger so unprepared adventurers should take
+    advantage of its slow speed and run away.
+
+MOB::BROWNSLUG - brown slug
+    The lowest of the giant slugs is the brown slug.  It uses a mild
+    acid to defeat its foes and then scrapes up the partially digested
+    remains with its radula.
+
+MOB::DEATHSLUG - death slug
+    The dreaded Death Slug is the next stage of the Purple Slug's
+    growth.  A hideous horn has grown from its forehead with which it
+    can impale attackers.  Those who think their acid resistance means
+    they can ignore all slugs end up unpleasantly surprised.
+
+MOB::FLOATINGEYE - floating eye
+    A floating eye is aptly named.  It is a 50 centimeter diameter
+    floating eyeball.  Thankfully, it has lids that cover the back
+    half, so it is not too disgusting to see.
+
+    Some theorize the first floating eye was a Distance Seeing spell
+    that went awry.  This does not explain why those that try to hit
+    the eye in melee often find themselves paralysed by its gaze.
+
+MOB::WIZARDSEYE - wizard's eye
+    While it is generally believed that the floating eye is a result
+    of a magic experiment, it wasn't until Pqar the Prudent developed
+    the wizard's eye spell that there was any proof.  Her spell was
+    created by studying the existent floating eyes so possess the same
+    unusual attack ability.  She further augmented the summoned
+    creatures by shifting their phase so they can float through solid
+    stone - all the better for spying.
+
+MOB::GELATINOUSCUBE - gelatinous cube
+    The gelatinous cube is a large cube of semi-transparent jelly.
+    One can often see the shape of incompletely dissolved items inside
+    the cube.
+
+    Cubes blindly scour the dungeon, eating anything metallic.  When
+    they grow to sufficient size, they split into two smaller cubes.
+    Attackers should be wary of the paralyzing nature of the acid
+    splash that is produced by piercing their skin.
+
+MOB::SCORPION - scorpion
+    The scorpion is renowned for its powerful sting.  Crushing the
+    scorpion does no good if you die shortly after from the poison of
+    its sting.
+
+MOB::CAVESPIDER - cave spider
+    The small inoffensive cave spider is often targeted by adventurers
+    for the nutritious and tasty meat it provides.  Care is advised that
+    a hungry adventurer not mistake it for its giant kin.
+
+MOB::GIANTSPIDER - giant spider
+    This spider is bloated with the unmentionable contents of its previous
+    meals.  Care is cautioned lest you be the next victim to be liquified
+    and sucked into its gullet.
+
+MOB::KIWI - kiwi
+    The kiwi, native to New Zealand, is peculiar in that it is not just a
+    flightless bird, but a wingless bird as well.  Its nocturnal habit
+    allows it to live peacefully in the depths, feasting on insects
+    snuffled out with its long beak.  Antagonizing the kiwi is strongly 
+    discouraged for that same snout can inflict a devastating piercing
+    attack.
+
+MOB::BAT - bat
+    Explorers of dungeon depths should be thankful for bats for their part
+    in minimizing the buzzing insects that would otherwise mar the 
+    spelunking adventure.  Naysayers point out that bats do most of their
+    hunting outside of the cave and leave more than enough guano within
+    the cave to mitigate any beneficial effect they might have.
+
+    It is said that only by carefully sifting through and washing bat
+    guano can one acquire enough mosquito eyes to make the famed mosquito
+    eye soup.  This tidbit of knowledge leaves unanswered the question
+    of why one would desire such a soup in the first place.
+
+MOB::LARGEBAT - large bat
+    Unsurprising, where there are bats, there will be bigger bats.
+    Those who have grown accustomed to feasting on bats are warned that
+    while there is more meat on these bones, there is also more fight.
+    
+MOB::VAMPIREBAT - vampire bat
+    Blood sucking vampire bats traditionally acquire their nutrients from
+    sleeping cattle.  You may have noticed the lack of bovines in the
+    dungeons.  Sleep tight!
+
+MOB::STALKER - invisible stalker
+    Ever have the feeling that someone was watching you?  And turned around
+    suddenly to confront the watcher only to see no one?  Someone may still
+    be watching you.  Someone invisible.  With fangs.  That drip acid.
+
+MOB::FROG - frog
+    The large cave frog swiftly hops through the tunnels looking for a pond to
+    call its own.  A wise adventurer will not try to get in its way.  An unwise
+    adventurer will form the frog's next snack.
+
+MOB::SKELETON - skeleton
+    What is dead should stay dead!  Why then do these bones move?  No
+    ligaments connect the joints.  No muscles power the motion.  Yet
+    these facts do not prevent the skeleton from clacking inexorably
+    forward.
+
+MOB::ZOMBIE - zombie
+    The dead bloated corpse twitches.  An effect of rigor mortis setting in?
+    No.  It is the vile necromantic art animating the corpse, transforming
+    the decaying meat into a shambling undead monstrosity.
+
+MOB::GHAST - ghast
+    Twisted hunchbacked bipeds, ghasts are dreadful undead that swipe at
+    foes with their noxious claws.  Some warriors have been known to leave
+    weapons for ghasts to pick up in the hope that they can face a mere
+    sword rather than the claws.
+
+MOB::LICH - lich
+    Powerful necromancers dissatisfied with the limitations of mortality
+    can perform a complicated ritual to transform themselves into
+    the undead lich.  In their new form they fear not the concerns
+    that once plagued them.
+
+MOB::SOULSUCKER - soul sucker
+    Adventurers who escape the deepest levels of the dungeon report of
+    hideously powerful creatures.  One that haunts the memory of any
+    who hears of it is the dreaded soul sucker.  Most creatures
+    imperil only your physical body, but the soul sucker can use
+    necromantic magic to absorb your soul!
+
+    If you are so unfortunate as to suffer this fate, you will find
+    yourself without memory of any of the hard-earned skills or spells
+    that you had acquired.  Worse yet, the soul sucker will have
+    gained those spells in turn and will show no hesitation in using
+    them against you!
+
+MOB::IMP - imp
+    Much like cockroaches infest all human habitations, imps infest 
+    all infernal habitations.  From the slightly-balmy upper circles
+    of hell where the merely slightly-not-good dwell, down to the 
+    fiery deeps where dwell the truly evil, explorers have reported the
+    presence of imps.
+
+    Rather than try and exterminate imps directly, the daemons instead have
+    devised summoning spells to bring imps in as cannon fodder.
+
+MOB::KOBOLD - kobold
+    Kobolds are a small purple-furred race of bipedal dogs.  Their 
+    pack-like tendencies and cunning nature compensates for their weak 
+    stature.
+
+MOB::KOBOLDMAGE - kobold mage
+    In Wpark the Wonderful's youth he believed that the kobold species
+    held great promise.  It was only their lack of higher knowledge
+    that prevented them from being accepted as equals among civilized
+    nations.  He set out on a pilgrimage to teach the kobolds the
+    wisdom of the world.
+
+    While Wpark has refused to ever speak of his experiences, it was
+    only after then that blue-robed kobold mages began to terrorize
+    the underworld.  Their use of modern magic spells and wearing of
+    the signature blue wizard robe suggest Wpark may have been at
+    least partly successful.
+
+MOB::KOBOLDASSASSIN - kobold assassin
+    "There are many scurrilous lies spread about the noble kobold race.  
+    The most ridiculous is surely that of the so-called Kobold 
+    Assassin.  Every so often, I hear reports of one of these kobold
+    subtypes.  The report usually describes them as black clad members
+    of a secret kobold organization that will stop at nothing to
+    defend kobold kind and keep themselves secret.
+
+    "Every time I try and track down the originators of these reports, 
+    the primary witness is always conveniently away on some long term 
+    business trip, or has gotten himself killed in some tragic
+    accident.  The lack of any first hand accounts proves that the
+    Kobold Assassin is nothing more than hearsay spread to discredit
+    kobold kind."
+
+    From an early journal of Wpark the Wonderful.
+
+MOB::KOBOLDFIGHTER - kobold fighter
+    While any kobold is willing to pick up a sword to take what they
+    desire, kobold fighters are more likely to be already be properly
+    equipped and trained in such weapons.  Many adventurers that had
+    come to scorn kobolds received a harsh lesson in manners from an
+    affronted kobold fighter.
+
+MOB::KOBOLDTHIEF - kobold thief
+    The highest caste in kobold society belongs not to the warriors who bravely
+    defend the warrens against intrusion, but to the thieves that use sneaky
+    subterfuge to extract treasure from other civilizations for the benefit of
+    kobold-kind.  Those encountering the kobold thief should keep a close eye
+    on their valuables or they may win the fight only to lose their wallet.
+
+MOB::TROLL - troll
+    The brutish nature of a troll cannot be understated.  They attack
+    with clumsy, but devastating, force.  They have thick skins able
+    to withstand the sharpest barbs.  And the worst part?  When you
+    finally think you have killed them... they come back!
+
+MOB::CAVETROLL
+    When Prakal the Earth Mage was faced with a large band of trolls,
+    he did what seemed reasonable to him at the time.  A few quick
+    casts of petrify would, he thought, result in a nice addition to
+    his museum of curiosities.  Unfortunately, the powerful
+    regenerative nature of trolls prevailed over even Prakal's potent
+    magics.  The trolls were petrified into stone.  Being made of
+    stone didn't make them any more tractable, however.
+
+    Unfortunately for the world at large, Prakal took the better part
+    of valour and ran away.  This left the stone trolls to breed and
+    multiply into what are now properly termed as Cave Trolls.
+
+MOB::LIZARDMAN - lizardman
+    The cold blood of a lizardman seems to lead to cool thinking.
+    Lizardmen show no mercy to the weak.  Their native habitat is the
+    swamplands of the surface world, but they have adapted well to the
+    underground depths.
+
+MOB::TURTLOID - turtloid
+    The thick armour shell of these turtle people makes them
+    formidable opponents in a fight.
+
+MOB::LARGETURTLOID - large turtloid
+    It is said that turtloids never die of old age, but instead just
+    keep growing to ever larger sizes.  Perhaps it is a good idea to
+    slay them when they are still only this small?
+
+MOB::ORC - orc
+    The filthy orcs are disdained by all species that have developed a
+    language sophisticated enough to include the word "disdain".
+
+MOB::HILLORC - hill orc
+    Native to the hills of Abr'po, the vicious hill orc is often used
+    as a scape goat for any local problems.  Indeed, most army leaders
+    of Abr'po enlist a token hill orc squad.  At the end of combat,
+    the hill orc squad is accused of all the various war crimes that
+    occurred and summarily executed.  Scholars debate if the fact that
+    hill orcs still eagerly apply for such positions is a sign of
+    their lack of mental acuity or overriding desire to commit war
+    crimes.
+
+MOB::HEADLESS - headless
+    The origin of these abominations is unknown.  Well, it is pretty
+    clear that some mad wizard was responsible, but WHICH mad wizard
+    remains in doubt.  Rheo the Book Eater certainly wouldn't have had
+    the foresight to provide them with a crude form of telepathy to
+    compensate for their lack of eyes.  Wpark the Wonderful's
+    fascination with the colour puce rules him out - he'd have surely
+    dyed their hide.  And Treska of the Seven Alphabets?  Her prudish
+    nature would have ensured there was no second generation of
+    headlesses to terrorize the world.
+
+MOB::CHAMELEON - chameleon
+    This rather large lizard is a distant cousin of the more familiar
+    desert dwelling chameleon.  Exposure to powerful magic forces
+    seems to have amplified its colour shifting ability into the
+    ability to adopt the form of almost any creature!  Be warned it
+    gains the creature's special powers when it transforms.  A large
+    number of dungeoneers thus advocate destroying chameleons before
+    they have a chance to change into something even more frightening.
+
+MOB::LIVINGTREE - animated tree
+    While pedants are quick to point out that all trees are animate - one
+    glance at the destruction wrought by the roots of an oak should settle the
+    skeptical - those who have witnessed a true animate tree feel there is an
+    important distinction between the slow inexorable growth of normal trees
+    and these creatures.  The most obvious difference is that it is a lot
+    harder to run away from an animate tree!
+
+    There is good news for adventurers beset by tree problems.  The animate
+    trees are the result of a spell that hastens the natural life forces.  When
+    the spell's power is used up the trees will revert once again to the
+    pleasant shade-giving plants one is used to.
+
+MOB::EARTHELEMENTAL - earth elemental
+    Hailing from the elemental plane of Earth, these fearsome foes
+    threaten all but the strongest adventurers.  Their bodies, made
+    from the very dirt animated, can absorb tremendous damage.  Their
+    attacks will shock the most stalwart.
+
+MOB::AIRELEMENTAL - air elemental
+    We often take the air for granted.  We breathe and walk through
+    this fluid without thinking of the force it represents.  The
+    destructive power of air elementals swiftly remind adventurers
+    that the most insubstantial of things still hurts if it hits you
+    hard enough.
+    
+    By controlling the movement of airborne dust, and hence the
+    friction between the airborne dust, air elementals can create
+    massive charge disparities.  These ground themselves with
+    devastating lightning bolts.
+
+MOB::FIREELEMENTAL - fire elemental
+    Staring into the flame of a candle can grant you enlightenment.
+    Staring into the flame of an fire elemental can grant you a swift
+    death.
+
+MOB::WATERELEMENTAL - water elemental
+    One of the most feared elementals, water elementals combine an
+    extraordinary strength with a truly sinister attack.  When hit by
+    a water elemental, one takes little direct damage.  A part of the
+    elemental dislodges itself, however, and blocks your trachea.  Many
+    a brave adventurer has met a miserable death by drowning despite
+    having slain the elemental.
+
+MOB::FLESHGOLEM - flesh golem
+    Anyone can take a mound of flesh and fashion it in a crude mockery
+    of a biped.  The trick is to get it to walk under its own power.
+    While golems themselves possess no soul or life, it is said that
+    necromancers who make them require a soul of a creature to power
+    the animation process.
+
+MOB::STONEGOLEM - stone golem
+    A stone golem consists of a collection of ten to twenty boulders.
+    Strange magics can be seen flickering between the boulders,
+    holding them into a vaguely man like shape.  No soul or life is
+    detectable in the resulting creation, but it is rumoured that one
+    was consumed to power their creation.
+
+MOB::IRONGOLEM - iron golem
+    The grinding of gears and clanking of metal precedes the arrival
+    of an iron golem.  Wise adventurers use the warning to flee.
+    Unwise adventurers die.
+
+MOB::GHOST - ghost
+    Death, they say, is but the start of a new journey.  Some, it
+    would seem, are not yet interested in that new journey, but remain
+    in this world to plague the living.
+
+    Ghosts are the incorporeal souls of the restless dead.  They
+    possess a hatred of those who still enjoy the feel of fresh air.
+    
+    Warriors tell of trying to fight ghosts, but being overcome by
+    fright at their hideous appearance, or finding that their weapons
+    seemed to have no effect.
+
+MOB::LIVINGFROST - living frost
+    A cloud of super cooled air glares at you menacingly.  You are not 
+    sure how a mere cloud of ice crystals can glare.  And you are equally
+    unsure how said cloud keeps moving relentlessly towards you.  These
+    are not the questions you should be asking yourself, however.  You
+    should instead be wondering how you will survive long enough to
+    see the frost dissipate.
+
+MOB::ELDER - village elder
+    An old woman. bent double with age, who is well respected in the
+    local village for her wisdom.  She is the one that led you to the
+    cave when you volunteered to defeat the evil within.  No doubt she
+    can now lead you back where hopefully celebrations await!
+
+MAGICDOOR::NOTENOUGHDOORS - not enough doors
+    The magical door radiates a sense of loss.  You have the eerie
+    feeling that the local dungeon is incomplete.  It seems unlikely
+    you will be opening this door on this adventure.
+
+MAGICDOOR::NOITEMS - no items to consume
+    As you try to open the magical door, a verse suddenly enters your
+    mind.  "Wands, Rings, Scrolls, and Potions.  Four of each and no
+    more.  Place with utmost symmetry.  And much knowledge will be
+    thine."  You mutter under your breath at the appalling lack of
+    meter.
+
+MAGICDOOR::INSUFFICIENTITEMS - not enough items consumed
+    As you watch your magical items disappear into the aether, you
+    wonder if what is hidden by this door is worth the trouble?
+    Hopefully a pattern emerges before you must sacrifice your useful
+    items.
+
+MAGICDOOR::SUCCESS - door opens
+    As the last item vibrates, the purple glow fades from the door.
+    Tentatively, you try the handle.  The door, it seems, is no longer
+    magical, and easily opens to your push.  You hope Belweir has not
+    sent you on a wild goose chase.
+
+SIGNPOST_GBA::WELCOME
+    Welcome to the Tutorial!
+
+    Press up and down to scroll through this message.  Faster scrolling can
+    be done by [R] and [L].  You've read it all when the arrows
+    disappear at the bottom.
+
+    Buttons on the Gameboy Advance (GBA) are placed in [Square]
+    brackets.  [A] and [B] are on the front and labelled.  [L] and [R]
+    are the shoulder buttons on the far side of the GBA.  [Start] and
+    [Select] are the small buttons labelled as such.  On the DS, [X]
+    and [Y] can be used instead of [Start] and [Select].  The DS also supports
+    the touch screen - POWDER can be played with the stylus only.  Special
+    stylus hints will be provided at the end of these help descriptions.
+
+    When you have menus visible you can select the current entry with
+    [A].  To cancel the menu hit [B].
+
+    The first task is to move!  You can move in four directions, up,
+    down, left, and right by pressing the directional pad.
+
+    Stylus: Clicking on the screen will also cause you to move in that
+    direction.  You can hold down the stylus to keep moving in the desired
+    direction.  You do not need to hit the adjacent tile either.
+
+    Now move down the hallway to the next signpost!
+
+SIGNPOST_GBA::MINIMAP
+    Help and Minimap
+    ----------------
+
+    While playing you can get help.  Hit [Start] to bring up the
+    Command menu.  Choose Options... The Options... menu has a Help
+    choice.
+
+    As you explore the dungeon you reveal more of the map.  You can
+    press and hold [R] to view a minimap to see what you have
+    explored.  Your location is a white square.  Up and down stair
+    cases are green squares.
+
+    Stylus: The bottom of the screen has a row of action buttons.  There are
+    buttons for Help and Minimap there.
+
+SIGNPOST_GBA::LOOK
+    Look and History
+    ----------------
+
+    Hit [Start] and choose Look.  This puts you in look mode that lets
+    you scroll around.  Selecting a monster with [A] will provide
+    detailed information about that monster.
+
+    Hit [Start] and choose History.  This brings up the history of
+    messages you have received.
+
+    Stylus: The eyeball engages look mode.  To stop looking, select the current
+    cursor position.  The history on the DS is in the top window.
+
+SIGNPOST_GBA::BOULDER
+    Boulders
+    --------
+
+    Boulders are too large to pick up but can be pushed through the
+    dungeon.  If you get yourself stuck behind a boulder, you can Swap
+    places with it.  First, remove your equipped items using the
+    inventory screen.  Hit [Start] and choose Swap.  After choosing the
+    direction of the boulder, you will swap places with it.
+
+    Note you can also swap with friendly monsters.
+
+    Stylus: The Swap command is on the action bar.  Note that to push a boulder
+    you must click on the tile adjacent to you - it will not be pushed in run
+    mode.
+
+SIGNPOST_GBA::MELEE
+    Combat
+    ------
+
+    Behind this door is a fearsome foe!
+
+    Attacking an enemy with your equipped weapon is simple.  Just walk
+    into it!  Note that tame or friendly creatures won't be attacked
+    this way - you will instead swap positions.
+
+    Adventuring can make one hungry.  If a corpse is left you will be
+    prompted to eat it when you walk over it.  Be warned that you are
+    what you eat.
+
+    Stylus: You need to click on the creature when it is adjacent to attack -
+    if you click past the creature you will just stop moving.
+
+SIGNPOST_GBA::INVENTORY
+    Inventory
+    ---------
+
+    While you start the adventure not wearing anything, that doesn't
+    mean you are empty handed.  You have some equipment in your
+    inventory!
+
+    Hit [Select] to bring up the inventory screen.  Use the cursor to
+    target the chain mail.  Hit [A] to bring up the context menu.
+    Select Equip.  Target the body slot and hit [A] to put the
+    chainmail on your body.
+
+    Stylus: The brown bag action bar icon brings up the inventory screen.  When
+    you select an item, the action bar reflects things you can do with it.  The
+    fully dressed person means equip.
+
+SIGNPOST_GBA::PICKUP
+    Pick Up
+    -------
+
+    Look!  Some earlier adventurer has left an item on the dungeon
+    floor!  All the better to equip yourself with!
+
+    Walk over the longsword.  You will be prompted to pick it up.
+    Then use [Select] to bring up your inventory and to equip it in
+    your Main Hand.
+
+SIGNPOST_GBA::DOOR
+    Doors
+    -----
+
+    Passages in the dungeon can be blocked by simple wooden doors.
+    Opening is straightforward: walk into the door and you will try
+    and open it.  If at first you don't succeed, try, try again!
+
+    Stylus: You need to click on the door when standing beside it - clicking
+    past the door will have you stop at the door.
+
+SIGNPOST_GBA::USE
+    Item Use
+    --------
+
+    Three different items are here.  What sort of items is a mystery.
+    They could be beneficial or dangerous.  The easiest way to learn
+    is by trial!
+
+    Pick up the items by walking over them.  Use [Select] to bring up
+    your inventory and select the items with [A].  Try to Drink the
+    potion, to Zap the wand, and to Read the scroll.
+
+SIGNPOST_GBA::WATER
+    Water
+    -----
+
+    Your way forward is blocked by a large pool of water.  Without
+    some magical assistance, you will likely sink in the water if you
+    walk on it.  When underwater you will take drowning damage until
+    you resurface.  You can try and return to the surface by walking
+    back onto land.
+
+    You can explicitly climb out of water or up an down staircases
+    with [Start] followed by Climb.
+
+    Stylus: The ladder action bar icon performs Climb.
+
+SIGNPOST_GBA::SEARCH
+    Secret Doors
+    ------------
+
+    This room would seem to be a dead end.  However, not everything is
+    as it seems.
+
+    Press [Start] to bring up the Command menu.  You could hit [A] on
+    Search to search once.  Instead, hit [L] on Search.  This will
+    bind [L] to Search.  Then repeatedly press [L] while standing by
+    the walls of this room to search for secret doors.
+
+    Note that almost any entry of the Command menu can be bound to [L]
+    or [R] in this way.  To bind to [A] or [B] hit [Select] over the
+    command and then [A] or [B].  The bottom of the status line
+    provides hints as to the currently bound commands.  After binding
+    search, the far left will change from M to s.
+
+    Stylus: Click on yourself to search.
+
+SIGNPOST_GBA::SPELLS
+    Spells and Skills
+    -----------------
+
+    As you explore the dungeons of POWDER you will encounter books
+    that hold powerful skills and arcane spells.  To unlock these,
+    first pick up the book by walking on it. Then raise your inventory
+    with [Select].  Select the book and choose the Read option to
+    learn what skills and spells are possible.
+
+    When you are reading a book you can hit [A] to try and learn the
+    current skill or spell.  It may have prerequisites that prevent
+    you from learning it just yet.  [B] will stop reading.  [Select]
+    will bring up help on that specific spell.
+
+    There is a maximum number of skills you can know based on your
+    physical level and a maximum number of spells based on your
+    mental level.  These levels increase when you gain 1000
+    experience.  The amount they increase depends on the god you pick.
+
+    You can free up spells and skills by the Forget command.  [Start]
+    for the Command menu and select Forget.
+
+    Skills take effect automatically so you do not need to explicitly
+    invoke them.
+
+    Spells can be cast by hitting [B] provided you have enough magic
+    points for the spell.
+
+    Stylus: The lightning bolt icon casts a spell.  The Forget command can be
+    found on the Command menu which is the > icon on the action bar.
+
+SIGNPOST_GBA::DIP
+    Dipping Items
+    -------------
+
+    You can dip items into potions.  This can be useful to discover
+    the property of the potion or to apply some effect to the item.
+
+    Pick up the long sword and potion.  [Select] for the inventory screen,
+    and then select the long sword with [A].  Choose the Dip from the
+    menu.  Then pick the potion and select it as the target.  Most
+    likely, nothing will happen.
+
+SIGNPOST_GBA::QUIVER
+    Quivering Ammo
+    --------------
+
+    You can throw individual items by [Select] to the inventory
+    screen, selecting the item with [A], and choosing the Throw
+    command from the menu.  You will then pick a direction.  You can
+    throw in 10 directions.  In addition to the movement directions,
+    you can throw along the four diagonals.  You can also throw up and
+    down by selecting the square two squares up or two squares down
+    from you.  Be warned that things that are thrown upwards tend to
+    fall back down.
+
+    This process can get tedious, however.  Instead you can quiver
+    items that you want to throw often.  [Select] to inventory, select
+    your item, and pick Quiver.  A q will appear beside the item to
+    mark it as quivered.  Quivered items have the dequiver option to
+    undo this.
+
+    To throw a quivered item hit [A] and choose a direction.
+
+    Note that when you walk over items that were quivered you will
+    automatically pick them up without taking a turn.
+
+SIGNPOST_GBA::DARK
+    Darkness
+    --------
+
+    Not all of POWDER is well lit.  Many areas are dark, only allowing
+    you to see your immediate surroundings.  Light sources can be
+    invaluable in mapping these areas faster and ensuring you get the
+    jump on foes, rather than the other way around.
+    
+SIGNPOST_GBA::DRAGONS
+    Dragons
+    -------
+
+    Here be dragons!
+    
+SIGNPOST_GBA::WONTUTORIAL
+    The whole point of those dragons was to ensure you would die.  I
+    had thought I had put enough in there.  Clearly, I underestimated
+    either your skill or persistence.  Or maybe both.
+
+    It is not recommended that you let me know you read this.  I will
+    probably just respond by adding more dragons.
+    
+    - Jeff Lait
+
+SIGNPOST_GBA::KIWI
+    Down this corridor is one of the most feared of creatures: the
+    kiwi!  This fear is misfounded as the kiwi is a peaceable sort that
+    will only attack if provoked.
+
+    Sometimes you may find your way blocked by a kiwi.  If waiting
+    isn't an option, you can try and swap places.  Hit [Start] and
+    choose Swap.  Then select the direction of the kiwi to switch
+    places peacefully.
+
+    If you look at a creature and it isn't described as hostile, there
+    is no need to attack it as it will leave you alone.
+
+SIGNPOST_GBA::WON
+    WARNING: Cave may contain the ultimate evil, Baalz'bub.
+
+    NOTE: Entrance has a magic one-way seal to prevent anything from
+    escaping.  Anything includes you!
+
+SIGNPOST_SDL::WELCOME
+    Welcome to the Tutorial!
+
+    Press up and down to scroll through this message.  Faster scrolling can
+    be done with [Page Up] and [Page Down].  You've read it all when
+    the arrows disappear at the bottom.
+
+    Keypresses are written inside square brackets.  Note that the case
+    matters - to hit [S] for swap you must use shift-s.  POWDER can also be
+    played entirely with the mouse.  Special mouse hints are at the end of
+    these help sections.
+
+    When you have menus visible you can select the current entry with
+    [Enter].  To cancel the menu hit [Escape].
+
+    The first task is to move!  You can move in four directions, up,
+    down, left, and right by pressing the cursor keys.
+
+    Mouse: Clicking on the screen will also cause you to move in that
+    direction.  You can hold down the stylus to keep moving in the desired
+    direction.  You do not need to hit the adjacent tile either.
+
+    Now move down the hallway to the next signpost!
+
+SIGNPOST_SDL::MINIMAP
+    Help and Minimap
+    ----------------
+
+    While playing you can get help.  Hit [?] to bring up the help menu.
+
+    As you explore the dungeon you reveal more of the map.  You can
+    hit [m] to view a minimap to see what you have explored.  Your
+    location is a white square.  Up and down staircases are green
+    squares.
+
+    Mouse: The bottom of the screen has a row of action buttons.  There are
+    buttons for Help and Minimap there.
+
+SIGNPOST_SDL::LOOK
+    Look and History
+    ----------------
+
+    Hit [x].  This puts you in look mode that lets you scroll around.
+    Selecting a monster with [Enter] will provide detailed information
+    about that monster.  Select yourself to see your current state.
+
+    Hit [v].  This brings up the history of messages you have received.
+
+    Mouse: The eyeball engages look mode.  To stop looking, select the current
+    cursor position.
+
+SIGNPOST_SDL::BOULDER
+    Boulders
+    --------
+
+    Boulders are too large to pick up but can be pushed through the
+    dungeon.  If you get yourself stuck behind a boulder, you can Swap
+    places with it.  First, remove your equipped items using the
+    inventory screen.  Hit [S] (shift-s).  After choosing the direction
+    of the boulder, you will swap places with it.
+
+    Note you can also swap with friendly monsters.
+
+    Mouse: The Swap command is on the action bar.  Note that to push a boulder
+    you must click on the tile adjacent to you - it will not be pushed in run
+    mode.
+
+SIGNPOST_SDL::MELEE
+    Combat
+    ------
+
+    Behind this door is a fearsome foe!
+
+    Attacking an enemy with your equipped weapon is simple.  Just walk
+    into it!  Note that tame or friendly creatures won't be attacked
+    this way - you will instead swap positions.
+
+    Adventuring can make one hungry.  If a corpse is left you can hit
+    [e] to eat it.  Be warned that you are what you eat.
+
+    Mouse: You need to click on the creature when it is adjacent to attack -
+    if you click past the creature you will just stop moving.
+
+SIGNPOST_SDL::INVENTORY
+    Inventory
+    ---------
+
+    While you start the adventure not wearing anything, that doesn't
+    mean you are empty handed.  You have some equipment in your
+    inventory!
+
+    Hit [i] to bring up the inventory screen.  Use the cursor to
+    target the chain mail.  Hit [Enter] to bring up the context menu.
+    Select Equip.  Target the body slot and hit [Enter] to put the
+    chainmail on your body.
+
+    Mouse: The brown bag action bar icon brings up the inventory screen.  When
+    you select an item, the action bar reflects things you can do with it.  The
+    fully dressed person means equip.
+
+SIGNPOST_SDL::PICKUP
+    Pick Up
+    -------
+
+    Look!  Some earlier adventurer has left an item on the dungeon
+    floor!  All the better to equip yourself with!
+
+    Walk over the longsword.  Hit [g] to pick up the sword.
+    Then use [i] to bring up your inventory and to equip it in
+    your Main Hand.
+
+    Mouse: The action bar has a pickup command.
+
+SIGNPOST_SDL::DOOR
+    Doors
+    -----
+
+    Passages in the dungeon can be blocked by simple wooden doors.
+    Opening is straightforward: walk into the door and you will try
+    and open it.  If at first you don't succeed, try, try again!
+
+    Mouse: You need to click on the door when standing beside it - clicking
+    past the door will have you stop at the door.
+
+SIGNPOST_SDL::USE
+    Item Use
+    --------
+
+    Three different items are here.  What sort of items is a mystery.
+    They could be beneficial or dangerous.  The easiest way to learn
+    is by trial!
+
+    Pick up the items by walking over them and hitting [g].  Use [i]
+    for your inventory and select the items with [Enter].  Try to
+    Drink the potion, to Zap the wand, and to Read the scroll.
+
+SIGNPOST_SDL::WATER
+    Water
+    -----
+
+    Your way forward is blocked by a large pool of water.  Without
+    some magical assistance, you will likely sink in the water if you
+    walk on it.  When underwater you will take drowning damage until
+    you resurface.  You can try and return to the surface by walking
+    back onto land.
+
+    You can also climb out of water or up and down staircases with [>]
+    and [<].
+
+    Mouse: The ladder action bar icon performs Climb.
+
+SIGNPOST_SDL::SEARCH
+    Secret Doors
+    ------------
+
+    This room would seem to be a dead end.  However, not everything is
+    as it seems.
+
+    Repeatedly press [s] while standing by the walls of this room to
+    search for secret doors.
+
+    Mouse: Click on yourself to search.
+
+SIGNPOST_SDL::SPELLS
+    Spells and Skills
+    -----------------
+
+    As you explore the dungeons of POWDER you will encounter books
+    that hold powerful skills and arcane spells.  To unlock these,
+    first pick up the book by walking on it and hitting [g]. Then
+    raise your inventory with [i].  Select the book and choose the
+    Read option to learn what skills and spells are possible.
+
+    When you are reading a book you can hit [Enter] to try and learn the
+    current skill or spell.  It may have prerequisites that prevent
+    you from learning it just yet.  [Escape] will stop reading.  [i]
+    will bring up help on that specific spell.
+
+    There is a maximum number of skills you can know based on your
+    physical level and a maximum number of spells based on your
+    mental level.  These levels increase when you gain 1000
+    experience.  The amount they increase depends on the god you pick.
+
+    You can free up spells and skills by hitting [F] (shift-f) for the
+    Forget command.
+
+    Skills take effect automatically so you do not need to explicitly
+    invoke them.
+
+    Spells can be cast by hitting [z] provided you have enough magic
+    points for the spell.
+
+    Mouse: The lightning bolt icon casts a spell.  The Forget command can be
+    found on the Command menu which is the > icon on the action bar.
+
+SIGNPOST_SDL::DIP
+    Dipping Items
+    -------------
+
+    You can dip items into potions.  This can be useful to discover
+    the property of the potion or to apply some effect to the item.
+
+    Pick up the long sword and potion.  Hit [i] for the inventory
+    screen and select the long sword with [Enter].  Choose the Dip
+    command from the menu.  Then pick the potion and select it as the
+    target.  Most likely, nothing will happen.
+
+SIGNPOST_SDL::QUIVER
+    Quivering Ammo
+    --------------
+
+    You can throw individual items by [i] to the inventory
+    screen, selecting the item with [Enter], and choosing the Throw
+    command from the menu.  You will then pick a direction.  You can
+    throw in 10 directions.  In addition to the movement directions,
+    you can throw along the four diagonals.  You can also throw up and
+    down by selecting the square two squares up or two squares down
+    from you.  Be warned that things that are thrown upwards tend to
+    fall back down.
+
+    This process can get tedious, however.  Instead you can quiver
+    items that you want to throw often.  [i] to inventory, select
+    your item, and pick Quiver.  A q will appear beside the item to
+    mark it as quivered.  Quivered items have the dequiver option to
+    undo this.
+
+    To throw a quivered item hit [f] and choose a direction.
+
+    Note that when you walk over items that were quivered you will
+    automatically pick them up without taking a turn.
+
+SIGNPOST_SDL::DARK
+    Darkness
+    --------
+
+    Not all of POWDER is well lit.  Many areas are dark, only allowing
+    you to see your immediate surroundings.  Light sources can be
+    invaluable in mapping these areas faster and ensuring you get the
+    jump on foes, rather than the other way around.
+    
+SIGNPOST_SDL::DRAGONS
+    Dragons
+    -------
+
+    Here be dragons!
+    
+SIGNPOST_SDL::WONTUTORIAL
+    The whole point of those dragons was to ensure you would die.  I
+    had thought I had put enough in there.  Clearly, I underestimated
+    either your skill or persistence.  Or maybe both.
+
+    It is not recommended that you let me know you read this.  I will
+    probably just respond by adding more dragons.
+    
+    - Jeff Lait
+
+SIGNPOST_SDL::KIWI
+    Down this corridor is one of the most feared of creatures: the
+    kiwi!  This fear is misfounded as the kiwi is a peaceable sort that
+    will only attack if provoked.
+
+    Sometimes you may find your way blocked by a kiwi.  If waiting
+    isn't an option, you can try and swap places.  Hit [S] (shift-s)
+    and select the direction of the kiwi to switch places peacefully.
+
+    If you look at a creature and it isn't described as hostile, there
+    is no need to attack it as it will leave you alone.
+
+SIGNPOST_SDL::WON
+    WARNING: Cave may contain the ultimate evil, Baalz'bub.
+
+    NOTE: Entrance has a magic one-way seal to prevent anything from
+    escaping.  Anything includes you!
+
+SIGNPOST_iPOWDER::WELCOME
+    Welcome to the Tutorial!
+
+    Tap the top and bottom to scroll through this message.  
+    You've read it all when the arrows disappear at the bottom.
+
+    There are three buttons on screen, a green [A], red [B], and a blue
+    directional pad.  [A] usually means Okay, [B] means Cancel, and the
+    directional pad are the four directions.
+
+    When you have menus visible you can select the current entry with
+    [A].  To cancel the menu hit [B].
+
+    The first task is to move!  You can move in four directions, up,
+    down, left, and right by pressing the directional pad or tapping
+    on the screen.  Tapping on yourself will search in place.
+
+    Now move down the hallway to the next signpost!
+
+SIGNPOST_iPOWDER::MINIMAP
+    Help and Minimap
+    ----------------
+
+    While playing you can get help.  Hit ? button to bring up the help menu.
+
+    As you explore the dungeon you reveal more of the map.  There is a map
+    button you can press to bring up the mini map.  Your
+    location is a white square.  Up and down staircases are green
+    squares.
+
+SIGNPOST_iPOWDER::LOOK
+    Look and History
+    ----------------
+
+    Tap the eyeball.  This puts you in look mode that lets you scroll around.
+    Selecting a monster and tapping [A] will provide detailed information
+    about that monster.  Select yourself to see your current state.
+
+    Tap the clock.  This brings up the history of messages you have received.
+
+SIGNPOST_iPOWDER::BOULDER
+    Boulders
+    --------
+
+    Boulders are too large to pick up but can be pushed through the
+    dungeon.  If you get yourself stuck behind a boulder, you can Swap
+    places with it.  First, remove your equipped items using the
+    inventory screen.  Then tap the swap button.  After choosing the direction
+    of the boulder, you will swap places with it.
+
+    Note you can also swap with friendly monsters.
+
+    Note that to push a boulder by tapping on the screen you you tap click on
+    the tile adjacent to you - it will not be pushed in run mode.
+
+SIGNPOST_iPOWDER::MELEE
+    Combat
+    ------
+
+    Behind this door is a fearsome foe!
+
+    Attacking an enemy with your equipped weapon is simple.  Just walk
+    into it!  Note that tame or friendly creatures won't be attacked
+    this way - you will instead swap positions.  If you are using the
+    directional pad, attacking is the default.  If you are tapping on the
+    screen to move, you will only attack if you tap directly on an adjacent
+    monster.
+
+    Adventuring can make one hungry.  If a corpse is left you can accept
+    the auto-prompt to eat it.  Be warned that you are what you eat!
+
+SIGNPOST_iPOWDER::INVENTORY
+    Inventory
+    ---------
+
+    While you start the adventure not wearing anything, that doesn't
+    mean you are empty handed.  You have some equipment in your
+    inventory!
+
+    Tap the bag to bring up the inventory screen.  Use the cursor to
+    target the chain mail.  Hit [A] to bring up the context menu.
+    Select Equip.  Target the body slot and hit [A] to put the
+    chainmail on your body.
+
+SIGNPOST_iPOWDER::PICKUP
+    Pick Up
+    -------
+
+    Look!  Some earlier adventurer has left an item on the dungeon
+    floor!  All the better to equip yourself with!
+
+    Walk over the longsword.  Accept the auto-prompt to pick up the sword.
+    Then use the bag button to bring up your inventory and to equip it in
+    your Main Hand.
+
+SIGNPOST_iPOWDER::DOOR
+    Doors
+    -----
+
+    Passages in the dungeon can be blocked by simple wooden doors.
+    Opening is straightforward: walk into the door and you will try
+    and open it.  If at first you don't succeed, try, try again!
+
+    If tapping on the screen to move, note that you will only attempt
+    to open the door if you tap directly on an adjacent door.
+
+SIGNPOST_iPOWDER::USE
+    Item Use
+    --------
+
+    Three different items are here.  What sort of items is a mystery.
+    They could be beneficial or dangerous.  The easiest way to learn
+    is by trial!
+
+    Pick up the items by walking over them and accepting the prompt.  Tap the
+    bag for your inventory and select the items with [A].  Try to
+    Drink the potion, to Zap the wand, and to Read the scroll.
+
+SIGNPOST_iPOWDER::WATER
+    Water
+    -----
+
+    Your way forward is blocked by a large pool of water.  Without
+    some magical assistance, you will likely sink in the water if you
+    walk on it.  When underwater you will take drowning damage until
+    you resurface.  You can try and return to the surface by walking
+    back onto land.
+
+    You can also climb out of water by selecting the Climb command
+    from the command menu (> button), or by adding a Climb action button.
+
+SIGNPOST_iPOWDER::SEARCH
+    Secret Doors
+    ------------
+
+    This room would seem to be a dead end.  However, not everything is
+    as it seems.
+
+    Repeatedly press the door-with-question mark button while standing by the
+    walls of this room to search for secret doors.
+
+SIGNPOST_iPOWDER::SPELLS
+    Spells and Skills
+    -----------------
+
+    As you explore the dungeons of POWDER you will encounter books
+    that hold powerful skills and arcane spells.  To unlock these,
+    first pick up the book by walking on it and accepting the autoprompt. 
+    Then raise your inventory with bag button.  Select the book and choose the
+    Read option to learn what skills and spells are possible.
+
+    When you are reading a book you can hit [A] to try and learn the
+    current skill or spell.  It may have prerequisites that prevent
+    you from learning it just yet.  [B] will stop reading.  
+
+    There is a maximum number of skills you can know based on your
+    physical level and a maximum number of spells based on your
+    mental level.  These levels increase when you gain 1000
+    experience.  The amount they increase depends on the god you pick.
+
+    You can free up spells and skills by using the Forget action.  You can use
+    this from the Command Menu (> button) or by creating a the Forget action
+    button.
+
+    Skills take effect automatically so you do not need to explicitly
+    invoke them.
+
+    Spells can be cast by hitting the lightning bolt button provided you have
+    enough magic points for the spell.  Note you can also create spell buttons
+    to simplify the casting process.
+
+SIGNPOST_iPOWDER::DIP
+    Dipping Items
+    -------------
+
+    You can dip items into potions.  This can be useful to discover
+    the property of the potion or to apply some effect to the item.
+
+    Pick up the long sword and potion.  Tap the bag button for the inventory
+    screen and select the long sword with [A].  Tap the Dip
+    command from the menu, this is the potion with the downward arrow.  Then
+    pick the potion and select it as the target.  Most likely, nothing will
+    happen.
+
+SIGNPOST_iPOWDER::QUIVER
+    Quivering Ammo
+    --------------
+
+    You can throw individual items by going to the inventory
+    screen, selecting the item with [A], and choosing the Throw
+    command from the menu.  You will then pick a direction.  You can
+    throw in 10 directions.  In addition to the movement directions,
+    you can throw along the four diagonals.  You can also throw up and
+    down by selecting the square two squares up or two squares down
+    from you.  Be warned that things that are thrown upwards tend to
+    fall back down.
+
+    This process can get tedious, however.  Instead you can quiver
+    items that you want to throw often.  Go to inventory, select
+    your item, and pick Quiver.  A q will appear beside the item to
+    mark it as quivered.  Quivered items have the dequiver option to
+    undo this.
+
+    To throw a quivered item tap the bow button from the main screen and choose
+    a direction.
+
+    Note that when you walk over items that were quivered you will
+    automatically pick them up without taking a turn.
+
+SIGNPOST_iPOWDER::DARK
+    Darkness
+    --------
+
+    Not all of POWDER is well lit.  Many areas are dark, only allowing
+    you to see your immediate surroundings.  Light sources can be
+    invaluable in mapping these areas faster and ensuring you get the
+    jump on foes, rather than the other way around.
+    
+SIGNPOST_iPOWDER::DRAGONS
+    Dragons
+    -------
+
+    Here be dragons!
+    
+SIGNPOST_iPOWDER::WONTUTORIAL
+    The whole point of those dragons was to ensure you would die.  I
+    had thought I had put enough in there.  Clearly, I underestimated
+    either your skill or persistence.  Or maybe both.
+
+    It is not recommended that you let me know you read this.  I will
+    probably just respond by adding more dragons.
+    
+    - Jeff Lait
+
+SIGNPOST_iPOWDER::KIWI
+    Down this corridor is one of the most feared of creatures: the
+    kiwi!  This fear is misfounded as the kiwi is a peaceable sort that
+    will only attack if provoked.
+
+    Sometimes you may find your way blocked by a kiwi.  If waiting
+    isn't an option, you can try and swap places.  Tap the swap button
+    and select the direction of the kiwi to switch places peacefully.
+
+    If you look at a creature and it isn't described as hostile, there
+    is no need to attack it as it will leave you alone.
+
+SIGNPOST_iPOWDER::WON
+    WARNING: Cave may contain the ultimate evil, Baalz'bub.
+
+    NOTE: Entrance has a magic one-way seal to prevent anything from
+    escaping.  Anything includes you!
+
+TALK::ELDER - village elder
+    So the omens were true!  You have defeated the great evil in the cave.
+    Not just those of the village, but the whole kingdom can sleep better
+    now.
+
+    Your strength and tenacity in the face of incredible odds should be
+    celebrated!
+
+    I have just such a celebration prepared at the village.  When you
+    are ready I can lead you there.
+

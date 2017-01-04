@@ -1,0 +1,388 @@
+linking Powder.elf
+n3dsmain.o: In function `getGlobalActionStrip()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:190: multiple definition of `getGlobalActionStrip()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:190: first defined here
+n3dsmain.o: In function `attemptunlock()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:190: multiple definition of `attemptunlock()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:190: first defined here
+n3dsmain.o: In function `getInventoryActionStrip(int)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:316: multiple definition of `getInventoryActionStrip(int)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:316: first defined here
+n3dsmain.o: In function `resetDefaultActionStrip()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:321: multiple definition of `resetDefaultActionStrip()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:321: first defined here
+n3dsmain.o: In function `getActionChar(ACTION_NAMES)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:348: multiple definition of `getActionChar(ACTION_NAMES)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:348: first defined here
+n3dsmain.o: In function `hideSideActionBar()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:349: multiple definition of `hideSideActionBar()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:349: first defined here
+n3dsmain.o: In function `getMask(unsigned char, int)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:373: multiple definition of `getMask(unsigned char, int)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:373: first defined here
+n3dsmain.o: In function `setMask(bool, int)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:382: multiple definition of `setMask(bool, int)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:382: first defined here
+n3dsmain.o: In function `loadOptions(SRAMSTREAM&)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:389: multiple definition of `loadOptions(SRAMSTREAM&)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:389: first defined here
+n3dsmain.o: In function `saveOptions(SRAMSTREAM&)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:437: multiple definition of `saveOptions(SRAMSTREAM&)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:437: first defined here
+n3dsmain.o: In function `makeAWish(MOB*)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:473: multiple definition of `makeAWish(MOB*)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:473: first defined here
+n3dsmain.o: In function `writeYesNoBar()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1031: multiple definition of `writeYesNoBar()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1031: first defined here
+n3dsmain.o: In function `writeGlobalActionBar(bool)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1061: multiple definition of `writeGlobalActionBar(bool)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1061: first defined here
+n3dsmain.o: In function `getColourFromRatio(int, int)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1133: multiple definition of `getColourFromRatio(int, int)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1133: first defined here
+n3dsmain.o: In function `writeStatusLine()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1142: multiple definition of `writeStatusLine()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1142: first defined here
+n3dsmain.o: In function `buildMenu(ACTION_NAMES*, unsigned char**)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1316: multiple definition of `buildMenu(ACTION_NAMES*, unsigned char**)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1316: first defined here
+n3dsmain.o: In function `selectMenu(ACTION_NAMES*)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1345: multiple definition of `selectMenu(ACTION_NAMES*)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1345: first defined here
+n3dsmain.o: In function `selectAssignment(ACTION_NAMES*, int&)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1383: multiple definition of `selectAssignment(ACTION_NAMES*, int&)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1383: first defined here
+n3dsmain.o: In function `buildActionMenu(ITEM*, ACTION_NAMES*)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1446: multiple definition of `buildActionMenu(ITEM*, ACTION_NAMES*)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1446: first defined here
+n3dsmain.o: In function `writeItemActionBar(ITEM*, bool)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1509: multiple definition of `writeItemActionBar(ITEM*, bool)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1509: first defined here
+n3dsmain.o: In function `introMessage()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1578: multiple definition of `introMessage()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1578: first defined here
+n3dsmain.o: In function `loadGame()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1999: multiple definition of `loadGame()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1999: first defined here
+n3dsmain.o: In function `rebuild_all()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:2121: multiple definition of `rebuild_all()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:2121: first defined here
+n3dsmain.o: In function `processWorld()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:2264: multiple definition of `processWorld()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:2264: first defined here
+n3dsmain.o: In function `performAutoPickup()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:2332: multiple definition of `performAutoPickup()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:2332: first defined here
+n3dsmain.o: In function `performRandomAction(MOB*)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:2372: multiple definition of `performRandomAction(MOB*)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:2372: first defined here
+n3dsmain.o: In function `performAutoRead()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:2474: multiple definition of `performAutoRead()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:2474: first defined here
+n3dsmain.o: In function `processHelp()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:3438: multiple definition of `processHelp()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:3438: first defined here
+n3dsmain.o: In function `saveGame()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:3588: multiple definition of `saveGame()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:3588: first defined here
+n3dsmain.o: In function `processOptions()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:3678: multiple definition of `processOptions()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:3678: first defined here
+n3dsmain.o: In function `intro_screen()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:1615: multiple definition of `intro_screen()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:1615: first defined here
+n3dsmain.o: In function `processVerbList()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:4409: multiple definition of `processVerbList()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:4409: first defined here
+n3dsmain.o: In function `processDirectionStylus(int&, int&, bool&, bool&, bool)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5567: multiple definition of `processDirectionStylus(int&, int&, bool&, bool&, bool)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5567: first defined here
+n3dsmain.o: In function `checkMiniMapButtons()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5633: multiple definition of `checkMiniMapButtons()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5633: first defined here
+n3dsmain.o: In function `checkModifierButtons()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5665: multiple definition of `checkModifierButtons()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5665: first defined here
+n3dsmain.o: In function `performAutoPrompt()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:2500: multiple definition of `performAutoPrompt()'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:2500: first defined here
+n3dsmain.o: In function `useInventory(MOB*, bool)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:2680: multiple definition of `useInventory(MOB*, bool)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:2680: first defined here
+n3dsmain.o: In function `processAction(ACTION_NAMES, SPELL_NAMES, MOB*)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:4507: multiple definition of `processAction(ACTION_NAMES, SPELL_NAMES, MOB*)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:4507: first defined here
+n3dsmain.o: In function `processAllInput(ACTION_NAMES&, SPELL_NAMES&, int&, int&)':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5698: multiple definition of `processAllInput(ACTION_NAMES&, SPELL_NAMES&, int&, int&)'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5698: first defined here
+n3dsmain.o: In function `main':
+c:/3DS/Homebrew/Games/WIP/Powder/port/3ds/n3dsmain.cpp:23: multiple definition of `main'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5566: first defined here
+n3dsmain.o: In function `main':
+c:/3DS/Homebrew/Games/WIP/Powder/port/3ds/n3dsmain.cpp:23: multiple definition of `menu_generic'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5566: first defined here
+n3dsmain.o: In function `main':
+c:/3DS/Homebrew/Games/WIP/Powder/port/3ds/n3dsmain.cpp:23: multiple definition of `glb_globalactionstrip'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5566: first defined here
+n3dsmain.o: In function `main':
+c:/3DS/Homebrew/Games/WIP/Powder/port/3ds/n3dsmain.cpp:26: multiple definition of `glb_actionbuttons'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5579: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5579: multiple definition of `glbSearchCount'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5588: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5578: multiple definition of `glbHasJustSearched'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5588: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5589: multiple definition of `glbAutoRunOpenSpace'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5594: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5579: multiple definition of `glbAutoRunEnabled'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5589: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5588: multiple definition of `glbAutoRunDY'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5591: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5588: multiple definition of `glbAutoRunDX'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5594: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5588: multiple definition of `glbToggleJump'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5594: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5588: multiple definition of `glbJump'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5599: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5588: multiple definition of `glbToggleSwap'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5594: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5588: multiple definition of `glbSwap'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5599: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5588: multiple definition of `glbToggleSafeWalk'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5594: first defined here
+n3dsmain.o: In function `main':
+c:/3DS/Homebrew/Games/WIP/Powder/port/3ds/n3dsmain.cpp:27: multiple definition of `glbSafeWalk'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5587: first defined here
+n3dsmain.o: In function `PTRSTACK<ITEM*>::reverse()':
+c:\3ds\homebrew\games\wip\powder/main.cpp:5580: multiple definition of `glbFinishedASave'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5588: first defined here
+n3dsmain.o: In function `main':
+c:/3DS/Homebrew/Games/WIP/Powder/port/3ds/n3dsmain.cpp:23: multiple definition of `glbColouredFont'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5566: first defined here
+n3dsmain.o: In function `main':
+c:/3DS/Homebrew/Games/WIP/Powder/port/3ds/n3dsmain.cpp:23: multiple definition of `glbActionBar'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5566: first defined here
+n3dsmain.o: In function `main':
+c:/3DS/Homebrew/Games/WIP/Powder/port/3ds/n3dsmain.cpp:23: multiple definition of `glbScreenTap'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5566: first defined here
+n3dsmain.o: In function `main':
+c:/3DS/Homebrew/Games/WIP/Powder/port/3ds/n3dsmain.cpp:27: multiple definition of `glbSuppressAutoClimb'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5587: first defined here
+n3dsmain.o: In function `main':
+c:/3DS/Homebrew/Games/WIP/Powder/port/3ds/n3dsmain.cpp:23: multiple definition of `glbAutoPrompt'
+main.o:c:/3DS/Homebrew/Games/WIP/Powder/main.cpp:5566: first defined here
+slug_and_blood.bmp.o:(.rodata+0x0): multiple definition of `bmp_slug_and_blood'
+all_bitmaps.o:(.data+0x20c): first defined here
+c:/devkitpro/devkitarm/bin/../lib/gcc/arm-none-eabi/5.3.0/../../../../arm-none-eabi/bin/ld.exe: Warning: size of symbol `bmp_slug_and_blood' changed from 4 in all_bitmaps.o to 76800 in slug_and_blood.bmp.o
+alphabet_brass_8.o:(.rodata+0x0): multiple definition of `alphabet_brass_Tiles'
+alphabet_brass_8.o:(.rodata+0x0): first defined here
+alphabet_classic_8.o:(.rodata+0x0): multiple definition of `alphabet_classic_Tiles'
+alphabet_classic_8.o:(.rodata+0x0): first defined here
+alphabet_heavy_8.o:(.rodata+0x0): multiple definition of `alphabet_heavy_Tiles'
+alphabet_heavy_8.o:(.rodata+0x0): first defined here
+alphabet_light_8.o:(.rodata+0x0): multiple definition of `alphabet_light_Tiles'
+alphabet_light_8.o:(.rodata+0x0): first defined here
+alphabet_shadow_8.o:(.rodata+0x0): multiple definition of `alphabet_shadow_Tiles'
+alphabet_shadow_8.o:(.rodata+0x0): first defined here
+dungeon16_16.o:(.rodata+0x0): multiple definition of `dungeon16_Tiles'
+dungeon16_16.o:(.rodata+0x0): first defined here
+master.pal.o:(.rodata+0x0): multiple definition of `master_Palette'
+master.pal.o:(.rodata+0x0): first defined here
+mini16_16.o:(.rodata+0x0): multiple definition of `mini16_Tiles'
+mini16_16.o:(.rodata+0x0): first defined here
+minif16_16.o:(.rodata+0x0): multiple definition of `minif16_Tiles'
+minif16_16.o:(.rodata+0x0): first defined here
+sprite.pal.o:(.rodata+0x0): multiple definition of `sprite_Palette'
+sprite.pal.o:(.rodata+0x0): first defined here
+sprite16_16.o:(.rodata+0x0): multiple definition of `sprite16_Tiles'
+sprite16_16.o:(.rodata+0x0): first defined here
+alphabet_brass_8.o:(.rodata+0x0): multiple definition of `alphabet_brass_Tiles'
+alphabet_brass_8.o:(.rodata+0x0): first defined here
+alphabet_classic_8.o:(.rodata+0x0): multiple definition of `alphabet_classic_Tiles'
+alphabet_classic_8.o:(.rodata+0x0): first defined here
+alphabet_heavy_8.o:(.rodata+0x0): multiple definition of `alphabet_heavy_Tiles'
+alphabet_heavy_8.o:(.rodata+0x0): first defined here
+alphabet_light_8.o:(.rodata+0x0): multiple definition of `alphabet_light_Tiles'
+alphabet_light_8.o:(.rodata+0x0): first defined here
+alphabet_shadow_8.o:(.rodata+0x0): multiple definition of `alphabet_shadow_Tiles'
+alphabet_shadow_8.o:(.rodata+0x0): first defined here
+dungeon16_16.o:(.rodata+0x0): multiple definition of `dungeon16_Tiles'
+dungeon16_16.o:(.rodata+0x0): first defined here
+master.pal.o:(.rodata+0x0): multiple definition of `master_Palette'
+master.pal.o:(.rodata+0x0): first defined here
+mini16_16.o:(.rodata+0x0): multiple definition of `mini16_Tiles'
+mini16_16.o:(.rodata+0x0): first defined here
+minif16_16.o:(.rodata+0x0): multiple definition of `minif16_Tiles'
+minif16_16.o:(.rodata+0x0): first defined here
+sprite.pal.o:(.rodata+0x0): multiple definition of `sprite_Palette'
+sprite.pal.o:(.rodata+0x0): first defined here
+sprite16_16.o:(.rodata+0x0): multiple definition of `sprite16_Tiles'
+sprite16_16.o:(.rodata+0x0): first defined here
+alphabet_brass_8.o:(.rodata+0x0): multiple definition of `alphabet_brass_Tiles'
+alphabet_brass_8.o:(.rodata+0x0): first defined here
+alphabet_classic_8.o:(.rodata+0x0): multiple definition of `alphabet_classic_Tiles'
+alphabet_classic_8.o:(.rodata+0x0): first defined here
+alphabet_heavy_8.o:(.rodata+0x0): multiple definition of `alphabet_heavy_Tiles'
+alphabet_heavy_8.o:(.rodata+0x0): first defined here
+alphabet_light_8.o:(.rodata+0x0): multiple definition of `alphabet_light_Tiles'
+alphabet_light_8.o:(.rodata+0x0): first defined here
+alphabet_shadow_8.o:(.rodata+0x0): multiple definition of `alphabet_shadow_Tiles'
+alphabet_shadow_8.o:(.rodata+0x0): first defined here
+dungeon16_16.o:(.rodata+0x0): multiple definition of `dungeon16_Tiles'
+dungeon16_16.o:(.rodata+0x0): first defined here
+master.pal.o:(.rodata+0x0): multiple definition of `master_Palette'
+master.pal.o:(.rodata+0x0): first defined here
+mini16_16.o:(.rodata+0x0): multiple definition of `mini16_Tiles'
+mini16_16.o:(.rodata+0x0): first defined here
+minif16_16.o:(.rodata+0x0): multiple definition of `minif16_Tiles'
+minif16_16.o:(.rodata+0x0): first defined here
+sprite.pal.o:(.rodata+0x0): multiple definition of `sprite_Palette'
+sprite.pal.o:(.rodata+0x0): first defined here
+sprite16_16.o:(.rodata+0x0): multiple definition of `sprite16_Tiles'
+sprite16_16.o:(.rodata+0x0): first defined here
+alphabet_brass_8.o:(.rodata+0x0): multiple definition of `alphabet_brass_Tiles'
+alphabet_brass_8.o:(.rodata+0x0): first defined here
+alphabet_classic_8.o:(.rodata+0x0): multiple definition of `alphabet_classic_Tiles'
+alphabet_classic_8.o:(.rodata+0x0): first defined here
+alphabet_heavy_8.o:(.rodata+0x0): multiple definition of `alphabet_heavy_Tiles'
+alphabet_heavy_8.o:(.rodata+0x0): first defined here
+alphabet_light_8.o:(.rodata+0x0): multiple definition of `alphabet_light_Tiles'
+alphabet_light_8.o:(.rodata+0x0): first defined here
+alphabet_shadow_8.o:(.rodata+0x0): multiple definition of `alphabet_shadow_Tiles'
+alphabet_shadow_8.o:(.rodata+0x0): first defined here
+dungeon16_16.o:(.rodata+0x0): multiple definition of `dungeon16_Tiles'
+dungeon16_16.o:(.rodata+0x0): first defined here
+master.pal.o:(.rodata+0x0): multiple definition of `master_Palette'
+master.pal.o:(.rodata+0x0): first defined here
+mini16_16.o:(.rodata+0x0): multiple definition of `mini16_Tiles'
+mini16_16.o:(.rodata+0x0): first defined here
+minif16_16.o:(.rodata+0x0): multiple definition of `minif16_Tiles'
+minif16_16.o:(.rodata+0x0): first defined here
+sprite.pal.o:(.rodata+0x0): multiple definition of `sprite_Palette'
+sprite.pal.o:(.rodata+0x0): first defined here
+sprite16_16.o:(.rodata+0x0): multiple definition of `sprite16_Tiles'
+sprite16_16.o:(.rodata+0x0): first defined here
+alphabet_brass_8.o:(.rodata+0x0): multiple definition of `alphabet_brass_Tiles'
+alphabet_brass_8.o:(.rodata+0x0): first defined here
+alphabet_classic_8.o:(.rodata+0x0): multiple definition of `alphabet_classic_Tiles'
+alphabet_classic_8.o:(.rodata+0x0): first defined here
+alphabet_heavy_8.o:(.rodata+0x0): multiple definition of `alphabet_heavy_Tiles'
+alphabet_heavy_8.o:(.rodata+0x0): first defined here
+alphabet_light_8.o:(.rodata+0x0): multiple definition of `alphabet_light_Tiles'
+alphabet_light_8.o:(.rodata+0x0): first defined here
+alphabet_shadow_8.o:(.rodata+0x0): multiple definition of `alphabet_shadow_Tiles'
+alphabet_shadow_8.o:(.rodata+0x0): first defined here
+dungeon16_16.o:(.rodata+0x0): multiple definition of `dungeon16_Tiles'
+dungeon16_16.o:(.rodata+0x0): first defined here
+master.pal.o:(.rodata+0x0): multiple definition of `master_Palette'
+master.pal.o:(.rodata+0x0): first defined here
+mini16_16.o:(.rodata+0x0): multiple definition of `mini16_Tiles'
+mini16_16.o:(.rodata+0x0): first defined here
+minif16_16.o:(.rodata+0x0): multiple definition of `minif16_Tiles'
+minif16_16.o:(.rodata+0x0): first defined here
+sprite.pal.o:(.rodata+0x0): multiple definition of `sprite_Palette'
+sprite.pal.o:(.rodata+0x0): first defined here
+sprite16_16.o:(.rodata+0x0): multiple definition of `sprite16_Tiles'
+sprite16_16.o:(.rodata+0x0): first defined here
+alphabet_brass_8.o:(.rodata+0x0): multiple definition of `alphabet_brass_Tiles'
+alphabet_brass_8.o:(.rodata+0x0): first defined here
+alphabet_classic_8.o:(.rodata+0x0): multiple definition of `alphabet_classic_Tiles'
+alphabet_classic_8.o:(.rodata+0x0): first defined here
+alphabet_heavy_8.o:(.rodata+0x0): multiple definition of `alphabet_heavy_Tiles'
+alphabet_heavy_8.o:(.rodata+0x0): first defined here
+alphabet_light_8.o:(.rodata+0x0): multiple definition of `alphabet_light_Tiles'
+alphabet_light_8.o:(.rodata+0x0): first defined here
+alphabet_shadow_8.o:(.rodata+0x0): multiple definition of `alphabet_shadow_Tiles'
+alphabet_shadow_8.o:(.rodata+0x0): first defined here
+dungeon16_16.o:(.rodata+0x0): multiple definition of `dungeon16_Tiles'
+dungeon16_16.o:(.rodata+0x0): first defined here
+master.pal.o:(.rodata+0x0): multiple definition of `master_Palette'
+master.pal.o:(.rodata+0x0): first defined here
+mini16_16.o:(.rodata+0x0): multiple definition of `mini16_Tiles'
+mini16_16.o:(.rodata+0x0): first defined here
+minif16_16.o:(.rodata+0x0): multiple definition of `minif16_Tiles'
+minif16_16.o:(.rodata+0x0): first defined here
+sprite.pal.o:(.rodata+0x0): multiple definition of `sprite_Palette'
+sprite.pal.o:(.rodata+0x0): first defined here
+sprite16_16.o:(.rodata+0x0): multiple definition of `sprite16_Tiles'
+sprite16_16.o:(.rodata+0x0): first defined here
+alphabet_brass_8.o:(.rodata+0x0): multiple definition of `alphabet_brass_Tiles'
+alphabet_brass_8.o:(.rodata+0x0): first defined here
+alphabet_classic_8.o:(.rodata+0x0): multiple definition of `alphabet_classic_Tiles'
+alphabet_classic_8.o:(.rodata+0x0): first defined here
+alphabet_heavy_8.o:(.rodata+0x0): multiple definition of `alphabet_heavy_Tiles'
+alphabet_heavy_8.o:(.rodata+0x0): first defined here
+alphabet_light_8.o:(.rodata+0x0): multiple definition of `alphabet_light_Tiles'
+alphabet_light_8.o:(.rodata+0x0): first defined here
+alphabet_shadow_8.o:(.rodata+0x0): multiple definition of `alphabet_shadow_Tiles'
+alphabet_shadow_8.o:(.rodata+0x0): first defined here
+dungeon16_16.o:(.rodata+0x0): multiple definition of `dungeon16_Tiles'
+dungeon16_16.o:(.rodata+0x0): first defined here
+master.pal.o:(.rodata+0x0): multiple definition of `master_Palette'
+master.pal.o:(.rodata+0x0): first defined here
+mini16_16.o:(.rodata+0x0): multiple definition of `mini16_Tiles'
+mini16_16.o:(.rodata+0x0): first defined here
+minif16_16.o:(.rodata+0x0): multiple definition of `minif16_Tiles'
+minif16_16.o:(.rodata+0x0): first defined here
+sprite.pal.o:(.rodata+0x0): multiple definition of `sprite_Palette'
+sprite.pal.o:(.rodata+0x0): first defined here
+sprite16_16.o:(.rodata+0x0): multiple definition of `sprite16_Tiles'
+sprite16_16.o:(.rodata+0x0): first defined here
+alphabet_brass_8.o:(.rodata+0x0): multiple definition of `alphabet_brass_Tiles'
+alphabet_brass_8.o:(.rodata+0x0): first defined here
+alphabet_classic_8.o:(.rodata+0x0): multiple definition of `alphabet_classic_Tiles'
+alphabet_classic_8.o:(.rodata+0x0): first defined here
+alphabet_heavy_8.o:(.rodata+0x0): multiple definition of `alphabet_heavy_Tiles'
+alphabet_heavy_8.o:(.rodata+0x0): first defined here
+alphabet_light_8.o:(.rodata+0x0): multiple definition of `alphabet_light_Tiles'
+alphabet_light_8.o:(.rodata+0x0): first defined here
+alphabet_shadow_8.o:(.rodata+0x0): multiple definition of `alphabet_shadow_Tiles'
+alphabet_shadow_8.o:(.rodata+0x0): first defined here
+dungeon16_16.o:(.rodata+0x0): multiple definition of `dungeon16_Tiles'
+dungeon16_16.o:(.rodata+0x0): first defined here
+master.pal.o:(.rodata+0x0): multiple definition of `master_Palette'
+master.pal.o:(.rodata+0x0): first defined here
+mini16_16.o:(.rodata+0x0): multiple definition of `mini16_Tiles'
+mini16_16.o:(.rodata+0x0): first defined here
+minif16_16.o:(.rodata+0x0): multiple definition of `minif16_Tiles'
+minif16_16.o:(.rodata+0x0): first defined here
+sprite.pal.o:(.rodata+0x0): multiple definition of `sprite_Palette'
+sprite.pal.o:(.rodata+0x0): first defined here
+sprite16_16.o:(.rodata+0x0): multiple definition of `sprite16_Tiles'
+sprite16_16.o:(.rodata+0x0): first defined here
+alphabet_brass_8.o:(.rodata+0x0): multiple definition of `alphabet_brass_Tiles'
+alphabet_brass_8.o:(.rodata+0x0): first defined here
+alphabet_classic_8.o:(.rodata+0x0): multiple definition of `alphabet_classic_Tiles'
+alphabet_classic_8.o:(.rodata+0x0): first defined here
+alphabet_heavy_8.o:(.rodata+0x0): multiple definition of `alphabet_heavy_Tiles'
+alphabet_heavy_8.o:(.rodata+0x0): first defined here
+alphabet_light_8.o:(.rodata+0x0): multiple definition of `alphabet_light_Tiles'
+alphabet_light_8.o:(.rodata+0x0): first defined here
+alphabet_shadow_8.o:(.rodata+0x0): multiple definition of `alphabet_shadow_Tiles'
+alphabet_shadow_8.o:(.rodata+0x0): first defined here
+dungeon16_16.o:(.rodata+0x0): multiple definition of `dungeon16_Tiles'
+dungeon16_16.o:(.rodata+0x0): first defined here
+master.pal.o:(.rodata+0x0): multiple definition of `master_Palette'
+master.pal.o:(.rodata+0x0): first defined here
+mini16_16.o:(.rodata+0x0): multiple definition of `mini16_Tiles'
+mini16_16.o:(.rodata+0x0): first defined here
+minif16_16.o:(.rodata+0x0): multiple definition of `minif16_Tiles'
+minif16_16.o:(.rodata+0x0): first defined here
+sprite.pal.o:(.rodata+0x0): multiple definition of `sprite_Palette'
+sprite.pal.o:(.rodata+0x0): first defined here
+sprite16_16.o:(.rodata+0x0): multiple definition of `sprite16_Tiles'
+sprite16_16.o:(.rodata+0x0): first defined here
+collect2.exe: error: ld returned 1 exit status
+make[1]: *** [/c/3DS/Homebrew/Games/WIP/Powder/Powder.elf] Error 1
+make: *** [build] Error 2

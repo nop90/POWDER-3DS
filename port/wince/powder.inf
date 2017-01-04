@@ -1,0 +1,37 @@
+;.Set Compress=ON
+
+[Version]
+Signature   = "$Windows NT$"        ; required as-is
+Provider    = "Jeff Lait"
+CESignature = "$Windows CE$"        ; required as-is
+ 
+[CEStrings]
+AppName     = "POWDER"              ; maximum of 40 characters, full app name will be "<Provider> <AppName>"
+InstallDir  = %CE1%\%AppName%       ; Program Files\POWDER
+ 
+[SourceDisksNames]                  ; directory that holds the application's files
+1 = , "Build directory",,ARMV4Rel
+2 = , "Library",,..\SDL-1.2.13\VisualCE\SDL\ARMV4Rel\ 
+ 
+[SourceDisksFiles]                  ; list of files to be included in .cab
+sdl.dll = 2
+powder.exe = 1
+ 
+[DefaultInstall]                    ; operations to be completed during install
+CopyFiles   = CopyToProgramFiles
+CEShortcuts = Shortcuts   
+ 
+[DestinationDirs]                   ; default destination directories for each operation section
+CopyToProgramFiles    = 0, %InstallDir%
+Shortcuts   = 0, %CE14%             ; \Windows\Start Menu\Programs\Games
+ 
+[CopyToProgramFiles]                ; copy operation file list
+"powder.exe", powder.exe
+"sdl.dll", sdl.dll
+ 
+[RegData]                           ; registry key list
+HKCU,Software\%AppName%,MajorVersion,0x00010001,110
+HKCU,Software\%AppName%,MinorVersion,0x00010001,1
+ 
+[Shortcuts]                         ; Shortcut created in destination dir, %CE14%
+%AppName%,0,powder.exe

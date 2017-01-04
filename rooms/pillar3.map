@@ -1,0 +1,22 @@
+# Not your usual pillar
+
+allowstairs = false
+
++--------+
+|####x###|
+|#......#|
+|#.#s##.#|
+|x.#Mm#.x|
+|#.#mM#.#|
+|#.##s#.#|
+|#......#|
+|####x###|
++--------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+m: SQUARE_FLOOR, SQUAREFLAG_LIT, MOBLEVEL_NORMAL
+M: SQUARE_FLOOR, SQUAREFLAG_LIT, MOBLEVEL_STRONG, ITEMTYPE_ANY

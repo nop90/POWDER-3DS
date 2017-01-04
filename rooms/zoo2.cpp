@@ -1,0 +1,162 @@
+// Auto-generated .map file
+// DO NOT HAND EDIT
+// Generated from zoo2.map
+
+#include "../map.h"
+#include "../glbdef.h"
+
+const SQUARE_NAMES glb_zoo2_squarelist[] =
+{
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_BLOCKEDDOOR,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_WALL,	
+SQUARE_BLOCKEDDOOR,	SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_BLOCKEDDOOR,	
+SQUARE_WALL,	SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_BLOCKEDDOOR,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL
+};
+
+const PT2 glb_zoo2_moblist[] =
+{
+	{ -1, -1, MOB_NONE }
+};
+
+const PT2 glb_zoo2_itemlist[] =
+{
+	{ -1, -1, ITEM_NONE }
+};
+
+const PT2 glb_zoo2_itemtypelist[] =
+{
+	{ -1, -1, ITEMTYPE_NONE }
+};
+
+const PT2 glb_zoo2_moblevellist[] =
+{
+	{ 4, 5, MOBLEVEL_NORMAL },
+	{ 3, 5, MOBLEVEL_NORMAL },
+	{ 2, 5, MOBLEVEL_NORMAL },
+	{ 1, 5, MOBLEVEL_NORMAL },
+	{ 4, 4, MOBLEVEL_NORMAL },
+	{ 3, 4, MOBLEVEL_NORMAL },
+	{ 2, 4, MOBLEVEL_NORMAL },
+	{ 1, 4, MOBLEVEL_NORMAL },
+	{ 4, 3, MOBLEVEL_NORMAL },
+	{ 3, 3, MOBLEVEL_NORMAL },
+	{ 2, 3, MOBLEVEL_NORMAL },
+	{ 1, 3, MOBLEVEL_NORMAL },
+	{ 4, 2, MOBLEVEL_NORMAL },
+	{ 3, 2, MOBLEVEL_NORMAL },
+	{ 2, 2, MOBLEVEL_NORMAL },
+	{ 1, 2, MOBLEVEL_NORMAL },
+	{ 4, 1, MOBLEVEL_NORMAL },
+	{ 3, 1, MOBLEVEL_NORMAL },
+	{ 2, 1, MOBLEVEL_NORMAL },
+	{ 1, 1, MOBLEVEL_NORMAL },
+	{ -1, -1, MOBLEVEL_NONE }
+};
+
+const PT2 glb_zoo2_intrinsiclist[] =
+{
+	{ 4, 5, INTRINSIC_ASLEEP },
+	{ 3, 5, INTRINSIC_ASLEEP },
+	{ 2, 5, INTRINSIC_ASLEEP },
+	{ 1, 5, INTRINSIC_ASLEEP },
+	{ 4, 4, INTRINSIC_ASLEEP },
+	{ 3, 4, INTRINSIC_ASLEEP },
+	{ 2, 4, INTRINSIC_ASLEEP },
+	{ 1, 4, INTRINSIC_ASLEEP },
+	{ 4, 3, INTRINSIC_ASLEEP },
+	{ 3, 3, INTRINSIC_ASLEEP },
+	{ 2, 3, INTRINSIC_ASLEEP },
+	{ 1, 3, INTRINSIC_ASLEEP },
+	{ 4, 2, INTRINSIC_ASLEEP },
+	{ 3, 2, INTRINSIC_ASLEEP },
+	{ 2, 2, INTRINSIC_ASLEEP },
+	{ 1, 2, INTRINSIC_ASLEEP },
+	{ 4, 1, INTRINSIC_ASLEEP },
+	{ 3, 1, INTRINSIC_ASLEEP },
+	{ 2, 1, INTRINSIC_ASLEEP },
+	{ 1, 1, INTRINSIC_ASLEEP },
+	{ -1, -1, INTRINSIC_NONE }
+};
+
+const PT2 glb_zoo2_squareflaglist[] =
+{
+	{ 5, 6, SQUAREFLAG_LIT },
+	{ 4, 6, SQUAREFLAG_LIT },
+	{ 3, 6, SQUAREFLAG_LIT },
+	{ 2, 6, SQUAREFLAG_LIT },
+	{ 1, 6, SQUAREFLAG_LIT },
+	{ 0, 6, SQUAREFLAG_LIT },
+	{ 5, 5, SQUAREFLAG_LIT },
+	{ 4, 5, SQUAREFLAG_LIT },
+	{ 3, 5, SQUAREFLAG_LIT },
+	{ 2, 5, SQUAREFLAG_LIT },
+	{ 1, 5, SQUAREFLAG_LIT },
+	{ 0, 5, SQUAREFLAG_LIT },
+	{ 5, 4, SQUAREFLAG_LIT },
+	{ 4, 4, SQUAREFLAG_LIT },
+	{ 3, 4, SQUAREFLAG_LIT },
+	{ 2, 4, SQUAREFLAG_LIT },
+	{ 1, 4, SQUAREFLAG_LIT },
+	{ 0, 4, SQUAREFLAG_LIT },
+	{ 5, 3, SQUAREFLAG_LIT },
+	{ 4, 3, SQUAREFLAG_LIT },
+	{ 3, 3, SQUAREFLAG_LIT },
+	{ 2, 3, SQUAREFLAG_LIT },
+	{ 1, 3, SQUAREFLAG_LIT },
+	{ 0, 3, SQUAREFLAG_LIT },
+	{ 5, 2, SQUAREFLAG_LIT },
+	{ 4, 2, SQUAREFLAG_LIT },
+	{ 3, 2, SQUAREFLAG_LIT },
+	{ 2, 2, SQUAREFLAG_LIT },
+	{ 1, 2, SQUAREFLAG_LIT },
+	{ 0, 2, SQUAREFLAG_LIT },
+	{ 5, 1, SQUAREFLAG_LIT },
+	{ 4, 1, SQUAREFLAG_LIT },
+	{ 3, 1, SQUAREFLAG_LIT },
+	{ 2, 1, SQUAREFLAG_LIT },
+	{ 1, 1, SQUAREFLAG_LIT },
+	{ 0, 1, SQUAREFLAG_LIT },
+	{ 5, 0, SQUAREFLAG_LIT },
+	{ 4, 0, SQUAREFLAG_LIT },
+	{ 3, 0, SQUAREFLAG_LIT },
+	{ 2, 0, SQUAREFLAG_LIT },
+	{ 1, 0, SQUAREFLAG_LIT },
+	{ 0, 0, SQUAREFLAG_LIT },
+	{ -1, -1, SQUAREFLAG_NONE }
+};
+
+const PT2 glb_zoo2_signpostlist[] =
+{
+	{ -1, -1, SIGNPOST_NONE }
+};
+
+const ROOM_DEF glb_zoo2_roomdef =
+{
+	{ 6, 7, 0 },
+	glb_zoo2_squarelist,
+	glb_zoo2_squareflaglist,
+	glb_zoo2_itemlist,
+	glb_zoo2_moblist,
+	glb_zoo2_itemtypelist,
+	glb_zoo2_moblevellist,
+	glb_zoo2_intrinsiclist,
+	glb_zoo2_signpostlist,
+	-1, -1,
+	100,
+	0, 0,
+	0,
+	1,
+	1,
+	1,
+	1,
+	-1, -1, 
+	-1, 
+	"zoo2"
+};

@@ -1,0 +1,8 @@
+#!/bin/sh
+export HOME=`pwd`/pdata
+cd
+./powder
+sync
+# return to the menu screen
+cd /usr/gp2x
+exec /usr/gp2x/gp2xmenu

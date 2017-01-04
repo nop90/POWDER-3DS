@@ -1,0 +1,158 @@
+// Auto-generated .map file
+// DO NOT HAND EDIT
+// Generated from forest2.map
+
+#include "../map.h"
+#include "../glbdef.h"
+
+const SQUARE_NAMES glb_forest2_squarelist[] =
+{
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_BLOCKEDDOOR,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_FOREST,	
+SQUARE_FOREST,	SQUARE_WALL,	SQUARE_FOREST,	SQUARE_BLOCKEDDOOR,	
+SQUARE_BLOCKEDDOOR,	SQUARE_FOREST,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_FOREST,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_FOREST,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_FOREST,	SQUARE_WALL,	SQUARE_FOREST,	
+SQUARE_WALL,	SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_FOREST,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_FOREST,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_FOREST,	
+SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL
+};
+
+const PT2 glb_forest2_moblist[] =
+{
+	{ 5, 6, MOB_LARGEBAT },
+	{ 2, 6, MOB_LARGEBAT },
+	{ 3, 5, MOB_VAMPIREBAT },
+	{ 3, 4, MOB_VAMPIREBAT },
+	{ -1, -1, MOB_NONE }
+};
+
+const PT2 glb_forest2_itemlist[] =
+{
+	{ -1, -1, ITEM_NONE }
+};
+
+const PT2 glb_forest2_itemtypelist[] =
+{
+	{ 3, 4, ITEMTYPE_ANY },
+	{ 3, 4, ITEMTYPE_ANY },
+	{ 3, 4, ITEMTYPE_ANY },
+	{ 3, 4, ITEMTYPE_ANY },
+	{ -1, -1, ITEMTYPE_NONE }
+};
+
+const PT2 glb_forest2_moblevellist[] =
+{
+	{ 3, 4, MOBLEVEL_UNIQUE },
+	{ -1, -1, MOBLEVEL_NONE }
+};
+
+const PT2 glb_forest2_intrinsiclist[] =
+{
+	{ -1, -1, INTRINSIC_NONE }
+};
+
+const PT2 glb_forest2_squareflaglist[] =
+{
+	{ 7, 7, SQUAREFLAG_LIT },
+	{ 6, 7, SQUAREFLAG_LIT },
+	{ 5, 7, SQUAREFLAG_LIT },
+	{ 4, 7, SQUAREFLAG_LIT },
+	{ 3, 7, SQUAREFLAG_LIT },
+	{ 2, 7, SQUAREFLAG_LIT },
+	{ 1, 7, SQUAREFLAG_LIT },
+	{ 0, 7, SQUAREFLAG_LIT },
+	{ 7, 6, SQUAREFLAG_LIT },
+	{ 6, 6, SQUAREFLAG_LIT },
+	{ 5, 6, SQUAREFLAG_LIT },
+	{ 4, 6, SQUAREFLAG_LIT },
+	{ 3, 6, SQUAREFLAG_LIT },
+	{ 2, 6, SQUAREFLAG_LIT },
+	{ 1, 6, SQUAREFLAG_LIT },
+	{ 0, 6, SQUAREFLAG_LIT },
+	{ 7, 5, SQUAREFLAG_LIT },
+	{ 6, 5, SQUAREFLAG_LIT },
+	{ 5, 5, SQUAREFLAG_LIT },
+	{ 4, 5, SQUAREFLAG_LIT },
+	{ 3, 5, SQUAREFLAG_LIT },
+	{ 2, 5, SQUAREFLAG_LIT },
+	{ 1, 5, SQUAREFLAG_LIT },
+	{ 0, 5, SQUAREFLAG_LIT },
+	{ 7, 4, SQUAREFLAG_LIT },
+	{ 6, 4, SQUAREFLAG_LIT },
+	{ 5, 4, SQUAREFLAG_LIT },
+	{ 4, 4, SQUAREFLAG_LIT },
+	{ 3, 4, SQUAREFLAG_LIT },
+	{ 2, 4, SQUAREFLAG_LIT },
+	{ 1, 4, SQUAREFLAG_LIT },
+	{ 0, 4, SQUAREFLAG_LIT },
+	{ 7, 3, SQUAREFLAG_LIT },
+	{ 6, 3, SQUAREFLAG_LIT },
+	{ 5, 3, SQUAREFLAG_LIT },
+	{ 4, 3, SQUAREFLAG_LIT },
+	{ 3, 3, SQUAREFLAG_LIT },
+	{ 2, 3, SQUAREFLAG_LIT },
+	{ 1, 3, SQUAREFLAG_LIT },
+	{ 0, 3, SQUAREFLAG_LIT },
+	{ 7, 2, SQUAREFLAG_LIT },
+	{ 6, 2, SQUAREFLAG_LIT },
+	{ 5, 2, SQUAREFLAG_LIT },
+	{ 4, 2, SQUAREFLAG_LIT },
+	{ 3, 2, SQUAREFLAG_LIT },
+	{ 2, 2, SQUAREFLAG_LIT },
+	{ 1, 2, SQUAREFLAG_LIT },
+	{ 0, 2, SQUAREFLAG_LIT },
+	{ 7, 1, SQUAREFLAG_LIT },
+	{ 6, 1, SQUAREFLAG_LIT },
+	{ 5, 1, SQUAREFLAG_LIT },
+	{ 4, 1, SQUAREFLAG_LIT },
+	{ 3, 1, SQUAREFLAG_LIT },
+	{ 2, 1, SQUAREFLAG_LIT },
+	{ 1, 1, SQUAREFLAG_LIT },
+	{ 0, 1, SQUAREFLAG_LIT },
+	{ 7, 0, SQUAREFLAG_LIT },
+	{ 6, 0, SQUAREFLAG_LIT },
+	{ 5, 0, SQUAREFLAG_LIT },
+	{ 4, 0, SQUAREFLAG_LIT },
+	{ 3, 0, SQUAREFLAG_LIT },
+	{ 2, 0, SQUAREFLAG_LIT },
+	{ 1, 0, SQUAREFLAG_LIT },
+	{ 0, 0, SQUAREFLAG_LIT },
+	{ -1, -1, SQUAREFLAG_NONE }
+};
+
+const PT2 glb_forest2_signpostlist[] =
+{
+	{ -1, -1, SIGNPOST_NONE }
+};
+
+const ROOM_DEF glb_forest2_roomdef =
+{
+	{ 8, 8, 0 },
+	glb_forest2_squarelist,
+	glb_forest2_squareflaglist,
+	glb_forest2_itemlist,
+	glb_forest2_moblist,
+	glb_forest2_itemtypelist,
+	glb_forest2_moblevellist,
+	glb_forest2_intrinsiclist,
+	glb_forest2_signpostlist,
+	-1, -1,
+	100,
+	0, 0,
+	0,
+	1,
+	1,
+	1,
+	1,
+	-1, -1, 
+	-1, 
+	"forest2"
+};

@@ -1,0 +1,13 @@
+# A prison sell for a single evil creature...
+
+allowstairs = false
+
++---+
+|#x#|
+|xMx|
+|#x#|
++---+
+
+#: SQUARE_WALL, SQUAREFLAG_LIT
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+M: SQUARE_FLOOR, SQUAREFLAG_LIT, MOBLEVEL_OVERPOWERING, INTRINSIC_ASLEEP

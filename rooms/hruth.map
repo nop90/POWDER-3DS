@@ -1,0 +1,64 @@
+# H'ruth's Quest
+
+allowstairs = false
+allowgeneration = false
+allowdig = false
+allowitems = false
+allowtele = false
+quest = GOD_BARB
+rarity = 0
+pos = 0 0
+
++------------------------------+
+|##############################|
+|#####....##...5###############|
+|####......#.#.##..############|
+|####..6...+.#..+..+....#######|
+|####......######4.#....#######|
+|#####....##...##..#..3.#######|
+|#####.####.....####....#######|
+|#####+#<)+..1..+.2+....#######|
+|#####.####.....###############|
+|##.......##...##.......#######|
+|#.........######..9.9..#######|
+|#...7..7..#....+.......#######|
+|#.........+..8.#..9..9.+.#####|
+|##.......##....#.......#A#####|
+|########################.#####|
+|#^^^^^^^^#.........#.###+###.#|
+|#^&&^&&^^#.C.C.C...###.....###|
+|#^&&&&&&^#.........#..B...B..#|
+|#^&D^&D&&+.C.C.C...+.........#|
+|#^&&&&&&^#.........#.........#|
+|#^&D&&D^^#.C.C.C...###.....###|
+|#^&&^&&&^#.........###########|
+|#^&^^^^^^#####################|
+|##+#######....################|
+|##.......+..E.+>##############|
+|##########....################|
+|##############################|
+|##############################|
++------------------------------+
+
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_REINFORCEDWALL, SQUAREFLAG_LIT
+^: SQUARE_MOUNTAIN, SQUAREFLAG_LIT
+&: SQUARE_FOREST, SQUAREFLAG_LIT
++: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+): SQUARE_FLOOR, ITEMTYPE_WEAPON, SQUAREFLAG_LIT
+>: SQUARE_LADDERDOWN, SQUAREFLAG_LIT
+<: SQUARE_LADDERUP, SQUAREFLAG_LIT
+1: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_DAEMON
+2: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_COCKATRICE
+3: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_YELLOWDRAGON
+4: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_GREENDRAGON
+5: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_LICH
+6: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_HILLORC
+7: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_ORC
+8: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_IRONGOLEM
+9: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_GHAST
+A: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_WATERELEMENTAL
+B: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_FIREELEMENTAL
+C: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_KOBOLDFIGHTER
+D: SQUARE_FOREST, SQUAREFLAG_LIT, MOB_KOBOLDASSASSIN
+E: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_LARGETURTLOID, MOBLEVEL_UNIQUE

@@ -1,0 +1,26 @@
+# The Lair of Purple Tridudes
+# This is very mean when they cast fetch.
+
+allowstairs = false
+minlevel = 13
+
++--------+
+|###x####|
+|#~~~~~##|
+|#~t..~~x|
+|#~.'t'~#|
+|#~..T.~#|
+|#~...'~#|
+|x~~'.t~#|
+|##~~~~~#|
+|######x#|
++--------+
+
+ : SQUARE_EMPTY
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+t: SQUARE_FLOOR, MOB_PURPLETRIDUDE, SQUAREFLAG_LIT
+T: SQUARE_FLOOR, MOB_PURPLETRIDUDE, MOBLEVEL_UNIQUE, INTRINSIC_LEADER, SQUAREFLAG_LIT
+': SQUARE_FLOOR, ITEM_BOULDER, SQUAREFLAG_LIT
+~: SQUARE_ACID, SQUAREFLAG_LIT

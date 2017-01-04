@@ -1,0 +1,19 @@
+# Kiwi's hide a secret.
+
+allowstairs = false
+
++-------+
+|#####  |
+|x.k.si |
+|#...#i |
+|#k.k#i |
+|###x#  |
++-------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+i: ITEMTYPE_ANY, SQUARE_CORRIDOR
+k: SQUARE_FLOOR, SQUAREFLAG_LIT, MOB_KIWI

@@ -1,0 +1,121 @@
+// Auto-generated .map file
+// DO NOT HAND EDIT
+// Generated from forest.map
+
+#include "../map.h"
+#include "../glbdef.h"
+
+const SQUARE_NAMES glb_forest_squarelist[] =
+{
+SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_BLOCKEDDOOR,	
+SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_EMPTY,	
+SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	
+SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	SQUARE_BLOCKEDDOOR,	
+SQUARE_BLOCKEDDOOR,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	SQUARE_FOREST,	
+SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_EMPTY,	
+SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_FOREST,	SQUARE_FOREST,	
+SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_EMPTY,	
+SQUARE_EMPTY,	SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_FOREST,	
+SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_EMPTY,	SQUARE_EMPTY,	
+SQUARE_EMPTY,	SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_FOREST,	
+SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_EMPTY,	
+SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_FOREST,	SQUARE_FOREST,	
+SQUARE_FOREST,	SQUARE_FOREST,	SQUARE_EMPTY,	SQUARE_EMPTY,	
+SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_EMPTY,	
+SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_EMPTY
+};
+
+const PT2 glb_forest_moblist[] =
+{
+	{ 2, 5, MOB_KOBOLDASSASSIN },
+	{ 4, 4, MOB_KOBOLDASSASSIN },
+	{ -1, -1, MOB_NONE }
+};
+
+const PT2 glb_forest_itemlist[] =
+{
+	{ -1, -1, ITEM_NONE }
+};
+
+const PT2 glb_forest_itemtypelist[] =
+{
+	{ -1, -1, ITEMTYPE_NONE }
+};
+
+const PT2 glb_forest_moblevellist[] =
+{
+	{ -1, -1, MOBLEVEL_NONE }
+};
+
+const PT2 glb_forest_intrinsiclist[] =
+{
+	{ -1, -1, INTRINSIC_NONE }
+};
+
+const PT2 glb_forest_squareflaglist[] =
+{
+	{ 5, 6, SQUAREFLAG_LIT },
+	{ 4, 6, SQUAREFLAG_LIT },
+	{ 3, 6, SQUAREFLAG_LIT },
+	{ 2, 6, SQUAREFLAG_LIT },
+	{ 6, 5, SQUAREFLAG_LIT },
+	{ 5, 5, SQUAREFLAG_LIT },
+	{ 4, 5, SQUAREFLAG_LIT },
+	{ 3, 5, SQUAREFLAG_LIT },
+	{ 2, 5, SQUAREFLAG_LIT },
+	{ 1, 5, SQUAREFLAG_LIT },
+	{ 5, 4, SQUAREFLAG_LIT },
+	{ 4, 4, SQUAREFLAG_LIT },
+	{ 3, 4, SQUAREFLAG_LIT },
+	{ 2, 4, SQUAREFLAG_LIT },
+	{ 1, 4, SQUAREFLAG_LIT },
+	{ 6, 3, SQUAREFLAG_LIT },
+	{ 5, 3, SQUAREFLAG_LIT },
+	{ 4, 3, SQUAREFLAG_LIT },
+	{ 3, 3, SQUAREFLAG_LIT },
+	{ 2, 3, SQUAREFLAG_LIT },
+	{ 6, 2, SQUAREFLAG_LIT },
+	{ 5, 2, SQUAREFLAG_LIT },
+	{ 4, 2, SQUAREFLAG_LIT },
+	{ 3, 2, SQUAREFLAG_LIT },
+	{ 2, 2, SQUAREFLAG_LIT },
+	{ 1, 2, SQUAREFLAG_LIT },
+	{ 0, 2, SQUAREFLAG_LIT },
+	{ 7, 1, SQUAREFLAG_LIT },
+	{ 6, 1, SQUAREFLAG_LIT },
+	{ 5, 1, SQUAREFLAG_LIT },
+	{ 4, 1, SQUAREFLAG_LIT },
+	{ 3, 1, SQUAREFLAG_LIT },
+	{ 2, 1, SQUAREFLAG_LIT },
+	{ 3, 0, SQUAREFLAG_LIT },
+	{ -1, -1, SQUAREFLAG_NONE }
+};
+
+const PT2 glb_forest_signpostlist[] =
+{
+	{ -1, -1, SIGNPOST_NONE }
+};
+
+const ROOM_DEF glb_forest_roomdef =
+{
+	{ 8, 8, 0 },
+	glb_forest_squarelist,
+	glb_forest_squareflaglist,
+	glb_forest_itemlist,
+	glb_forest_moblist,
+	glb_forest_itemtypelist,
+	glb_forest_moblevellist,
+	glb_forest_intrinsiclist,
+	glb_forest_signpostlist,
+	8, -1,
+	100,
+	0, 0,
+	0,
+	1,
+	1,
+	1,
+	1,
+	-1, -1, 
+	-1, 
+	"forest"
+};

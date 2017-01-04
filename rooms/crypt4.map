@@ -1,0 +1,34 @@
+# An ancient crypt
+# Created by Zak
+
+allowstairs = false
+minlevel = 2
+
++-------------+
+|#############|
+|#(#z#Z#(#[#Z#|
+|#.#.#.#.#z#.#|
+|#....g......#|
+|#...........#|
+|####x######x#|
+|x....#[L/#/L#|
+|####x##x#####|
+|#...........#|
+|#...g.......#|
+|#.#.#.#.#.#.#|
+|#Z#[#[#Z#z#z#|
+|#############|
++-------------+
+
+ : SQUARE_EMPTY
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+(: SQUARE_FLOOR, ITEMTYPE_WEAPON, SQUAREFLAG_LIT
+[: SQUARE_FLOOR, ITEMTYPE_ARMOUR, SQUAREFLAG_LIT
+/: SQUARE_FLOOR, ITEMTYPE_WAND, SQUAREFLAG_LIT
+z: SQUARE_FLOOR, MOB_ZOMBIE, SQUAREFLAG_LIT
+Z: SQUARE_FLOOR, MOB_SKELETON, SQUAREFLAG_LIT
+L: SQUARE_FLOOR, MOB_LICH, SQUAREFLAG_LIT, ITEMTYPE_WEAPON
+g: SQUARE_FLOOR, MOB_GHAST, SQUAREFLAG_LIT, ITEMTYPE_ARMOUR

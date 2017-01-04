@@ -1,0 +1,21 @@
+# A tranquil forest glade
+
+minlevel = 8
+allowstairs = false
+
++--------+
+|   x    |
+|  .....x|
+|x..&&&& |
+|  &&&&& |
+| &&&a&  |
+| &a&&&& |
+|  &&&&  |
+|        |
++--------+
+
+ : SQUARE_EMPTY
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+.: SQUARE_CORRIDOR, SQUAREFLAG_LIT
+&: SQUARE_FOREST, SQUAREFLAG_LIT
+a: SQUARE_FOREST, SQUAREFLAG_LIT, MOB_KOBOLDASSASSIN

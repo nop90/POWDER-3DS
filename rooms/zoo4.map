@@ -1,0 +1,19 @@
+# A tough zoo.
+# 3x4 monsters
+
+allowstairs = false
+
++-----+
+|###x#|
+|#mmm#|
+|xmMm#|
+|#mMmx|
+|#mmm#|
+|##x##|
++-----+
+
+#: SQUARE_WALL, SQUAREFLAG_LIT
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+m: SQUARE_FLOOR, SQUAREFLAG_LIT, MOBLEVEL_NORMAL, INTRINSIC_ASLEEP
+M: SQUARE_FLOOR, SQUAREFLAG_LIT, MOBLEVEL_STRONG, INTRINSIC_ASLEEP
+

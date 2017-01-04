@@ -1,0 +1,20 @@
+# I think Prakal was here?
+
+allowstairs = false
+minlevel = 2
+
++------+
+|####x#|
+|x....#|
+|#   .#|
+|# L .#|
+|#   .x|
+|######|
++------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+L: SQUARE_FLOOR, MOB_LICH, SQUAREFLAG_LIT, ITEMTYPE_WEAPON, ITEMTYPE_ARTIFACT, MOBLEVEL_UNIQUE

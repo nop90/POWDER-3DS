@@ -1,0 +1,18 @@
+ifeq ($(CXXFLAGS),)
+    CXXFLAGS=-O3
+endif
+
+.cpp.o:
+	$(CXX) -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386 -DLINUX -DMACOSX -I../sdl -I/Library/Frameworks/SDL.framework/Headers -c $< -o $@ $(CXXFLAGS) -mmacosx-version-min=10.5
+
+.m.o:
+	$(CXX) -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386 -DLINUX -DMACOSX -I../sdl -I/Library/Frameworks/SDL.framework/Headers -c $< -o $@ $(CXXFLAGS) -mmacosx-version-min=10.5
+
+all: $(TARGET)
+
+$(TARGET): $(OFILES)
+	$(CXX) -isysroot /Developer/SDKs/MacOSX10.5.sdk -arch i386 -framework Cocoa -framework SDL -o $(TARGET) $(OFILES) $(CXXFLAGS) -mmacosx-version-min=10.5
+
+clean:
+	$(RM) $(OFILES)
+	$(RM) $(TARGET)

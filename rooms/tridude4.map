@@ -1,0 +1,25 @@
+# The Lair of Blue Tridudes
+
+allowstairs = false
+minlevel = 10
+
++--------+
+|###x####|
+|###..###|
+|##..'.##|
+|##.t..##|
+|##..T.##|
+|#.t.'t.x|
+|x.'##..#|
+|#..##..#|
+|######x#|
++--------+
+
+ : SQUARE_EMPTY
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+t: SQUARE_FLOOR, MOB_BLUETRIDUDE, SQUAREFLAG_LIT
+T: SQUARE_FLOOR, MOB_BLUETRIDUDE, MOBLEVEL_UNIQUE, INTRINSIC_LEADER, SQUAREFLAG_LIT
+': SQUARE_FLOOR, ITEM_BOULDER, SQUAREFLAG_LIT
+~: SQUARE_ACID, SQUAREFLAG_LIT

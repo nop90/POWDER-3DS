@@ -1,0 +1,16 @@
+The build files for eMbedded Visual C. I hope they would also work
+with regular Visual Studio.
+
+Copy the .vcp and .vcw files into powder source directory. Open the
+.vcw with eMVC. Set 'Release' as the active configuration (I'm too
+lazy to make Debug work, since I don't have a debugger for Windows CE
+anyway).
+
+You'll also need SDL.dll and SDL.lib and SDLmain.lib in the powder
+source directory, and SDL includes as include/ directory.
+
+
+The inf files can be used to build CABs to make life easier.
+Be sure to update version numbers in RegData, not that they are used
+anywhere :)
+

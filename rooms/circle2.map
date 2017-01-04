@@ -1,0 +1,16 @@
+# A smaller circle
+
++-------+
+| ##x## |
+|##...##|
+|#.....x|
+|#.....#|
+|x.....#|
+|##...##|
+| ##x## |
++-------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT

@@ -1,0 +1,18 @@
+# A room divided into 4 sub rooms.
+
++--------+
+|######x#|
+|x...s..#|
+|#...#..#|
+|#...##x#|
+|#x###..x|
+|#...s..#|
+|#...#..#|
+|##x#####|
++--------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT

@@ -1,0 +1,16 @@
+# A simple zoo.
+# 2x3 monsters.
+
+allowstairs = false
+
++----+
+|#x##|
+|xmm#|
+|#mmx|
+|#mm#|
+|##x#|
++----+
+
+#: SQUARE_WALL, SQUAREFLAG_LIT
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+m: SQUARE_FLOOR, SQUAREFLAG_LIT, MOBLEVEL_NORMAL, INTRINSIC_ASLEEP

@@ -1,0 +1,131 @@
+// Auto-generated .map file
+// DO NOT HAND EDIT
+// Generated from crypt3.map
+
+#include "../map.h"
+#include "../glbdef.h"
+
+const SQUARE_NAMES glb_crypt3_squarelist[] =
+{
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_BLOCKEDDOOR,	
+SQUARE_WALL,	SQUARE_BLOCKEDDOOR,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	
+SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	
+SQUARE_CORRIDOR,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_CORRIDOR,	
+SQUARE_EMPTY,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	
+SQUARE_EMPTY,	SQUARE_CORRIDOR,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_CORRIDOR,	SQUARE_EMPTY,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	
+SQUARE_CORRIDOR,	SQUARE_EMPTY,	SQUARE_CORRIDOR,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_CORRIDOR,	SQUARE_EMPTY,	SQUARE_EMPTY,	
+SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_EMPTY,	SQUARE_CORRIDOR,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	
+SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	SQUARE_CORRIDOR,	
+SQUARE_CORRIDOR,	SQUARE_BLOCKEDDOOR,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_BLOCKEDDOOR,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL
+};
+
+const PT2 glb_crypt3_moblist[] =
+{
+	{ 6, 5, MOB_ZOMBIE },
+	{ 2, 5, MOB_ZOMBIE },
+	{ 7, 3, MOB_GHAST },
+	{ 1, 3, MOB_GHAST },
+	{ 5, 2, MOB_LICH },
+	{ 3, 2, MOB_LICH },
+	{ 7, 1, MOB_SKELETON },
+	{ 4, 1, MOB_LICH },
+	{ 1, 1, MOB_SKELETON },
+	{ -1, -1, MOB_NONE }
+};
+
+const PT2 glb_crypt3_itemlist[] =
+{
+	{ 6, 1, ITEM_BOULDER },
+	{ 2, 1, ITEM_BOULDER },
+	{ -1, -1, ITEM_NONE }
+};
+
+const PT2 glb_crypt3_itemtypelist[] =
+{
+	{ 7, 3, ITEMTYPE_ARMOUR },
+	{ 1, 3, ITEMTYPE_ARMOUR },
+	{ 5, 2, ITEMTYPE_WAND },
+	{ 3, 2, ITEMTYPE_WAND },
+	{ 4, 1, ITEMTYPE_ARTIFACT },
+	{ -1, -1, ITEMTYPE_NONE }
+};
+
+const PT2 glb_crypt3_moblevellist[] =
+{
+	{ 4, 1, MOBLEVEL_UNIQUE },
+	{ -1, -1, MOBLEVEL_NONE }
+};
+
+const PT2 glb_crypt3_intrinsiclist[] =
+{
+	{ 4, 1, INTRINSIC_LEADER },
+	{ -1, -1, INTRINSIC_NONE }
+};
+
+const PT2 glb_crypt3_squareflaglist[] =
+{
+	{ 8, 6, SQUAREFLAG_LIT },
+	{ 7, 6, SQUAREFLAG_LIT },
+	{ 6, 6, SQUAREFLAG_LIT },
+	{ 5, 6, SQUAREFLAG_LIT },
+	{ 4, 6, SQUAREFLAG_LIT },
+	{ 3, 6, SQUAREFLAG_LIT },
+	{ 2, 6, SQUAREFLAG_LIT },
+	{ 1, 6, SQUAREFLAG_LIT },
+	{ 0, 6, SQUAREFLAG_LIT },
+	{ 8, 5, SQUAREFLAG_LIT },
+	{ 0, 5, SQUAREFLAG_LIT },
+	{ 8, 4, SQUAREFLAG_LIT },
+	{ 0, 4, SQUAREFLAG_LIT },
+	{ 8, 3, SQUAREFLAG_LIT },
+	{ 0, 3, SQUAREFLAG_LIT },
+	{ 8, 2, SQUAREFLAG_LIT },
+	{ 0, 2, SQUAREFLAG_LIT },
+	{ 8, 1, SQUAREFLAG_LIT },
+	{ 0, 1, SQUAREFLAG_LIT },
+	{ 8, 0, SQUAREFLAG_LIT },
+	{ 7, 0, SQUAREFLAG_LIT },
+	{ 6, 0, SQUAREFLAG_LIT },
+	{ 5, 0, SQUAREFLAG_LIT },
+	{ 4, 0, SQUAREFLAG_LIT },
+	{ 3, 0, SQUAREFLAG_LIT },
+	{ 2, 0, SQUAREFLAG_LIT },
+	{ 1, 0, SQUAREFLAG_LIT },
+	{ 0, 0, SQUAREFLAG_LIT },
+	{ -1, -1, SQUAREFLAG_NONE }
+};
+
+const PT2 glb_crypt3_signpostlist[] =
+{
+	{ -1, -1, SIGNPOST_NONE }
+};
+
+const ROOM_DEF glb_crypt3_roomdef =
+{
+	{ 9, 7, 0 },
+	glb_crypt3_squarelist,
+	glb_crypt3_squareflaglist,
+	glb_crypt3_itemlist,
+	glb_crypt3_moblist,
+	glb_crypt3_itemtypelist,
+	glb_crypt3_moblevellist,
+	glb_crypt3_intrinsiclist,
+	glb_crypt3_signpostlist,
+	8, -1,
+	100,
+	0, 0,
+	0,
+	1,
+	1,
+	1,
+	1,
+	-1, -1, 
+	-1, 
+	"crypt3"
+};

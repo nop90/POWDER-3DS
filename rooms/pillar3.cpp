@@ -1,0 +1,155 @@
+// Auto-generated .map file
+// DO NOT HAND EDIT
+// Generated from pillar3.map
+
+#include "../map.h"
+#include "../glbdef.h"
+
+const SQUARE_NAMES glb_pillar3_squarelist[] =
+{
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_DOOR,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_FLOOR,	SQUARE_WALL,	SQUARE_SECRETDOOR,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_FLOOR,	SQUARE_WALL,	
+SQUARE_DOOR,	SQUARE_FLOOR,	SQUARE_WALL,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_WALL,	SQUARE_FLOOR,	SQUARE_DOOR,	
+SQUARE_WALL,	SQUARE_FLOOR,	SQUARE_WALL,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_WALL,	SQUARE_FLOOR,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_FLOOR,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_SECRETDOOR,	SQUARE_WALL,	SQUARE_FLOOR,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_DOOR,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL
+};
+
+const PT2 glb_pillar3_moblist[] =
+{
+	{ -1, -1, MOB_NONE }
+};
+
+const PT2 glb_pillar3_itemlist[] =
+{
+	{ -1, -1, ITEM_NONE }
+};
+
+const PT2 glb_pillar3_itemtypelist[] =
+{
+	{ 4, 4, ITEMTYPE_ANY },
+	{ 3, 3, ITEMTYPE_ANY },
+	{ -1, -1, ITEMTYPE_NONE }
+};
+
+const PT2 glb_pillar3_moblevellist[] =
+{
+	{ 4, 4, MOBLEVEL_STRONG },
+	{ 3, 4, MOBLEVEL_NORMAL },
+	{ 4, 3, MOBLEVEL_NORMAL },
+	{ 3, 3, MOBLEVEL_STRONG },
+	{ -1, -1, MOBLEVEL_NONE }
+};
+
+const PT2 glb_pillar3_intrinsiclist[] =
+{
+	{ -1, -1, INTRINSIC_NONE }
+};
+
+const PT2 glb_pillar3_squareflaglist[] =
+{
+	{ 7, 7, SQUAREFLAG_LIT },
+	{ 6, 7, SQUAREFLAG_LIT },
+	{ 5, 7, SQUAREFLAG_LIT },
+	{ 4, 7, SQUAREFLAG_LIT },
+	{ 3, 7, SQUAREFLAG_LIT },
+	{ 2, 7, SQUAREFLAG_LIT },
+	{ 1, 7, SQUAREFLAG_LIT },
+	{ 0, 7, SQUAREFLAG_LIT },
+	{ 7, 6, SQUAREFLAG_LIT },
+	{ 6, 6, SQUAREFLAG_LIT },
+	{ 5, 6, SQUAREFLAG_LIT },
+	{ 4, 6, SQUAREFLAG_LIT },
+	{ 3, 6, SQUAREFLAG_LIT },
+	{ 2, 6, SQUAREFLAG_LIT },
+	{ 1, 6, SQUAREFLAG_LIT },
+	{ 0, 6, SQUAREFLAG_LIT },
+	{ 7, 5, SQUAREFLAG_LIT },
+	{ 6, 5, SQUAREFLAG_LIT },
+	{ 5, 5, SQUAREFLAG_LIT },
+	{ 4, 5, SQUAREFLAG_LIT },
+	{ 3, 5, SQUAREFLAG_LIT },
+	{ 2, 5, SQUAREFLAG_LIT },
+	{ 1, 5, SQUAREFLAG_LIT },
+	{ 0, 5, SQUAREFLAG_LIT },
+	{ 7, 4, SQUAREFLAG_LIT },
+	{ 6, 4, SQUAREFLAG_LIT },
+	{ 5, 4, SQUAREFLAG_LIT },
+	{ 4, 4, SQUAREFLAG_LIT },
+	{ 3, 4, SQUAREFLAG_LIT },
+	{ 2, 4, SQUAREFLAG_LIT },
+	{ 1, 4, SQUAREFLAG_LIT },
+	{ 0, 4, SQUAREFLAG_LIT },
+	{ 7, 3, SQUAREFLAG_LIT },
+	{ 6, 3, SQUAREFLAG_LIT },
+	{ 5, 3, SQUAREFLAG_LIT },
+	{ 4, 3, SQUAREFLAG_LIT },
+	{ 3, 3, SQUAREFLAG_LIT },
+	{ 2, 3, SQUAREFLAG_LIT },
+	{ 1, 3, SQUAREFLAG_LIT },
+	{ 0, 3, SQUAREFLAG_LIT },
+	{ 7, 2, SQUAREFLAG_LIT },
+	{ 6, 2, SQUAREFLAG_LIT },
+	{ 5, 2, SQUAREFLAG_LIT },
+	{ 4, 2, SQUAREFLAG_LIT },
+	{ 3, 2, SQUAREFLAG_LIT },
+	{ 2, 2, SQUAREFLAG_LIT },
+	{ 1, 2, SQUAREFLAG_LIT },
+	{ 0, 2, SQUAREFLAG_LIT },
+	{ 7, 1, SQUAREFLAG_LIT },
+	{ 6, 1, SQUAREFLAG_LIT },
+	{ 5, 1, SQUAREFLAG_LIT },
+	{ 4, 1, SQUAREFLAG_LIT },
+	{ 3, 1, SQUAREFLAG_LIT },
+	{ 2, 1, SQUAREFLAG_LIT },
+	{ 1, 1, SQUAREFLAG_LIT },
+	{ 0, 1, SQUAREFLAG_LIT },
+	{ 7, 0, SQUAREFLAG_LIT },
+	{ 6, 0, SQUAREFLAG_LIT },
+	{ 5, 0, SQUAREFLAG_LIT },
+	{ 4, 0, SQUAREFLAG_LIT },
+	{ 3, 0, SQUAREFLAG_LIT },
+	{ 2, 0, SQUAREFLAG_LIT },
+	{ 1, 0, SQUAREFLAG_LIT },
+	{ 0, 0, SQUAREFLAG_LIT },
+	{ -1, -1, SQUAREFLAG_NONE }
+};
+
+const PT2 glb_pillar3_signpostlist[] =
+{
+	{ -1, -1, SIGNPOST_NONE }
+};
+
+const ROOM_DEF glb_pillar3_roomdef =
+{
+	{ 8, 8, 0 },
+	glb_pillar3_squarelist,
+	glb_pillar3_squareflaglist,
+	glb_pillar3_itemlist,
+	glb_pillar3_moblist,
+	glb_pillar3_itemtypelist,
+	glb_pillar3_moblevellist,
+	glb_pillar3_intrinsiclist,
+	glb_pillar3_signpostlist,
+	-1, -1,
+	100,
+	0, 0,
+	0,
+	1,
+	1,
+	1,
+	1,
+	-1, -1, 
+	-1, 
+	"pillar3"
+};

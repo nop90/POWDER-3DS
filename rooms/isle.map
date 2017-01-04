@@ -1,0 +1,19 @@
+# A simple island.
+
+minlevel = 3
+
++--------+
+| ~~~~~  |
+|~~...~~x|
+|~~....~~|
+| ~~....~|
+|x.~~~..~|
+|   x~~~~|
++--------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+.: SQUARE_CORRIDOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+~: SQUARE_WATER, SQUAREFLAG_LIT

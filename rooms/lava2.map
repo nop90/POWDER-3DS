@@ -1,0 +1,18 @@
+# A pool of toasty lava.
+
+minlevel = 5
+
++-------+
+|   x   |
+|  ~~~~x|
+|x~~~~~ |
+| ~~~~  |
+|  x    |
++-------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+.: SQUARE_CORRIDOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+~: SQUARE_LAVA, SQUAREFLAG_LIT

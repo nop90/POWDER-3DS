@@ -1,0 +1,42 @@
+;.Set Compress=ON
+
+[Version]
+Signature   = "$Windows NT$"        ; required as-is
+Provider    = "Ibson the Grey"
+CESignature = "$Windows CE$"        ; required as-is
+ 
+[CEStrings]
+AppName     = "Ibson the Grey's tileset for POWDER" ; maximum of 40 characters, full app name will be "<Provider> <AppName>"
+InstallDir  = %CE5%\POWDER\gfx       ; Program Files\POWDER
+ 
+[SourceDisksNames]                  ; directory that holds the application's files
+1 = , "Ibson Tileset",,gfx\ibsongrey
+
+[SourceDisksFiles]                  ; list of files to be included in .cab
+alphabet_brass.bmp = 1
+alphabet_classic.bmp = 1
+alphabet_heavy.bmp = 1
+alphabet_light.bmp = 1
+alphabet_shadow.bmp = 1
+dungeon16.bmp = 1
+mini16.bmp = 1
+minif16.bmp = 1
+sprite16.bmp = 1
+ 
+[DefaultInstall]                    ; operations to be completed during install
+CopyFiles   = CopyGfx
+ 
+[DestinationDirs]                   ; default destination directories for each operation section
+CopyGfx     = 0, %InstallDir%
+ 
+[CopyGfx]                ; copy operation file list
+"alphabet_brass.bmp", alphabet_brass.bmp
+"alphabet_classic.bmp", alphabet_classic.bmp
+"alphabet_heavy.bmp", alphabet_heavy.bmp
+"alphabet_light.bmp", alphabet_light.bmp
+"alphabet_shadow.bmp", alphabet_shadow.bmp
+"dungeon16.bmp", dungeon16.bmp
+"mini16.bmp", mini16.bmp
+"minif16.bmp", minif16.bmp
+"sprite16.bmp", sprite16.bmp
+ 

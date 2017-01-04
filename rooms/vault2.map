@@ -1,0 +1,22 @@
+# A double guarded secret room, mark 2
+
+allowstairs = false
+
++--------+
+|##x#####|
+|#..#.s.#|
+|#..#g#i#|
+|#..#.#g#|
+|x..sg#g#|
+|#..#.#i#|
+|##x#####|
++--------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+g: SQUARE_FLOOR, MOBLEVEL_STRONG, ITEMTYPE_ANY, SQUAREFLAG_LIT
+i: ITEMTYPE_ANY, SQUARE_FLOOR, SQUAREFLAG_LIT
+

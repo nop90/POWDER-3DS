@@ -1,0 +1,29 @@
+# Another temple to the Kobold God
+
+allowstairs = false
+minlevel = 3
+
++-----------+
+|#########x#|
+|#.."....#.#|
+|#..1K#k(#.#|
+|#.####[.#.#|
+|#.k(....#.#|
+|#.[.....x.#|
+|#####x###.#|
+|x..#k.k#..x|
+|#..#...#..#|
+|#.........#|
+|#####x#####|
++-----------+
+
+ : SQUARE_EMPTY
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+": SQUARE_FLOOR, ITEMTYPE_AMULET, SQUAREFLAG_LIT
+K: SQUARE_FLOOR, MOB_KOBOLDMAGE, SQUAREFLAG_LIT
+1: SQUARE_FLOOR, MOB_KOBOLDMAGE, SQUAREFLAG_LIT, INTRINSIC_LEADER
+k: SQUARE_FLOOR, MOB_KOBOLD, SQUAREFLAG_LIT
+(: SQUARE_FLOOR, ITEMTYPE_WEAPON, SQUAREFLAG_LIT
+[: SQUARE_FLOOR, ITEMTYPE_ARMOUR, SQUAREFLAG_LIT

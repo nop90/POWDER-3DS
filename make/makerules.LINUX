@@ -1,0 +1,21 @@
+ifeq ($(CXXFLAGS),)
+    CXXFLAGS=-O3
+endif
+
+.cpp.o:
+	$(CXX) -DLINUX -I ../../port/sdl `sdl-config --cflags` -c $< -o $@ $(CXXFLAGS)
+
+all: $(TARGET)
+
+$(TARGET): $(OFILES)
+	# This extra step is from:
+	# http://www.trilithium.com/johan/2005/06/static-libstdc/
+	# and is to try and ensure we end up with a static link
+	# of stdc++.
+	$(RM) libstdc++.a
+	ln -s `$(CXX) -print-file-name=libstdc++.a`
+	$(CXX) -static-libgcc -L. -o $(TARGET) $(OFILES) `sdl-config --libs` $(CXXFLAGS) $(LDFLAGS)
+
+clean:
+	$(RM) $(OFILES)
+	$(RM) $(TARGET)

@@ -1,0 +1,15 @@
+ifeq ($(CXXFLAGS),)
+    CXXFLAGS=-O3
+endif
+
+.cpp.o:
+	$(CC) -DLINUX -I. -I../../port/sdl $(CFLAGS) -c $< -o $@ $(CXXFLAGS)
+
+all: $(TARGET)
+
+$(TARGET): $(OFILES)
+	$(CC) -static -L. -o $(TARGET) $(OFILES) $(LIBS) $(CXXFLAGS)
+
+clean:
+	$(RM) $(OFILES)
+	$(RM) $(TARGET)

@@ -1,0 +1,169 @@
+// Auto-generated .map file
+// DO NOT HAND EDIT
+// Generated from tridude3.map
+
+#include "../map.h"
+#include "../glbdef.h"
+
+const SQUARE_NAMES glb_tridude3_squarelist[] =
+{
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_BLOCKEDDOOR,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_ACID,	SQUARE_ACID,	SQUARE_ACID,	
+SQUARE_ACID,	SQUARE_ACID,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_ACID,	SQUARE_FLOOR,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_ACID,	SQUARE_ACID,	SQUARE_BLOCKEDDOOR,	
+SQUARE_WALL,	SQUARE_ACID,	SQUARE_FLOOR,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_ACID,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_ACID,	SQUARE_FLOOR,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_ACID,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_ACID,	SQUARE_FLOOR,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_ACID,	SQUARE_WALL,	
+SQUARE_BLOCKEDDOOR,	SQUARE_ACID,	SQUARE_ACID,	SQUARE_FLOOR,	
+SQUARE_FLOOR,	SQUARE_FLOOR,	SQUARE_ACID,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_ACID,	SQUARE_ACID,	
+SQUARE_ACID,	SQUARE_ACID,	SQUARE_ACID,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	SQUARE_WALL,	
+SQUARE_WALL,	SQUARE_WALL,	SQUARE_BLOCKEDDOOR,	SQUARE_WALL
+};
+
+const PT2 glb_tridude3_moblist[] =
+{
+	{ 5, 6, MOB_PURPLETRIDUDE },
+	{ 4, 4, MOB_PURPLETRIDUDE },
+	{ 4, 3, MOB_PURPLETRIDUDE },
+	{ 2, 2, MOB_PURPLETRIDUDE },
+	{ -1, -1, MOB_NONE }
+};
+
+const PT2 glb_tridude3_itemlist[] =
+{
+	{ 3, 6, ITEM_BOULDER },
+	{ 5, 5, ITEM_BOULDER },
+	{ 5, 3, ITEM_BOULDER },
+	{ 3, 3, ITEM_BOULDER },
+	{ -1, -1, ITEM_NONE }
+};
+
+const PT2 glb_tridude3_itemtypelist[] =
+{
+	{ -1, -1, ITEMTYPE_NONE }
+};
+
+const PT2 glb_tridude3_moblevellist[] =
+{
+	{ 4, 4, MOBLEVEL_UNIQUE },
+	{ -1, -1, MOBLEVEL_NONE }
+};
+
+const PT2 glb_tridude3_intrinsiclist[] =
+{
+	{ 4, 4, INTRINSIC_LEADER },
+	{ -1, -1, INTRINSIC_NONE }
+};
+
+const PT2 glb_tridude3_squareflaglist[] =
+{
+	{ 7, 8, SQUAREFLAG_LIT },
+	{ 6, 8, SQUAREFLAG_LIT },
+	{ 5, 8, SQUAREFLAG_LIT },
+	{ 4, 8, SQUAREFLAG_LIT },
+	{ 3, 8, SQUAREFLAG_LIT },
+	{ 2, 8, SQUAREFLAG_LIT },
+	{ 1, 8, SQUAREFLAG_LIT },
+	{ 0, 8, SQUAREFLAG_LIT },
+	{ 7, 7, SQUAREFLAG_LIT },
+	{ 6, 7, SQUAREFLAG_LIT },
+	{ 5, 7, SQUAREFLAG_LIT },
+	{ 4, 7, SQUAREFLAG_LIT },
+	{ 3, 7, SQUAREFLAG_LIT },
+	{ 2, 7, SQUAREFLAG_LIT },
+	{ 1, 7, SQUAREFLAG_LIT },
+	{ 0, 7, SQUAREFLAG_LIT },
+	{ 7, 6, SQUAREFLAG_LIT },
+	{ 6, 6, SQUAREFLAG_LIT },
+	{ 5, 6, SQUAREFLAG_LIT },
+	{ 4, 6, SQUAREFLAG_LIT },
+	{ 3, 6, SQUAREFLAG_LIT },
+	{ 2, 6, SQUAREFLAG_LIT },
+	{ 1, 6, SQUAREFLAG_LIT },
+	{ 0, 6, SQUAREFLAG_LIT },
+	{ 7, 5, SQUAREFLAG_LIT },
+	{ 6, 5, SQUAREFLAG_LIT },
+	{ 5, 5, SQUAREFLAG_LIT },
+	{ 4, 5, SQUAREFLAG_LIT },
+	{ 3, 5, SQUAREFLAG_LIT },
+	{ 2, 5, SQUAREFLAG_LIT },
+	{ 1, 5, SQUAREFLAG_LIT },
+	{ 0, 5, SQUAREFLAG_LIT },
+	{ 7, 4, SQUAREFLAG_LIT },
+	{ 6, 4, SQUAREFLAG_LIT },
+	{ 5, 4, SQUAREFLAG_LIT },
+	{ 4, 4, SQUAREFLAG_LIT },
+	{ 3, 4, SQUAREFLAG_LIT },
+	{ 2, 4, SQUAREFLAG_LIT },
+	{ 1, 4, SQUAREFLAG_LIT },
+	{ 0, 4, SQUAREFLAG_LIT },
+	{ 7, 3, SQUAREFLAG_LIT },
+	{ 6, 3, SQUAREFLAG_LIT },
+	{ 5, 3, SQUAREFLAG_LIT },
+	{ 4, 3, SQUAREFLAG_LIT },
+	{ 3, 3, SQUAREFLAG_LIT },
+	{ 2, 3, SQUAREFLAG_LIT },
+	{ 1, 3, SQUAREFLAG_LIT },
+	{ 0, 3, SQUAREFLAG_LIT },
+	{ 7, 2, SQUAREFLAG_LIT },
+	{ 6, 2, SQUAREFLAG_LIT },
+	{ 5, 2, SQUAREFLAG_LIT },
+	{ 4, 2, SQUAREFLAG_LIT },
+	{ 3, 2, SQUAREFLAG_LIT },
+	{ 2, 2, SQUAREFLAG_LIT },
+	{ 1, 2, SQUAREFLAG_LIT },
+	{ 0, 2, SQUAREFLAG_LIT },
+	{ 7, 1, SQUAREFLAG_LIT },
+	{ 6, 1, SQUAREFLAG_LIT },
+	{ 5, 1, SQUAREFLAG_LIT },
+	{ 4, 1, SQUAREFLAG_LIT },
+	{ 3, 1, SQUAREFLAG_LIT },
+	{ 2, 1, SQUAREFLAG_LIT },
+	{ 1, 1, SQUAREFLAG_LIT },
+	{ 0, 1, SQUAREFLAG_LIT },
+	{ 7, 0, SQUAREFLAG_LIT },
+	{ 6, 0, SQUAREFLAG_LIT },
+	{ 5, 0, SQUAREFLAG_LIT },
+	{ 4, 0, SQUAREFLAG_LIT },
+	{ 3, 0, SQUAREFLAG_LIT },
+	{ 2, 0, SQUAREFLAG_LIT },
+	{ 1, 0, SQUAREFLAG_LIT },
+	{ 0, 0, SQUAREFLAG_LIT },
+	{ -1, -1, SQUAREFLAG_NONE }
+};
+
+const PT2 glb_tridude3_signpostlist[] =
+{
+	{ -1, -1, SIGNPOST_NONE }
+};
+
+const ROOM_DEF glb_tridude3_roomdef =
+{
+	{ 8, 9, 0 },
+	glb_tridude3_squarelist,
+	glb_tridude3_squareflaglist,
+	glb_tridude3_itemlist,
+	glb_tridude3_moblist,
+	glb_tridude3_itemtypelist,
+	glb_tridude3_moblevellist,
+	glb_tridude3_intrinsiclist,
+	glb_tridude3_signpostlist,
+	13, -1,
+	100,
+	0, 0,
+	0,
+	1,
+	1,
+	1,
+	1,
+	-1, -1, 
+	-1, 
+	"tridude3"
+};

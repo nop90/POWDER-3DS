@@ -1,0 +1,24 @@
+# A more complicated lair...
+# This has a guaranteed mirror shield.
+
+allowstairs = false
+
++--------------+
+|   ,          |
+|,,,, ######## |
+|###, #...#D]# |
+|#.s,,s...s.D# |
+|### ,#...#D.# |
+| ,,,,######## |
+| ,            |
++--------------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+,: SQUARE_CORRIDOR
+#: SQUARE_WALL, SQUAREFLAG_LIT
+D: SQUARE_FLOOR, MOB_BLUEDRAGON, SQUAREFLAG_LIT
+]: SQUARE_FLOOR, ITEM_REFLECTSHIELD, SQUAREFLAG_LIT
+

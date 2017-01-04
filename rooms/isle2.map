@@ -1,0 +1,23 @@
+# A more complex island.
+
+minlevel = 4
+allowstairs = false
+
++----------+
+| ~~~~~~~  |
+|~~.....~~x|
+|~...11..~~|
+|~~~~~~..~~|
+|~~...~~~~~|
+| ~~..11..~|
+|x.~~~..~~~|
+|   x~~~~  |
++----------+
+
+ : SQUARE_EMPTY
+x: SQUARE_DOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+.: SQUARE_CORRIDOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+~: SQUARE_WATER, SQUAREFLAG_LIT
+1: SQUARE_CORRIDOR, SQUAREFLAG_LIT, MOBLEVEL_NORMAL, ITEMTYPE_ANY

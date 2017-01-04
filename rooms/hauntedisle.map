@@ -1,0 +1,24 @@
+# A haunted island.
+# Ghosts, I believe, are restricted from walking over water.
+
+minlevel = 3
+allowstairs = false
+
++--------+
+| ~~~~~  |
+|~~...~~x|
+|~~!G$.~~|
+| ~~!..G~|
+|x.~~~G.~|
+|   x~~~~|
++--------+
+
+ : SQUARE_EMPTY
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+.: SQUARE_CORRIDOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+~: SQUARE_WATER, SQUAREFLAG_LIT
+G: SQUARE_CORRIDOR, MOB_GHOST, SQUAREFLAG_LIT
+!: SQUARE_CORRIDOR, ITEMTYPE_ANY, SQUAREFLAG_LIT
+$: SQUARE_CORRIDOR, ITEMTYPE_ARTIFACT, SQUAREFLAG_LIT

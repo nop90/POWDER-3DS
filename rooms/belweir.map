@@ -1,0 +1,39 @@
+# Belweir's Quest
+
+allowstairs = false
+allowdig = false
+
+minlevel = 21
+maxlevel = 21
+mandatory = 1
+
++-------------+
+|###+###      |
+|#11.11#      |
+|#11.11#      |
+|+.....#      |
+|#11.11#      |
+|#11.11*******|
+|***%***,,,,,*|
+|*,,,,,,,###,*|
+|*,=?==,====,*|
+|*,####,####,*|
+|*,====,=?==,*|
+|*,####,####,*|
+|*,==?=,====,*|
+|*,,#######,,*|
+|**,+=,^,=+,**|
+| *********** |
++-------------+
+
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+,: SQUARE_FLOOR, SQUAREFLAG_LIT, SQUAREFLAG_NOMOB
+#: SQUARE_WALL, SQUAREFLAG_LIT
+*: SQUARE_REINFORCEDWALL, SQUAREFLAG_LIT
+ : SQUARE_EMPTY
++: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+=: SQUARE_FLOOR, ITEMTYPE_SPELLBOOK, SQUAREFLAG_LIT, SQUAREFLAG_NOMOB
+?: SQUARE_FLOOR, ITEMTYPE_SCROLL, ITEMTYPE_SCROLL, ITEMTYPE_SCROLL, ITEMTYPE_SCROLL, ITEMTYPE_SCROLL, SQUAREFLAG_LIT, SQUAREFLAG_NOMOB
+1: SQUARE_FLOORALTAR, SQUAREFLAG_LIT
+%: SQUARE_MAGICDOOR, SQUAREFLAG_LIT
+^: SQUARE_FLOORHOLE, SQUAREFLAG_LIT, SQUAREFLAG_NOMOB

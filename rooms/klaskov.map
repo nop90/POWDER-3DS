@@ -1,0 +1,59 @@
+# Klaskov Quest
+
+allowstairs = false
+allowgeneration = false
+allowdig = false
+allowitems = false
+allowtele = false
+rarity = 0
+quest = GOD_FIGHTER
+pos = 0 0
+
++------------------------------+
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|
+|^^^^^^^^^^^^^^^^^^^^^^^>^^^^^^|
+|^^^^^^^^^^^^^^^^^^^^^^&&^^^^^^|
+|^^^^^^^^^^^^^^^^^^^^&&&.^^^^^^|
+|^^^^^^^^^^^...&&&&&&&^^^^^^^^^|
+|^^^^^^^^^..HHH!HHH&&&^^^^^^^^^|
+|^^^^^^^^...HHHHHHH.&&^^^^^^^^^|
+|^^^^^^^^...hhhhhhh...^^^^^^^^^|
+|^^^^^^^^^..hhhhhhh.^^^^^^^^^^^|
+|^^^^^^^^^^......^^^^^^^^^^^^^^|
+|^^^^^^^^^^^^..^^^^^^^^^^^^^^^^|
+|^^^^^^^^^^^^..^^^^^^^^^^^^^^^^|
+|^^^^^^^^&&.......^^^^^^^^^^^^^|
+|^^^^^^&&&&........^^^^^^^^^^^^|
+|^^^^^&&~~~.......&&&^^^^^^^^^^|
+|^^^^&&~~~~~~~...~~~&&^^^^^^^^^|
+|^^^^&&&&.~~~~..~~~~&&&^^^^^^^^|
+|^^^^&&&&&..........&&^^^^^^^^^|
+|^^^^^&&&..@.....@..&&^^^^^^^^^|
+|^^^^^^&&.#####.#+##^^^^^^^^^^^|
+|^^^^^^...+,,<#.#,,#..^^^^^^^^^|
+|^^^^^^...#,,t#.#,t+....^^^^^^^|
+|^^^^^^^..#####.##+#...^^^^^^^^|
+|^^^^^^^^.......#,,#.^^^^^^^^^^|
+|^^^^^^^^^^.....####^^^^^^^^^^^|
+|^^^^^^^^^^^.......^^^^^^^^^^^^|
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|
+|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|
++------------------------------+
+
+.: SQUARE_GRASS, SQUAREFLAG_LIT
+,: SQUARE_FLOOR, SQUAREFLAG_LIT
+t: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+^: SQUARE_MOUNTAIN, SQUAREFLAG_LIT
+&: SQUARE_FOREST, SQUAREFLAG_LIT
+~: SQUARE_WATER, SQUAREFLAG_LIT
++: SQUARE_DOOR, SQUAREFLAG_LIT
+=: SQUARE_FLOOR, ITEMTYPE_SPELLBOOK, SQUAREFLAG_LIT
+>: SQUARE_LADDERDOWN, SQUAREFLAG_LIT
+<: SQUARE_LADDERUP, SQUAREFLAG_LIT
+@: SQUARE_GRASS, SQUAREFLAG_LIT
+h: SQUARE_GRASS, SQUAREFLAG_LIT, MOB_ORC
+H: SQUARE_GRASS, SQUAREFLAG_LIT, MOB_HILLORC
+!: SQUARE_GRASS, SQUAREFLAG_LIT, MOB_HILLORC, MOBLEVEL_UNIQUE, INTRINSIC_LEADER

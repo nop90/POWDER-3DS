@@ -1,0 +1,22 @@
+# An ancient crypt, 2
+
+allowstairs = false
+minlevel = 2
+
++---------+
+|#########|
+|xz#z#z#S#|
+|#.#.g..z#|
+|#..z..#S#|
+|#####x###|
+|##z....zx|
+|##x######|
++---------+
+
+ : SQUARE_EMPTY
+x: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+.: SQUARE_CORRIDOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+z: SQUARE_CORRIDOR, MOB_ZOMBIE, SQUAREFLAG_LIT
+S: SQUARE_CORRIDOR, MOB_SKELETON, SQUAREFLAG_LIT
+g: SQUARE_CORRIDOR, MOB_GHAST, SQUAREFLAG_LIT, ITEMTYPE_ARMOUR

@@ -1,0 +1,88 @@
+# Tutorial Level
+
+# Things learned
+# 1) We want to get to interesting point quickly
+#    This means enough to really play POWDER
+# 2) We want people to learn that POWDER is non-linear
+#    The open approach to exploration helps teach this.
+# 3) Not too many sign posts before first fight!
+
+allowstairs = false
+allowgeneration = false
+allowdig = false
+allowitems = false
+allowtele = false
+rarity = 0
+pos = 0 0
+
++------------------------------+
+|##############################|
+|#...##...##.......#...##..8.##|
+|#<.1...2.##...b6..+.r.##.k..##|
+|#...##...##.......#+#+#####.##|
+|#######.###########.#....#H.##|
+|######...#..(..####7####.##.##|
+|######.3...4..5.+...####.##+##|
+|######...#.....######.......##|
+|#####################...9...##|
+|##########rrr####.....!./.?.##|
+|##~~...####+#####.###.......##|
+|##~~.C..##.=..#....##+###.####|
+|##~~###....=B.s.A..##.###...##|
+|##~~###s##....#....##.#####+##|
+|##!?r...###+#########.###!0..#|
+|##//###### , ########+###(...#|
+|#########  ,  #####.....######|
+|######### ,,, #####..E.d+..rr#|
+|########  ,F, #####.....#...r#|
+|######## ,,,     #############|
+|########  ,   ,,            ##|
+|########  ,,,,G,+,,,  ,,, ,  #|
+|#########    ,,, ,,,,,,,,,,, #|
+|############ ,,  ,,,,z,,,,,, #|
+|############        ,,,z,,,  #|
+|################,,,   ,,,   ##|
+|############...s,,,,z,,,, ####|
+|############.D.##,,,,,,   ####|
+|############...###       #####|
+|##############################|
+|##############################|
++------------------------------+
+
+.: SQUARE_FLOOR, SQUAREFLAG_LIT
+#: SQUARE_WALL, SQUAREFLAG_LIT
+ : SQUARE_EMPTY
+,: SQUARE_CORRIDOR 
+~: SQUARE_WATER, SQUAREFLAG_LIT
++: SQUARE_BLOCKEDDOOR, SQUAREFLAG_LIT
+s: SQUARE_SECRETDOOR, SQUAREFLAG_LIT
+<: SQUARE_LADDERUP
+(: SQUARE_FLOOR, ITEM_LONGSWORD, SQUAREFLAG_LIT
+/: SQUARE_FLOOR, ITEMTYPE_WAND, SQUAREFLAG_LIT
+=: SQUARE_FLOOR, ITEMTYPE_SPELLBOOK, SQUAREFLAG_LIT
+!: SQUARE_FLOOR, ITEMTYPE_POTION, SQUAREFLAG_LIT
+?: SQUARE_FLOOR, ITEMTYPE_SCROLL, SQUAREFLAG_LIT
+r: SQUARE_FLOOR, MOB_RAT, SQUAREFLAG_LIT
+d: SQUARE_FLOOR, ITEM_DAGGER, ITEM_DAGGER, ITEM_DAGGER, ITEM_DAGGER, SQUAREFLAG_LIT
+b: SQUARE_FLOOR, ITEM_BOULDER, SQUAREFLAG_LIT
+k: SQUARE_FLOOR, MOB_KIWI, SQUAREFLAG_LIT
+z: SQUARE_CORRIDOR, MOB_REDDRAGON
+
+1: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_WELCOME
+2: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_MINIMAP
+3: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_INVENTORY
+4: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_PICKUP
+5: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_DOOR
+6: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_BOULDER
+7: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_MELEE
+8: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_LOOK
+9: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_USE
+0: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_DIP
+A: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_SEARCH
+B: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_SPELLS
+C: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_WATER
+D: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_WONTUTORIAL
+E: SQUARE_SIGNPOST, SQUAREFLAG_LIT, SIGNPOST_QUIVER
+F: SQUARE_SIGNPOST, SIGNPOST_DARK
+G: SQUARE_SIGNPOST, SIGNPOST_DRAGONS
+H: SQUARE_SIGNPOST, SIGNPOST_KIWI
