@@ -187,11 +187,13 @@ input_drawcursor(int kx, int ky)
 int
 input_getchar(int gx, int gy, bool shifted)
 {
-    STYLUSLOCK		styluslock(REGION_KEYBOARD);
     int			sx, sy;
+#ifndef _NOSTYLUS
+   STYLUSLOCK		styluslock(REGION_KEYBOARD);
 
     styluslock.setRange(KEYLEFT, KEYTOP, 
 			KEYLEFT+2*KEYWIDTH-1, KEYTOP+2*KEYHEIGHT-1);
+#endif
 
 #ifdef HAS_KEYBOARD
     while (1)
@@ -212,12 +214,14 @@ input_getchar(int gx, int gy, bool shifted)
 	    return key;
 
 	// Check stylus.
+#ifndef _NOSTYLUS
 	if (styluslock.getchartile(sx, sy))
 	{
 	    key = input_lookupkey(sx, sy, shifted);
 	    if (key)
 		return key;
 	}
+#endif
     }
 #else
     int		dx, dy, key = 0;
@@ -304,6 +308,7 @@ input_getchar(int gx, int gy, bool shifted)
 	    break;
 	}
 	
+#ifndef _NOSTYLUS
 	// Check stylus.
 	if (styluslock.getchartile(sx, sy))
 	{
@@ -317,6 +322,7 @@ input_getchar(int gx, int gy, bool shifted)
 		break;
 	    }
 	}
+#endif
     }
 
     input_erasecursor(key_x, key_y);

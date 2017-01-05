@@ -94,14 +94,23 @@ msg_awaitaccept()
     
     // After some play testings, I decided that hitting anything should
     // bring the next message.  It has to be a net new press though.
-    
+
 #ifndef HAS_KEYBOARD
+#ifdef _3DS
+    // Wait for it to go off
+    while (ctrl_anyrawpressed() && !hamfake_forceQuit()) hamfake_awaitEvent();
+    // And on
+    while (!ctrl_anyrawpressed() && !hamfake_forceQuit()) hamfake_awaitEvent();
+//    // And off...  
+//    while (ctrl_anyrawpressed() && !hamfake_forceQuit()) hamfake_awaitEvent();
+#else
     // Wait for it to go off
     while (ctrl_anyrawpressed() && !hamfake_forceQuit());
     // And on
     while (!ctrl_anyrawpressed() && !hamfake_forceQuit());
     // And off...  
     while (ctrl_anyrawpressed() && !hamfake_forceQuit());
+#endif
 #else
     hamfake_clearKeyboardBuffer();
 
@@ -396,7 +405,7 @@ msg_append(const char *msg)
 void
 msg_alert(const char *msg)
 {
-    BUF		buf;
+   BUF		buf;
     
     if (!msg_isempty())
     {

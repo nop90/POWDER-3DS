@@ -1646,7 +1646,7 @@ intro_screen()
 	gfx_printtext(0, 18, "Built with DevkitPro 1.4.4 r21");
 #else
 #ifdef _3DS
-	gfx_printtext(0, 18, "Built with DevkitArm");
+	gfx_printtext(0, 18, "Built with DevkitArm r45");
 #else
 	gfx_printtext(0, 18, "Built with HAM 2.8");
 #endif
@@ -1933,6 +1933,7 @@ intro_screen()
 	int		aorb;
 
 	gfx_printtext(0, 6, "Gender? ");
+
 	glbGender = gfx_selectmenu(5, 7, gendermenu, aorb, glbGender);
 
 	// Secret code: [Start] to pick random gender.
@@ -2689,8 +2690,9 @@ useInventory(MOB *avatar, bool quickselect)
     bool		consumed = true;
     bool		forceconsume = false;
     int			aorb = 0;
+#ifndef _NOSTYLUS
     STYLUSLOCK		styluslock(REGION_BOTTOMBUTTON);
-    
+#endif    
     // If we are doing quickselect, determine which key will cause
     // the quick select.
     if (quickselect)
@@ -2745,7 +2747,7 @@ useInventory(MOB *avatar, bool quickselect)
 	    consumed = forceconsume;
 	    break;
 	}
-	
+#ifndef _NOSTYLUS	
 	if (styluslock.performInventoryDrag(sx, sy, ex, ey, avatar, dirty))
 	{
 	    // No mater what, we
@@ -2797,7 +2799,7 @@ useInventory(MOB *avatar, bool quickselect)
 		}
 	    }
 	}
-		
+#endif		
 	if (dirty)
 	{
 	    ITEM		*item;
@@ -2949,6 +2951,7 @@ useInventory(MOB *avatar, bool quickselect)
 	{
 	    int		button;
 
+#ifndef _NOSTYLUS
 	    // Check to see if the action menu was used.
 	    if (glbActionBar && styluslock.getbottombutton(button))
 	    {
@@ -2958,6 +2961,7 @@ useInventory(MOB *avatar, bool quickselect)
 		    apress = true;
 		}
 	    }
+#endif
 	}
 
 	if (!apress)
@@ -3235,8 +3239,9 @@ useInventory(MOB *avatar, bool quickselect)
 		    // Item is in main inventory, equip.
 		    // Get the user to choose a inventory slot...
 		    gfx_setinvcursor(slotx, sloty, true);
-
+#ifndef _NOSTYLUS
 		    STYLUSLOCK	styluslock(REGION_SLOTS);
+#endif
 		    while (1)
 		    {
 			if (!gfx_isnewframe())
@@ -3262,6 +3267,7 @@ useInventory(MOB *avatar, bool quickselect)
 			}
 
 			int		sslot;
+#ifndef _NOSTYLUS
 			if (styluslock.selectinventoryslot(sslot))
 			{
 			    if (sslot == -1)
@@ -3274,7 +3280,7 @@ useInventory(MOB *avatar, bool quickselect)
 			    }
 			    break;
 			}
-
+#endif
 			// Consume invalid keys.
 			hamfake_getKeyPress(false);
 
@@ -5700,8 +5706,9 @@ checkModifierButtons()
 void
 processAllInput(ACTION_NAMES &action, SPELL_NAMES &spell, int &dx, int &dy)
 {
+#ifndef _NOSTYLUS
     STYLUSLOCK	styluslock(REGION_BOTTOMBUTTON | REGION_SIDEBUTTON);
-    
+#endif    
     // Check for forced actions.
     if (glbAutoRunEnabled)
     {
@@ -6157,11 +6164,13 @@ processAllInput(ACTION_NAMES &action, SPELL_NAMES &spell, int &dx, int &dy)
 	}
 
 	int buttonsel;
+#ifndef _NOSTYLUS
 	if (action == ACTION_NONE && glbActionBar && styluslock.getbottombutton(buttonsel))
 	{
 	    action_unpackStripButton(glb_globalactionstrip[buttonsel],
 				action, spell);
 	}
+#endif	
 	if (action == ACTION_NONE && spell == SPELL_NONE)
 	{
 	    int		iact, ispell;
@@ -6339,7 +6348,6 @@ gba_main(void)
 
     // Switch to tiled mode.
     gfx_setmode(0);
-
     {
 	int		y;
 	for (y = 0; y < 20; y++)

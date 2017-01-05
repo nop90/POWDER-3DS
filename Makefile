@@ -47,7 +47,7 @@ CFLAGS	:=	-g -Wall -O2 $(ARCH)
 #-			-mword-relocations \ -fomit-frame-pointer -ffast-math \
 
 
-CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS -DLINUX 
+CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS -DLINUX -D_NOSTYLUS
 
 CXXFLAGS	:= $(CFLAGS) 
 

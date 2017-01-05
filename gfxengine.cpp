@@ -710,14 +710,12 @@ gfx_setmode(int mode)
     {
 	// Intro screen...
 	ham_SetBgMode(3);
-
 	gfx_reblitslugandblood();
 
 	// Ensure we have current sprite date.
 	hamfake_LoadSpritePal((void *)glb_tilesets[glb_tileset].spritepalette, 512);
-// nop90: wrong memory access !!!!
-	hamfake_ReloadSpriteGfx((u16*)(&glb_tilesets[glb_tileset].sprite[glb_sprite*4*BYTEPERTILE]),
-			0, 4);
+
+	hamfake_ReloadSpriteGfx((u16*)(&glb_tilesets[glb_tileset].sprite[glb_sprite*4*BYTEPERTILE]), 0, 4);
 	
 	// NOTE: This actually copies incorrect data!  Likely due to it
 	// using 32bit copies or ignoring waitstates.    
@@ -745,7 +743,6 @@ gfx_setmode(int mode)
     // 1: 64x64: Terrain tiles
     // 2: 64x64: Monters/Item tiles
     // 3: 64x64: Shadow tiles
-
 #if 1
     // We want a 32x32 as we only will use one screen worth.
     ham_bg[0].mi = ham_InitMapEmptySet(0, 0);
@@ -870,8 +867,7 @@ gfx_setmode(int mode)
     }
 
     // Load the sprite.
-    hamfake_ReloadSpriteGfx((u16*)(&glb_tilesets[glb_tileset].sprite[glb_sprite*4*BYTEPERTILE]),
-		    0, 4);
+    hamfake_ReloadSpriteGfx((u16*)(&glb_tilesets[glb_tileset].sprite[glb_sprite*4*BYTEPERTILE]), 0, 4);
 }
 
 
@@ -2286,9 +2282,10 @@ gfx_selectmenu(int x, int y, const char **menu, int &aorb, int def,
     if (select < 0)
 	select = 0;		// Less than zero is also illegal.
 
+    int		startoflist = 0, endoflist = 0;
+#ifndef _NOSTYLUS
     STYLUSLOCK	styluslock((!menuactions) ? REGION_MENU
 			    : (REGION_MENU | REGION_BOTTOMBUTTON | REGION_SIDEBUTTON));
-    int		startoflist = 0, endoflist = 0;
 
     // If we are in drag mode, we need to free up the borders so they
     // can be selected.
@@ -2296,7 +2293,7 @@ gfx_selectmenu(int x, int y, const char **menu, int &aorb, int def,
 	styluslock.setRange(x, 0, 29, 20);
     else
 	styluslock.setRange(x, -1, -1, -1);
-
+#endif
     // Display the menu.
     gfx_displaylist(x, y, 18, menu, select, startoflist, endoflist);
 
@@ -2497,7 +2494,7 @@ gfx_selectmenu(int x, int y, const char **menu, int &aorb, int def,
 		if (!dx && !dy)
 			ctrl_getdir(dx, dy);
 	#endif
-
+#ifndef _NOSTYLUS
 		// Process any drag requests.
 		if (menuactions)
 		{
@@ -2548,7 +2545,7 @@ gfx_selectmenu(int x, int y, const char **menu, int &aorb, int def,
 			}
 			}
 		}
-		
+#endif		
 		if (!dx && !dy)
 		{
 			// Nothing to do.
@@ -2580,7 +2577,9 @@ gfx_selectmenu(int x, int y, const char **menu, int &aorb, int def,
 			gfx_displaylist(x, y, 18, menu, select, startoflist, endoflist);
 		}
     }
+
     if (menuactions) writeGlobalActionBar(false);
+
     return -1;
 }
 
@@ -2693,8 +2692,9 @@ gfx_displayinfotext(const char *text)
 {
     const char		*curtext;
     int			 dx, dy, y;
+#ifndef _NOSTYLUS
     STYLUSLOCK		 styluslock(REGION_DISPLAYTEXT);
-
+#endif
     gfx_displayinfoblock(text, false);
 
     curtext = text;
@@ -2773,14 +2773,14 @@ gfx_displayinfotext(const char *text)
 	}
 	hamfake_clearKeyboardBuffer();
 #endif
-
+#ifndef _NOSTYLUS
 	if (styluslock.getdisplaytext(dy))
 	{
 	    dy = dy;
 	    if (!dy)
 		break;
 	}
-	
+#endif	
 	if (!dy)
 	    continue;
 
@@ -3197,8 +3197,9 @@ gfx_pager_display(int y)
     
     // Clear the repeat queue of SDL
     hamfake_clearKeyboardBuffer();
-    
+#ifndef _NOSTYLUS    
     STYLUSLOCK		 styluslock(REGION_DISPLAYTEXT);
+#endif
     while (1)
     {
 	if (!gfx_isnewframe())
@@ -3279,13 +3280,14 @@ gfx_pager_display(int y)
 	}
 	hamfake_clearKeyboardBuffer();
 #endif
+#ifndef _NOSTYLUS
 	if (styluslock.getdisplaytext(dy))
 	{
 	    dy = dy;
 	    if (!dy)
 		break;
 	}
-
+#endif
 	if (dy < 0)
 	{
 	    // User wants to scroll up.
@@ -3346,8 +3348,9 @@ gfx_selecttile(int &tx, int &ty, bool quickselect, int *quickold, int *aorb,
     int		dx, dy;
     int		oldoverlay;
     bool	cancel;
+#ifndef _NOSTYLUS
     STYLUSLOCK	styluslock(REGION_MAPTILES);
-
+#endif
     if (stylus)
 	*stylus = false;
 
@@ -3391,7 +3394,7 @@ gfx_selecttile(int &tx, int &ty, bool quickselect, int *quickold, int *aorb,
 	    else
 		return false;
 	}
-
+#ifndef _NOSTYLUS
 	if (styluslock.getmaptile(dx, dy, cancel))
 	{
 	    // User pressed on a tile successfully.
@@ -3415,7 +3418,7 @@ gfx_selecttile(int &tx, int &ty, bool quickselect, int *quickold, int *aorb,
 	    hamfake_clearKeyboardBuffer();
 	    return !cancel;
 	}
-
+#endif
 	ctrl_getdir(dx, dy);
 	if (!dx && !dy)
 	{
@@ -3450,9 +3453,9 @@ gfx_selectinventory(int &selectx, int &selecty)
     int		button;
     int		dx, dy;
     bool	apress, bpress;
-
+#ifndef _NOSTYLUS
     STYLUSLOCK	styluslock(REGION_BOTTOMBUTTON);
-
+#endif
     writeYesNoBar();
 
     gfx_setinvcursor(selectx, selecty, false);
@@ -3467,7 +3470,7 @@ gfx_selectinventory(int &selectx, int &selecty)
 	ctrl_getdir(dx, dy);
 	apress = ctrl_hit(BUTTON_A);
 	bpress = ctrl_hit(BUTTON_B);
-
+#ifndef _NOSTYLUS
 	if (styluslock.getbottombutton(button))
 	{
 	    // Either a cancel or accept.
@@ -3476,7 +3479,7 @@ gfx_selectinventory(int &selectx, int &selecty)
 	    if (button == 26)
 		bpress = true;
 	}
-
+#endif
 	if (bpress)
 	{
 	    // Cancel
@@ -3515,8 +3518,9 @@ gfx_selectdirection(int otx, int oty, int &rdx, int &rdy, int &rdz)
     int		dx, dy, ndx, ndy, tx, ty;
     int		oldoverlay;
     bool	chose = false;
+#ifndef _NOSTYLUS
     STYLUSLOCK	styluslock(REGION_TENDIR);
-
+#endif
     hamfake_flushdir();
     hamfake_buttonreq(5, 1);
 
@@ -3557,7 +3561,7 @@ gfx_selectdirection(int otx, int oty, int &rdx, int &rdy, int &rdz)
 	    chose = true;
 	    break;
 	}
-
+#ifndef _NOSTYLUS
 	if (styluslock.gettendir(rdx, rdy, rdz, chose))
 	{
 	    // Invert sense of choosing.
@@ -3566,7 +3570,7 @@ gfx_selectdirection(int otx, int oty, int &rdx, int &rdy, int &rdz)
 	    hamfake_buttonreq(5, 0);
 	    return chose;
 	}
-	
+#endif	
 	if (!ndx && !ndy)
 	{
 	    // Consume any key in case an invalid key was hit

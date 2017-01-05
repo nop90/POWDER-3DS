@@ -83,8 +83,13 @@ ctrl_setrepeat(BUTTONS button, int timedelay)
 int
 ctrl_anyrawpressed()
 {
-#ifdef HAS_KEYBOARD
+#if defined(HAS_KEYBOARD)
     return 0;
+#elif defined(_3DS)
+	if(hamfake_isAnyPressed())
+	return 0;
+    else
+	return 1;
 #else
     if (~R_CTRLINPUT & 0x3FF)
 	return 1;

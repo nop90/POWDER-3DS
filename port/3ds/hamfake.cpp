@@ -99,7 +99,8 @@ struct SPRITEDATA
 #define MAX_SPRITES 128
 
 
-SPRITEDATA	 *glbSpriteList;
+//SPRITEDATA	 *glbSpriteList;
+SPRITEDATA	 glbSpriteList[MAX_SPRITES];
 
 
 // Do we have an extra tileset loaded?
@@ -260,7 +261,6 @@ hamfake_rebuildScreen()
 {
   int			i, layer, x, y, tileidx, tx, ty;
   int			offset;
-
 /*
   if (!glb_isdirty)
     return;
@@ -274,17 +274,16 @@ hamfake_rebuildScreen()
     {
       dst = (u8 *) glbVideoSurface;
       scaleScreenFrom15bit(dst, 0);
-	  // nop90: cosider to flush texture memory here
     }
     return;
   }
 
   // Clear our video surface.
   memset(glb_nativescreen, 0, HAM_SCRH * HAM_SCRW * sizeof(u16));
-
   // Blit each layer in turn.
   // Hard coded layer order:
   int		lay_ord[4] = { 1, 2, 3, 0 };
+
   for (i = 0; i < 4; i++)
   {
     layer = lay_ord[i];
@@ -389,7 +388,8 @@ hamfake_rebuildScreen()
   }
 
   // Draw the cursor sprite
-  blitSprite(glbSpriteList[0]);
+// NOP90 thow a memory read error
+  blitSprite(glbSpriteList[0]); 
 
   // Lock and update the final surface using our lookup...
   {
@@ -399,7 +399,6 @@ hamfake_rebuildScreen()
     {
       dst = (u8 *) glbVideoSurface;
       scaleScreenFromPaletted(dst, 0);
-	  // nop90: cosider to flush texture memory here
     }
 
   }
@@ -620,12 +619,11 @@ ham_Init()
 
   glbFullScreen = true;
 
-/*
   for (i = 0; i < MAX_SPRITES; i++)
   {
     glbSpriteList[i].active = false;
   }
-*/
+
   memset(glbJoyState, 0, MAX_JOY_BUTTON * sizeof(bool));
 
   // Load any save games.
