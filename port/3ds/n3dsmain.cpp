@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <3ds.h>
 #include "sf2d.h"
+#include "hamfake.h"
 
 extern int gba_main(void);
 
@@ -68,7 +69,7 @@ int main()
 	sf2d_set_3D(false);
 	sf2d_set_vblank_wait(true);
 
- 	osSetSpeedupEnable(true);
+	osSetSpeedupEnable(true);
 	romfsInit();
 
 	consoleInit(GFX_BOTTOM, NULL);
@@ -82,6 +83,6 @@ int main()
   // run
   gba_main();
 
-//  N3ds_Quit();
-  return 0;
+  hamfake_softReset();
+  return 0; //Should never reach this point
 }

@@ -1394,7 +1394,6 @@ selectAssignment(ACTION_NAMES *menu, int &button)
 	lastsel = select;
     delete [] m;
     delete [] stripvalue;
-
     if (select == -1)
 	return ACTION_NONE;
     else
@@ -1666,7 +1665,7 @@ intro_screen()
 		MAINMENU_TUTORIAL,
 		MAINMENU_VIEWSCORES,
 		MAINMENU_OPTIONS,
-#if defined(USING_SDL) && !defined(SYS_PSP)
+#if (defined(USING_SDL) ||defined (_3DS)) && !defined(SYS_PSP)
 #ifndef iPOWDER
 		MAINMENU_QUIT,
 #endif
@@ -1685,7 +1684,7 @@ intro_screen()
 		MAINMENU_TUTORIAL,
 		MAINMENU_VIEWSCORES,
 		MAINMENU_OPTIONS,
-#if defined(USING_SDL) && !defined(SYS_PSP)
+#if (defined(USING_SDL) ||defined (_3DS)) && !defined(SYS_PSP)
 #ifndef iPOWDER
 		MAINMENU_QUIT,
 #endif
@@ -1704,7 +1703,7 @@ intro_screen()
 		MAINMENU_SAVESCUM,
 		MAINMENU_VIEWSCORES,
 		MAINMENU_OPTIONS,
-#if defined(USING_SDL) && !defined(SYS_PSP)
+#if (defined(USING_SDL) ||defined (_3DS)) && !defined(SYS_PSP)
 #ifndef iPOWDER
 		MAINMENU_QUIT,
 #endif
@@ -3773,7 +3772,7 @@ processOptions()
 	OPTION_FULLSCREEN
     };
 
-#if defined(USING_SDL) && !defined(iPOWDER)
+#if (defined(USING_SDL) ||defined (_3DS)) && !defined(SYS_PSP)
     int			i;
 
     // Toggle the Full Screen option depending on our actual full
@@ -4424,11 +4423,13 @@ processVerbList()
     ACTION_NAMES	action;
     
     action = selectAssignment(menu_generic, button);
-
     // Wait for the action to go high so we don't get
     // another trigger for USE...
+#ifdef _3DS
+    while (ctrl_anyrawpressed() && !hamfake_forceQuit()) hamfake_awaitEvent();
+#else
     while (ctrl_rawpressed(button));
-
+#endif
     switch (button)
     {
 	case BUTTON_SELECT:

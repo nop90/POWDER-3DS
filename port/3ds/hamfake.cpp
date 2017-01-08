@@ -38,6 +38,9 @@ using namespace std;
 
 #define MAX_JOY_BUTTON 12
 
+#define TICKS_PER_MSEC (268123.480)
+#define TICKS_PER_FRAME ((TICKS_PER_MSEC*1000)/61) // we set the timer to 61 FPS, but the vblank wait will adjust the frame rate to 60 FPS
+
 //
 // Global GBA state:
 //
@@ -55,6 +58,8 @@ bool		 glbStylusState = false;
 bool		 glbJoyState[MAX_JOY_BUTTON];
 
 extern int	glb_newframe; // from gfxengine.c
+
+u64 lastframe = 0;
 
 BUTTONS	 glbJoyToButton[MAX_JOY_BUTTON] =
 {
@@ -256,16 +261,26 @@ blitSprite(const SPRITEDATA &sprite)
   }
 }
 
+extern void vblFunc();
+
 void
 hamfake_rebuildScreen()
 {
   int			i, layer, x, y, tileidx, tx, ty;
   int			offset;
-/*
-  if (!glb_isdirty)
-    return;
-  glb_isdirty = false;
-*/
+  u64 			sysTicks;
+  
+  sysTicks = svcGetSystemTick();
+#ifdef DEBUG
+  if (!glb_isdirty && (lastframe + TICKS_PER_FRAME > sysTicks))
+		return;
+#endif
+  if (lastframe + TICKS_PER_FRAME <= sysTicks)
+  {
+	vblFunc();
+	lastframe = sysTicks;
+  }
+  
   if (glb_videomode == 3)
   {
     u8		*dst = 0;
@@ -408,15 +423,15 @@ hamfake_rebuildScreen()
 void
 hamfake_awaitEvent()
 {
-//nop90
 	do {
-// we need here to put  a sleepthread call...
-		aptMainLoop(); // if(!aptMainLoop()) exit=1;
-// ... an here handling home menu event
+// Handling home menu event
+		if(!aptMainLoop()) hamfake_softReset();
+// we need here to put  a sleepthread call to handle game paused from home menu
+// 		svcSleepThread(1000000) // 1ms
 		hidScanInput();
-	} while (!hidKeysDown() && !hidKeysUp());
-//  SDL_WaitEvent(0);
-	glb_newframe = 1; // this is dirty, should be set only every 1/60 of second
+		if (lastframe + TICKS_PER_FRAME <= svcGetSystemTick()) glb_newframe = 1;
+	} while (!hidKeysDown() && !hidKeysUp() && !glb_newframe);
+	glb_newframe = 1; // dirty hack
 }
 
 // Return our internal screen.
@@ -487,12 +502,11 @@ void
 hamfake_pollEvents()
 {
 //nop90
-	unsigned int keydown = hidKeysDown();
-	unsigned int keyup = hidKeysUp();
+	unsigned int keyHeld = hidKeysHeld();
 	int i;
 	for (i=0;i<MAX_JOY_BUTTON;i++) {
-		if (keydown & hidButton[i]) glbJoyState[i] = true;
-		if (keyup & hidButton[i]) glbJoyState[i] = false;
+		if (keyHeld & hidButton[i]) glbJoyState[i] = true;
+		else glbJoyState[i] = false;
 	}
 /*
   SDL_Event	event;
@@ -643,6 +657,8 @@ ham_Init()
     printf("External tileset loaded.\n");
   }
 
+  lastframe = svcGetSystemTick();
+  
   return;
 }
 
@@ -832,21 +848,21 @@ hamfake_LoadSpritePal(void *vpal, int bytes)
   glb_isdirty = true;
 }
 
-void
-hamfake_softReset()
+extern void task_exit();
+
+void hamfake_softReset()
 {
-//  SDL_Quit();
+  task_exit();
+
   exit(0);
 }
 
-bool
-hamfake_extratileset()
+bool hamfake_extratileset()
 {
   return ham_extratileset;
 }
 
-void
-hamfake_getstyluspos(int &x, int &y)
+void hamfake_getstyluspos(int &x, int &y)
 {
   x = glbStylusX;
   y = glbStylusY;

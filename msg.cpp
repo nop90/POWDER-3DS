@@ -101,8 +101,6 @@ msg_awaitaccept()
     while (ctrl_anyrawpressed() && !hamfake_forceQuit()) hamfake_awaitEvent();
     // And on
     while (!ctrl_anyrawpressed() && !hamfake_forceQuit()) hamfake_awaitEvent();
-//    // And off...  
-//    while (ctrl_anyrawpressed() && !hamfake_forceQuit()) hamfake_awaitEvent();
 #else
     // Wait for it to go off
     while (ctrl_anyrawpressed() && !hamfake_forceQuit());
