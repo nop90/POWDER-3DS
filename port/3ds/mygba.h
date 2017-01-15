@@ -20,7 +20,7 @@
 //#define USING_SDL
 #define HAS_DISKIO
 //#define HAS_KEYBOARD
-//#define HAS_STYLUS
+#define HAS_STYLUS
 #define HAS_XYBUTTON
 
 #include <3ds.h>

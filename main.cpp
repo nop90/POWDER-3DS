@@ -5707,9 +5707,7 @@ checkModifierButtons()
 void
 processAllInput(ACTION_NAMES &action, SPELL_NAMES &spell, int &dx, int &dy)
 {
-#ifndef _NOSTYLUS
     STYLUSLOCK	styluslock(REGION_BOTTOMBUTTON | REGION_SIDEBUTTON);
-#endif    
     // Check for forced actions.
     if (glbAutoRunEnabled)
     {
@@ -6165,13 +6163,11 @@ processAllInput(ACTION_NAMES &action, SPELL_NAMES &spell, int &dx, int &dy)
 	}
 
 	int buttonsel;
-#ifndef _NOSTYLUS
 	if (action == ACTION_NONE && glbActionBar && styluslock.getbottombutton(buttonsel))
 	{
 	    action_unpackStripButton(glb_globalactionstrip[buttonsel],
 				action, spell);
 	}
-#endif	
 	if (action == ACTION_NONE && spell == SPELL_NONE)
 	{
 	    int		iact, ispell;

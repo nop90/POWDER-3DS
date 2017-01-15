@@ -114,12 +114,7 @@ int	glb_tileset = 0;
 int	glb_modetilesets[1] = { 2};
 int	glb_tilesetmode = 0;
 #endif
-// Fonts default to shadowed.
-#ifndef _3DS
-int	glb_currentfont = 2;
-#else
 int	glb_currentfont = 1;
-#endif
 
 // This is our current tile reference array.
 // glb_tileidx[TILE_NAME] gives the gba tile index.
@@ -139,7 +134,9 @@ u16	glb_idxcount[TILEARRAY];
 // This is a map of our current 64x64 tile layout.
 u16	*glb_tilemap, *glb_shadowmap, *glb_mobmap;
 u16	*glb_abstilemap, *glb_absmobmap, *glb_absshadowmap;
-
+#ifdef _3DS
+u16	*glb_abstilemap2, *glb_absshadowmap2, *glb_absmobmap2;
+#endif
 // This is 32x24 and matches the currently displayed characters.
 u8	*glb_charmap;
 
@@ -643,10 +640,17 @@ gfx_init()
     memset(glb_absmobmap, 0xff, 17*12*sizeof(u16));
     memset(glb_absshadowmap, 0xff, 17*12*sizeof(u16));
     memset(glb_charmap, 0xff, 32*24);
-#ifdef _3DS	
-   int dw, dh; // unused
-//	bmp_slug_and_blood = bmp_load("gfx/tridude_goodbye_hires.bmp", dw, dh, true);
-	bmp_slug_and_blood = bmp_load("gfx/powder.bmp", dw, dh, true);
+#ifdef _3DS
+    glb_abstilemap2 = new u16[17*12];
+    glb_absmobmap2 = new u16[17*12];
+    glb_absshadowmap2 = new u16[32*32];
+    memset(glb_abstilemap2, 0xff, 17*12*sizeof(u16));
+    memset(glb_absmobmap2, 0xff, 17*12*sizeof(u16));
+    memset(glb_absshadowmap2, 0xff, 17*12*sizeof(u16));
+
+    int dw, dh; // unused
+	bmp_slug_and_blood = bmp_load("gfx/tridude_goodbye_hires.bmp", dw, dh, true);
+//	bmp_slug_and_blood = bmp_load("gfx/powder.bmp", dw, dh, true);
 #endif
 }
 
@@ -755,6 +759,13 @@ gfx_setmode(int mode)
 
     // We want a 64x64 screen.
     ham_bg[3].mi = ham_InitMapEmptySet(3, 0);
+
+#ifdef _3DS	
+    ham_bg[4].mi = ham_InitMapEmptySet(0, 0);
+    ham_bg[5].mi = ham_InitMapEmptySet(0, 0);
+    ham_bg[6].mi = ham_InitMapEmptySet(0, 0);
+#endif	
+
 #else
     // We want a 32x32 as we only will use one screen worth.
     ham_bg[0].mi = ham_InitMapEmptySet(0, 0);
@@ -834,6 +845,18 @@ gfx_setmode(int mode)
     
     // No rot.  Above the ground but below the shadow.
     ham_InitBg(2, 1, 2, 0);
+
+#ifdef _3DS	
+    ham_bg[4].ti = ham_bg[1].ti;
+    ham_bg[5].ti = ham_bg[2].ti;
+    ham_bg[6].ti = ham_bg[0].ti;
+    memset(glb_abstilemap2, 0xff, 17*12*sizeof(u16));
+    memset(glb_absmobmap2, 0xff, 17*12*sizeof(u16));
+    memset(glb_absshadowmap2, 0xff, 17*12*sizeof(u16));
+    ham_InitBg(4, 1, 3, 0);
+    ham_InitBg(5, 1, 2, 0);
+    ham_InitBg(6, 1, 2, 0);
+#endif
     
     gfx_buildstdcolors();
 
@@ -863,6 +886,11 @@ gfx_setmode(int mode)
 	    ham_SetMapTile(1, x, y, voidtileidx);
 	    ham_SetMapTile(2, x, y, voidtileidx);
 	    ham_SetMapTile(3, x, y, voidtileidx);
+#ifdef _3DS
+	    ham_SetMapTile(4, x, y, voidtileidx);
+	    ham_SetMapTile(5, x, y, voidtileidx);
+	    ham_SetMapTile(6, x, y, voidtileidx);
+#endif
 	}
     }
 
@@ -896,18 +924,42 @@ gfx_refreshtiles()
 		gfx_unlockTile((TILE_NAMES)tile);
 		glb_abstilemap[y * 17 + x] = INVALID_TILEIDX;
 	    }
-	    tile = glb_absshadowmap[y * 17 + x];
+#ifdef _3DS
+	    tile = glb_abstilemap2[y * 17 + x];
 	    if (tile != INVALID_TILEIDX)
 	    {
 		gfx_unlockTile((TILE_NAMES)tile);
-		glb_absshadowmap[y * 17 + x] = INVALID_TILEIDX;
+		glb_abstilemap2[y * 17 + x] = INVALID_TILEIDX;
 	    }
+#endif
+	    tile = glb_absshadowmap2[y * 17 + x];
+	    if (tile != INVALID_TILEIDX)
+	    {
+		gfx_unlockTile((TILE_NAMES)tile);
+		glb_absshadowmap2[y * 17 + x] = INVALID_TILEIDX;
+	    }
+#ifdef _3DS
+	    tile = glb_abstilemap2[y * 17 + x];
+	    if (tile != INVALID_TILEIDX)
+	    {
+		gfx_unlockTile((TILE_NAMES)tile);
+		glb_abstilemap2[y * 17 + x] = INVALID_TILEIDX;
+	    }
+#endif
 	    tile = glb_absmobmap[y * 17 + x];
 	    if (tile != INVALID_TILEIDX)
 	    {
 		gfx_unlockTile((TILE_NAMES)tile);
 		glb_absmobmap[y * 17 + x] = INVALID_TILEIDX;
 	    }
+#ifdef _3DS
+	    tile = glb_absmobmap2[y * 17 + x];
+	    if (tile != INVALID_TILEIDX)
+	    {
+		gfx_unlockTile((TILE_NAMES)tile);
+		glb_absmobmap2[y * 17 + x] = INVALID_TILEIDX;
+	    }
+#endif		
 	}
     }
 
@@ -961,6 +1013,12 @@ gfx_refreshtiles()
 	    gfx_unlockTile((TILE_NAMES)tile);
 	}
     }
+#ifdef _3DS
+    ham_bg[4].mi = ham_InitMapEmptySet(0, 0);
+    ham_bg[5].mi = ham_InitMapEmptySet(0, 0);
+    ham_bg[6].mi = ham_InitMapEmptySet(3, 0);
+#endif
+
 #if 0
     BUF			buf;
     buf.sprintf("%d, %d, %d, %d...%d, %d, %d, %d...",
@@ -1042,6 +1100,53 @@ gfx_setabstile(int tx, int ty, int tileno)
     ham_SetMapTile(1, tx1, ty1, tileidx+3);
 }
 
+#ifdef _3DS
+void
+gfx_setabstile2(int tx, int ty, int tileno)
+{
+    // Handle ability to write to -1 column
+    tx++;
+
+    UT_ASSERT(tx >= 0);
+    UT_ASSERT(tx < 17);
+    UT_ASSERT(ty >= 0);
+    UT_ASSERT(ty < 12);
+
+    int		tx1, ty1, tileidx, abstile;
+
+    // Update the abs map...
+    abstile = glb_abstilemap2[ty * 17 + tx];
+    if (abstile == tileno)
+	return;
+
+    gfx_unlockTile((TILE_NAMES)abstile);
+    tileidx = gfx_lockTile((TILE_NAMES)tileno, (TILE_NAMES *)&tileno);
+    glb_abstilemap2[ty * 17 + tx] = tileno;
+/*    
+    // Extra -1 is for our offset.
+    tx += glb_offx - 7 - 1;
+    ty += glb_offy - 5;
+*/
+    tx *= 2;
+    ty *= 2;
+    ty += 2;	
+    tx -= 1;
+	
+    tx1 = tx + 1;
+    ty1 = ty + 1;
+    tx &= 63;
+    ty &= 63;
+    tx1 &= 63;
+    ty1 &= 63;
+
+    ham_SetMapTile(4, tx, ty, tileidx);
+    ham_SetMapTile(4, tx1, ty, tileidx+1);
+    ham_SetMapTile(4, tx, ty1, tileidx+2);
+    ham_SetMapTile(4, tx1, ty1, tileidx+3);
+}
+
+#endif
+
 void
 gfx_setoverlay(int tx, int ty, int tileno)
 {
@@ -1071,6 +1176,55 @@ gfx_getoverlay(int tx, int ty)
 {
     return glb_shadowmap[ty * 32 + tx];
 }
+
+#ifdef _3DS
+void
+gfx_setabsoverlay2(int tx, int ty, int tileno)
+{
+    // Correct for ability to write to -1 column
+    tx++;
+
+    UT_ASSERT(tx >= 0);
+    UT_ASSERT(tx < 17);
+    UT_ASSERT(ty >= 0);
+    UT_ASSERT(ty < 12);
+
+    // Ignore this if we are not in a valid mode.
+    if (glb_gfxmode)
+	return;
+
+    int		tx1, ty1, tileidx, abstile;
+    
+    // Update the abs map...
+    abstile = glb_absshadowmap2[ty * 17 + tx];
+    if (abstile == tileno)
+	return;
+
+    gfx_unlockTile((TILE_NAMES)abstile);
+    tileidx = gfx_lockTile((TILE_NAMES)tileno, (TILE_NAMES *)&tileno);
+    glb_absshadowmap2[ty * 17 + tx] = tileno;
+
+//    tx += glb_offx - 7 - 1;	// Extra -1 is for writing to -1 column
+//    ty += glb_offy - 5;
+
+    tx *= 2;
+    ty *= 2;
+    ty += 2;
+    tx -= 1;
+	
+    tx1 = tx + 1;
+    ty1 = ty + 1;
+    tx &= 63;
+    ty &= 63;
+    tx1 &= 63;
+    ty1 &= 63;
+    
+    ham_SetMapTile(6, tx, ty, tileidx);
+    ham_SetMapTile(6, tx1, ty, tileidx+1);
+    ham_SetMapTile(6, tx, ty1, tileidx+2);
+    ham_SetMapTile(6, tx1, ty1, tileidx+3);
+}
+#endif
 
 void
 gfx_setabsoverlay(int tx, int ty, int tileno)
@@ -1184,6 +1338,52 @@ gfx_setabsmob(int tx, int ty, int tileno)
     ham_SetMapTile(2, tx, ty1, tileidx+2);
     ham_SetMapTile(2, tx1, ty1, tileidx+3);
 }
+
+#ifdef _3DS
+void
+gfx_setabsmob2(int tx, int ty, int tileno)
+{
+    // Handle ability to write to -1 column
+    tx++;
+
+    UT_ASSERT(tx >= 0);
+    UT_ASSERT(tx < 17);
+    UT_ASSERT(ty >= 0);
+    UT_ASSERT(ty < 12);
+
+    int		tx1, ty1, tileidx, abstile;
+
+    // Update the abs map...
+    abstile = glb_absmobmap2[ty * 17 + tx];
+    if (abstile == tileno)
+	return;
+
+    gfx_unlockTile((TILE_NAMES)abstile);
+    tileidx = gfx_lockTile((TILE_NAMES)tileno, (TILE_NAMES *)&tileno);
+    glb_absmobmap2[ty * 17 + tx] = tileno;
+/*    
+    // Extra -1 is for our offset.
+    tx += glb_offx - 7 - 1;
+    ty += glb_offy - 5;
+*/
+    tx *= 2;
+    ty *= 2;
+    ty += 2;		
+    tx -= 1;		
+
+    tx1 = tx + 1;
+    ty1 = ty + 1;
+    tx &= 63;
+    ty &= 63;
+    tx1 &= 63;
+    ty1 &= 63;
+
+    ham_SetMapTile(5, tx, ty, tileidx);
+    ham_SetMapTile(5, tx1, ty, tileidx+1);
+    ham_SetMapTile(5, tx, ty1, tileidx+2);
+    ham_SetMapTile(5, tx1, ty1, tileidx+3);
+}
+#endif
 
 int
 gfx_getmoblayer(int tx, int ty)
@@ -1474,7 +1674,7 @@ void gfx_scrollcenter(int tx, int ty)
     // We also need to set the text port
     M_BG0SCRLX_SET(-TILEWIDTH);
     M_BG0SCRLY_SET(-TILEHEIGHT*3);
-#elif defined(USING_DS) || defined(USING_SDL)
+#elif defined(USING_DS) || defined(USING_SDL) || defined(_3DS)
     M_BG1SCRLX_SET((tx-glb_scrollx)*TILEWIDTH*2 - 14*TILEWIDTH - TILEWIDTH + glb_nudgex);
     M_BG1SCRLY_SET((ty-glb_scrolly)*TILEHEIGHT*2 - 9*TILEHEIGHT - 2*TILEHEIGHT + glb_nudgey);
     M_BG2SCRLX_SET((tx-glb_scrollx)*TILEWIDTH*2 - 14*TILEWIDTH - TILEWIDTH + glb_nudgex);
@@ -1504,7 +1704,7 @@ gfx_isnewframe()
     int result;
 
     hamfake_rebuildScreen();
-    hamfake_awaitEvent();
+//    hamfake_awaitEvent();
     // The event could be a new frame...
     result = glb_newframe; 
     glb_newframe = 0;
@@ -2009,6 +2209,7 @@ gfx_showinventory(MOB *mob)
 	    // Draw the inventory item with pass thru and clear out
 	    // the overlay..
 	    item = mob->getItem(ix, iy);
+#ifndef _3DS
 	    if (!item)
 		gfx_setabstile(tx, ty, TILE_NORMALSLOT);
 	    else if (item->isFavorite())
@@ -2034,6 +2235,7 @@ gfx_showinventory(MOB *mob)
 			gfx_setabstile(tx, ty, TILE_EMPTYSLOT);
 		}
 	    }
+
 	    if (!ix)
 	    {
 		if (!mob->hasSlot((ITEMSLOT_NAMES) iy))
@@ -2047,11 +2249,63 @@ gfx_showinventory(MOB *mob)
 	    else
 		gfx_setabsmob(tx, ty, 
 				    (item ? item->getTile() : TILE_VOID));
-	    if (ix == glb_invx && iy == glb_invy)
-		gfx_setabsoverlay(tx, ty, TILE_CURSOR);
+
+#else
+	    if (!item)
+		gfx_setabstile2(tx, ty, TILE_NORMALSLOT);
+	    else if (item->isFavorite())
+	    {
+		gfx_setabstile2(tx, ty, TILE_FAVORITESLOT);
+	    }
 	    else
+	    {
+		if (item->isKnownCursed())
+		{
+		    if (item->isBlessed())
+			gfx_setabstile2(tx, ty, TILE_HOLYSLOT);
+		    else if (item->isCursed())
+			gfx_setabstile2(tx, ty, TILE_CURSEDSLOT);
+		    else
+			gfx_setabstile2(tx, ty, TILE_NORMALSLOT);
+		}
+		else
+		{
+		    if (item->isKnownNotCursed())
+			gfx_setabstile2(tx, ty, TILE_NORMALSLOT);
+		    else
+			gfx_setabstile2(tx, ty, TILE_EMPTYSLOT);
+		}
+	    }
+
+	    if (!ix)
+	    {
+		if (!mob->hasSlot((ITEMSLOT_NAMES) iy))
+		{
+		    gfx_setabsmob2(tx, ty, TILE_INVALIDSLOT);
+		}
+		else
+		    gfx_setabsmob2(tx, ty, 
+				    (item ? item->getTile() : TILE_VOID));
+	    }
+	    else
+		gfx_setabsmob2(tx, ty, 
+				    (item ? item->getTile() : TILE_VOID));
+
+#endif	    
+
+	    if (ix == glb_invx && iy == glb_invy)
+#ifdef _3DS
+		gfx_setabsoverlay2(tx, ty, TILE_CURSOR);
+#else
+		gfx_setabsoverlay(tx, ty, TILE_CURSOR);
+#endif
+	    else
+#ifdef _3DS
+		gfx_setabsoverlay2(tx, ty, TILE_VOID);
+#else
 		gfx_setabsoverlay(tx, ty, TILE_VOID);
-	    
+#endif
+
 	    // If the item is quivered, add the q flag.
 	    if (item && item->isQuivered())
 	    {
@@ -2108,7 +2362,11 @@ gfx_setinvcursor(int ix, int iy, bool onlyslots)
 
     // but only if inventory currently up
     if (glb_invmob)
-	gfx_setabsoverlay(tx, ty, TILE_VOID);
+#ifdef _3DS
+		gfx_setabsoverlay2(tx, ty, TILE_VOID);
+#else
+		gfx_setabsoverlay(tx, ty, TILE_VOID);
+#endif
 
     // Scroll the cursor as you hit the top of the inventory
     // If we are on the equipment column, we always stay on the
@@ -2163,7 +2421,11 @@ gfx_setinvcursor(int ix, int iy, bool onlyslots)
     if (!glb_invmob)
 	return;
 
-    gfx_setabsoverlay(tx, ty, TILE_CURSOR);
+#ifdef _3DS
+	gfx_setabsoverlay2(tx, ty, TILE_CURSOR);
+#else
+	gfx_setabsoverlay(tx, ty, TILE_CURSOR);
+#endif
     
     // Update the current inventory item...
     gfx_updateinventoryline(glb_invmob);
@@ -2283,7 +2545,6 @@ gfx_selectmenu(int x, int y, const char **menu, int &aorb, int def,
 	select = 0;		// Less than zero is also illegal.
 
     int		startoflist = 0, endoflist = 0;
-#ifndef _NOSTYLUS
     STYLUSLOCK	styluslock((!menuactions) ? REGION_MENU
 			    : (REGION_MENU | REGION_BOTTOMBUTTON | REGION_SIDEBUTTON));
 
@@ -2293,7 +2554,7 @@ gfx_selectmenu(int x, int y, const char **menu, int &aorb, int def,
 	styluslock.setRange(x, 0, 29, 20);
     else
 	styluslock.setRange(x, -1, -1, -1);
-#endif
+
     // Display the menu.
     gfx_displaylist(x, y, 18, menu, select, startoflist, endoflist);
 
@@ -2494,7 +2755,7 @@ gfx_selectmenu(int x, int y, const char **menu, int &aorb, int def,
 		if (!dx && !dy)
 			ctrl_getdir(dx, dy);
 	#endif
-#ifndef _NOSTYLUS
+
 		// Process any drag requests.
 		if (menuactions)
 		{
@@ -2545,7 +2806,7 @@ gfx_selectmenu(int x, int y, const char **menu, int &aorb, int def,
 			}
 			}
 		}
-#endif		
+
 		if (!dx && !dy)
 		{
 			// Nothing to do.
@@ -2617,7 +2878,11 @@ gfx_yesnomenu(const char *prompt, bool defchoice)
 		// even for a large prompt.
 		if (sx >= 16)
 		    break;
+#ifdef _3DS
+		gfx_setabsoverlay2(sx, sy, tile);
+#else
 		gfx_setabsoverlay(sx, sy, tile);
+#endif
 	    }
 	}
     }
@@ -2692,9 +2957,9 @@ gfx_displayinfotext(const char *text)
 {
     const char		*curtext;
     int			 dx, dy, y;
-#ifndef _NOSTYLUS
+
     STYLUSLOCK		 styluslock(REGION_DISPLAYTEXT);
-#endif
+
     gfx_displayinfoblock(text, false);
 
     curtext = text;
@@ -2773,14 +3038,14 @@ gfx_displayinfotext(const char *text)
 	}
 	hamfake_clearKeyboardBuffer();
 #endif
-#ifndef _NOSTYLUS
+
 	if (styluslock.getdisplaytext(dy))
 	{
 	    dy = dy;
 	    if (!dy)
 		break;
 	}
-#endif	
+
 	if (!dy)
 	    continue;
 
@@ -3181,7 +3446,11 @@ gfx_pager_display(int y)
 	    tile = TILE_SCROLL_BACK;
 	for (sx = -1; sx < 16; sx++)
 	{
+#ifdef _3DS
+		gfx_setabsoverlay2(sx, sy, tile);
+#else
 	    gfx_setabsoverlay(sx, sy, tile);
+#endif
 	}
     }
 
@@ -3197,9 +3466,9 @@ gfx_pager_display(int y)
     
     // Clear the repeat queue of SDL
     hamfake_clearKeyboardBuffer();
-#ifndef _NOSTYLUS    
+
     STYLUSLOCK		 styluslock(REGION_DISPLAYTEXT);
-#endif
+
     while (1)
     {
 	if (!gfx_isnewframe())
@@ -3280,14 +3549,14 @@ gfx_pager_display(int y)
 	}
 	hamfake_clearKeyboardBuffer();
 #endif
-#ifndef _NOSTYLUS
+
 	if (styluslock.getdisplaytext(dy))
 	{
 	    dy = dy;
 	    if (!dy)
 		break;
 	}
-#endif
+
 	if (dy < 0)
 	{
 	    // User wants to scroll up.
@@ -3348,9 +3617,9 @@ gfx_selecttile(int &tx, int &ty, bool quickselect, int *quickold, int *aorb,
     int		dx, dy;
     int		oldoverlay;
     bool	cancel;
-#ifndef _NOSTYLUS
+
     STYLUSLOCK	styluslock(REGION_MAPTILES);
-#endif
+
     if (stylus)
 	*stylus = false;
 
@@ -3394,7 +3663,7 @@ gfx_selecttile(int &tx, int &ty, bool quickselect, int *quickold, int *aorb,
 	    else
 		return false;
 	}
-#ifndef _NOSTYLUS
+
 	if (styluslock.getmaptile(dx, dy, cancel))
 	{
 	    // User pressed on a tile successfully.
@@ -3418,7 +3687,7 @@ gfx_selecttile(int &tx, int &ty, bool quickselect, int *quickold, int *aorb,
 	    hamfake_clearKeyboardBuffer();
 	    return !cancel;
 	}
-#endif
+
 	ctrl_getdir(dx, dy);
 	if (!dx && !dy)
 	{
@@ -3453,9 +3722,9 @@ gfx_selectinventory(int &selectx, int &selecty)
     int		button;
     int		dx, dy;
     bool	apress, bpress;
-#ifndef _NOSTYLUS
+
     STYLUSLOCK	styluslock(REGION_BOTTOMBUTTON);
-#endif
+
     writeYesNoBar();
 
     gfx_setinvcursor(selectx, selecty, false);
@@ -3470,7 +3739,7 @@ gfx_selectinventory(int &selectx, int &selecty)
 	ctrl_getdir(dx, dy);
 	apress = ctrl_hit(BUTTON_A);
 	bpress = ctrl_hit(BUTTON_B);
-#ifndef _NOSTYLUS
+
 	if (styluslock.getbottombutton(button))
 	{
 	    // Either a cancel or accept.
@@ -3479,7 +3748,7 @@ gfx_selectinventory(int &selectx, int &selecty)
 	    if (button == 26)
 		bpress = true;
 	}
-#endif
+
 	if (bpress)
 	{
 	    // Cancel
@@ -3518,9 +3787,9 @@ gfx_selectdirection(int otx, int oty, int &rdx, int &rdy, int &rdz)
     int		dx, dy, ndx, ndy, tx, ty;
     int		oldoverlay;
     bool	chose = false;
-#ifndef _NOSTYLUS
+
     STYLUSLOCK	styluslock(REGION_TENDIR);
-#endif
+
     hamfake_flushdir();
     hamfake_buttonreq(5, 1);
 
@@ -3529,6 +3798,7 @@ gfx_selectdirection(int otx, int oty, int &rdx, int &rdy, int &rdz)
     ty = oty;
     oldoverlay = gfx_getoverlay(tx, ty);
     gfx_setoverlay(tx, ty, TILE_CURSOR);
+
     dx = dy = 0;
     while (1)
     {
@@ -3561,7 +3831,7 @@ gfx_selectdirection(int otx, int oty, int &rdx, int &rdy, int &rdz)
 	    chose = true;
 	    break;
 	}
-#ifndef _NOSTYLUS
+
 	if (styluslock.gettendir(rdx, rdy, rdz, chose))
 	{
 	    // Invert sense of choosing.
@@ -3570,7 +3840,7 @@ gfx_selectdirection(int otx, int oty, int &rdx, int &rdy, int &rdz)
 	    hamfake_buttonreq(5, 0);
 	    return chose;
 	}
-#endif	
+
 	if (!ndx && !ndy)
 	{
 	    // Consume any key in case an invalid key was hit
@@ -3579,7 +3849,7 @@ gfx_selectdirection(int otx, int oty, int &rdx, int &rdy, int &rdz)
 	}
 
 	// Erase old...
-	gfx_setoverlay(tx, ty, oldoverlay);
+	    gfx_setoverlay(tx, ty, oldoverlay);
 
 	dx += ndx;
 	dy += ndy;
@@ -3605,8 +3875,8 @@ gfx_selectdirection(int otx, int oty, int &rdx, int &rdy, int &rdz)
 	tx &= MAP_WIDTH - 1;
 	ty &= MAP_HEIGHT - 1;
 	
-	oldoverlay = gfx_getoverlay(tx, ty);
-	gfx_setoverlay(tx, ty, TILE_CURSOR);
+    oldoverlay = gfx_getoverlay(tx, ty);
+    gfx_setoverlay(tx, ty, TILE_CURSOR);
     }
 
     // Parse out our dx,dy into rdx, rdy, rdz.

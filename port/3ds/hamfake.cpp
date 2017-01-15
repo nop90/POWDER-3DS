@@ -45,6 +45,7 @@ using namespace std;
 // Global GBA state:
 //
 sf2d_texture *glbVideoSurface;
+sf2d_texture *glbVideoSurface2;
 bool		 glbFullScreen = false;
 int		 glbScreenWidth = HAM_SCRW;
 int		 glbScreenHeight = HAM_SCRH;
@@ -85,10 +86,10 @@ u32	 hidButton[MAX_JOY_BUTTON] =
     KEY_X,	
     KEY_L,
     KEY_R,
-    KEY_DDOWN,
-    KEY_DLEFT,
-    KEY_DUP,
-    KEY_DRIGHT,
+    KEY_DOWN,
+    KEY_LEFT,
+    KEY_UP,
+    KEY_RIGHT,
     KEY_SELECT,
     KEY_START
 };
@@ -113,7 +114,7 @@ bool		 ham_extratileset = false;
 
 
 // Background state:
-bg_info			ham_bg[4];
+bg_info			ham_bg[7];
 
 bool			glb_isnewframe = 0, glb_isdirty = false;
 
@@ -134,10 +135,12 @@ int			glb_videomode = -1;
 void
 rebuildVideoSystemFromGlobals()
 {
-  if(glbVideoSurface) sf2d_free_texture(glbVideoSurface);
-  glbVideoSurface = sf2d_create_texture (HAM_SCRW, HAM_SCRH, TEXFMT_RGBA8, SF2D_PLACE_RAM);
+  if(! glbVideoSurface)
+    glbVideoSurface = sf2d_create_texture (HAM_SCRW, HAM_SCRH, TEXFMT_RGBA8, SF2D_PLACE_RAM);
+  if(! glbVideoSurface2)
+    glbVideoSurface2 = sf2d_create_texture (HAM_SCRW, HAM_SCRH, TEXFMT_RGBA8, SF2D_PLACE_RAM);
 
-  if (!glbVideoSurface) 
+  if (!glbVideoSurface || !glbVideoSurface2) 
   {
     printf("Failed to create screen\n");
     //N3ds_Quit();
@@ -145,6 +148,8 @@ rebuildVideoSystemFromGlobals()
   }
   sf2d_texture_set_params(glbVideoSurface, GPU_TEXTURE_MAG_FILTER(GPU_LINEAR) | GPU_TEXTURE_MIN_FILTER(GPU_LINEAR));
   sf2d_texture_tile32(glbVideoSurface);
+  sf2d_texture_set_params(glbVideoSurface2, GPU_TEXTURE_MAG_FILTER(GPU_LINEAR) | GPU_TEXTURE_MIN_FILTER(GPU_LINEAR));
+  sf2d_texture_tile32(glbVideoSurface2);
 
   glb_isdirty = true;
 }
@@ -196,15 +201,27 @@ scaleScreenFromPaletted(u8 *dst, int pitch)
   u16		*src;
 
   src = glb_nativescreen;
+if(dst == 	(u8 *) glbVideoSurface2) {
   for (y = 0; y < HAM_SCRH; y++){
       for (x = 0; x < HAM_SCRW; x++) 
-        sf2d_set_pixel( glbVideoSurface,x,y,RGBA8(0xff, glb_palette[src[x]*4+3], glb_palette[src[x]*4+2], glb_palette[src[x]*4+1]));
+        sf2d_set_pixel( glbVideoSurface2,x,y,RGBA8(0xff, glb_palette[src[x]*4+1], glb_palette[src[x]*4+2], glb_palette[src[x]*4+3]));
 	  src+=HAM_SCRW;
 	}
-	sf2d_start_frame(GFX_TOP, GFX_LEFT);
-	sf2d_draw_texture_scale(glbVideoSurface, glbScreenFudgeX, 0, glbFullScreen?1.5625:1.25 ,1.25);
-	sf2d_end_frame();
-	sf2d_swapbuffers();
+		sf2d_start_frame(GFX_TOP, GFX_LEFT);
+		sf2d_draw_texture_scale(glbVideoSurface2, glbScreenFudgeX, 0, glbFullScreen?1.5625:1.25 ,1.25);
+		sf2d_end_frame();
+//		sf2d_swapbuffers();
+} else {
+  for (y = 0; y < HAM_SCRH; y++){
+      for (x = 0; x < HAM_SCRW; x++) 
+        sf2d_set_pixel( glbVideoSurface,x,y,RGBA8(0xff, glb_palette[src[x]*4+1], glb_palette[src[x]*4+2], glb_palette[src[x]*4+3]));
+	  src+=HAM_SCRW;
+	}
+		sf2d_start_frame(GFX_BOTTOM, GFX_LEFT);
+		sf2d_draw_texture_scale(glbVideoSurface, 0, 0, 1.25 ,1.25);
+		sf2d_end_frame();
+		sf2d_swapbuffers();
+	}
 }
 
 void
@@ -271,10 +288,9 @@ hamfake_rebuildScreen()
   u64 			sysTicks;
   
   sysTicks = svcGetSystemTick();
-#ifdef DEBUG
-  if (!glb_isdirty && (lastframe + TICKS_PER_FRAME > sysTicks))
+//  if (!glb_isdirty && (lastframe + TICKS_PER_FRAME > sysTicks))
+  if (lastframe + TICKS_PER_FRAME > sysTicks)
 		return;
-#endif
   if (lastframe + TICKS_PER_FRAME <= sysTicks)
   {
 	vblFunc();
@@ -297,11 +313,12 @@ hamfake_rebuildScreen()
   memset(glb_nativescreen, 0, HAM_SCRH * HAM_SCRW * sizeof(u16));
   // Blit each layer in turn.
   // Hard coded layer order:
-  int		lay_ord[4] = { 1, 2, 3, 0 };
+  int		lay_ord[7] = { 1, 2, 3, 4, 5, 6, 0 };
 
-  for (i = 0; i < 4; i++)
+  for (i = 0; i < 7; i++)
   {
     layer = lay_ord[i];
+
 
     ty = ham_bg[layer].scrolly / 8;
     ty %= ham_bg[layer].mi->height;
@@ -313,7 +330,6 @@ hamfake_rebuildScreen()
       tx %= ham_bg[layer].mi->width;
       if (tx < 0)
         tx += ham_bg[layer].mi->width;
-
       for (x = 0; x < HAM_SCRW / 8; x++)
       {
         u8		*tile;
@@ -388,7 +404,7 @@ hamfake_rebuildScreen()
 
     // Just before the text layer we draw our sprites
     // This ensures the buttons are under the text.
-    if (i == 2)
+    if (i == 5)
     {
       int		j;
 
@@ -400,11 +416,19 @@ hamfake_rebuildScreen()
         blitSprite(glbSpriteList[j]);
       }
     }
+
+    if (i==2 && glbVideoSurface2)
+    {
+	  u8 *dst2 = 0;
+      dst2 = (u8 *) glbVideoSurface2;
+      scaleScreenFromPaletted(dst2, 0);
+	  // Clear our video surface before filling it with bottom screen data
+	  memset(glb_nativescreen, 0, HAM_SCRH * HAM_SCRW * sizeof(u16));
+    }
   }
 
   // Draw the cursor sprite
-// NOP90 thow a memory read error
-  blitSprite(glbSpriteList[0]); 
+    blitSprite(glbSpriteList[0]); 
 
   // Lock and update the final surface using our lookup...
   {
@@ -417,21 +441,6 @@ hamfake_rebuildScreen()
     }
 
   }
-}
-
-// Wait for an event to occur.
-void
-hamfake_awaitEvent()
-{
-	do {
-// Handling home menu event
-		if(!aptMainLoop()) hamfake_softReset();
-// we need here to put  a sleepthread call to handle game paused from home menu
-// 		svcSleepThread(1000000) // 1ms
-		hidScanInput();
-		if (lastframe + TICKS_PER_FRAME <= svcGetSystemTick()) glb_newframe = 1;
-	} while (!hidKeysDown() && !hidKeysUp() && !glb_newframe);
-	glb_newframe = 1; // dirty hack
 }
 
 // Return our internal screen.
@@ -501,43 +510,38 @@ int getJoyButton(BUTTONS button)
 void
 hamfake_pollEvents()
 {
-//nop90
+// we need here to put  a sleepthread call to handle game paused from home menu
+	svcSleepThread(TICKS_PER_MSEC); // 1ms
+// Handling home menu event
+	if(!aptMainLoop()) hamfake_softReset();
+
+	hidScanInput();
 	unsigned int keyHeld = hidKeysHeld();
 	int i;
 	for (i=0;i<MAX_JOY_BUTTON;i++) {
 		if (keyHeld & hidButton[i]) glbJoyState[i] = true;
 		else glbJoyState[i] = false;
 	}
-/*
-  SDL_Event	event;
+	if (lastframe + TICKS_PER_FRAME <= svcGetSystemTick()) glb_newframe = 1;
 
-  while (SDL_PollEvent(&event))
-  {
-    switch (event.type)
-    {
-    case SDL_VIDEORESIZE:
-      setResolution(event.resize.w, event.resize.h);
-      break;
+	touchPosition pos;	
+	hidTouchRead(&pos);
+	glbStylusX = pos.px;
+	glbStylusY = pos.py;
+	int x, y;
+	hamfake_getstyluspos(x, y);
 
-    case SDL_JOYBUTTONDOWN:
-      // If button press is in range, set our state
-      if (event.jbutton.button < MAX_JOY_BUTTON)
-	  glbJoyState[event.jbutton.button] = true;
-      break;
-    case SDL_JOYBUTTONUP:
-      if (event.jbutton.button < MAX_JOY_BUTTON)
-	  glbJoyState[event.jbutton.button] = false;
-      break;
-
-    case SDL_QUIT:
-      SDL_Quit();
-      exit(0);
-      break;
-    }
-  }
-*/
+	glbStylusState = (pos.px>0 || pos.py>0);
 }
 
+// Wait for an event to occur.
+void
+hamfake_awaitEvent()
+{
+	do {
+	    hamfake_pollEvents();
+	} while (!hidKeysDown() && !hidKeysUp() && !glb_newframe);
+}
 
 bool
 hamfake_isPressed(BUTTONS button)
@@ -545,7 +549,7 @@ hamfake_isPressed(BUTTONS button)
     int		bnum;
 
     hamfake_pollEvents();
-    hamfake_rebuildScreen();
+//    hamfake_rebuildScreen();
 
     bnum = getJoyButton(button);
     if (bnum < 0)
@@ -564,6 +568,9 @@ hamfake_isAnyPressed()
   for (i = 0; i < MAX_JOY_BUTTON; i++)
     if (glbJoyState[i])
       return 0x0;
+
+    if (glbStylusState)
+	return 0;
 
   return 0x3FF;
 }
@@ -658,7 +665,9 @@ ham_Init()
   }
 
   lastframe = svcGetSystemTick();
-  
+  gfxSetScreenFormat(GFX_BOTTOM,GSP_BGR8_OES); //reset screen forma changed by the console
+
+
   return;
 }
 
@@ -869,8 +878,8 @@ void hamfake_getstyluspos(int &x, int &y)
   // Convert accordint to our scale.
   x -= glbScreenFudgeX;
   y -= glbScreenFudgeY;
-  x /= glbScaleFactor;
-  y /= glbScaleFactor;
+  x /= 1.25;//glbScaleFactor;
+  y /= 1.25;//glbScaleFactor;
   // After conversion we can be out of the valid bounds.
   if (x < 0)
     x = 0;

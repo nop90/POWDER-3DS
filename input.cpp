@@ -161,7 +161,11 @@ input_drawkeyboard(bool shifted)
 	    gfx_printchar(KEYLEFT+x*2, KEYTOP+y*2, *key);
 	    key++;
 
+#ifdef _3DS
+	    gfx_setabsoverlay2(x, 3+y, TILE_EMPTYSLOT);
+#else
 	    gfx_setabsoverlay(x, 3+y, TILE_EMPTYSLOT);
+#endif
 	}
     }
 }
@@ -214,14 +218,12 @@ input_getchar(int gx, int gy, bool shifted)
 	    return key;
 
 	// Check stylus.
-#ifndef _NOSTYLUS
 	if (styluslock.getchartile(sx, sy))
 	{
 	    key = input_lookupkey(sx, sy, shifted);
 	    if (key)
 		return key;
 	}
-#endif
     }
 #else
     int		dx, dy, key = 0;
@@ -308,7 +310,6 @@ input_getchar(int gx, int gy, bool shifted)
 	    break;
 	}
 	
-#ifndef _NOSTYLUS
 	// Check stylus.
 	if (styluslock.getchartile(sx, sy))
 	{
@@ -322,7 +323,6 @@ input_getchar(int gx, int gy, bool shifted)
 		break;
 	    }
 	}
-#endif
     }
 
     input_erasecursor(key_x, key_y);

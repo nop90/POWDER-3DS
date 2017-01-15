@@ -30,8 +30,10 @@
 #include "stylus.h"
 #include "victory.h"
 
+
 // Width of screen in characters
 #define SCREEN_WIDTH	30
+
 // Number of lines per page.
 #define PAGE_SIZE 	3
 
@@ -101,6 +103,8 @@ msg_awaitaccept()
     while (ctrl_anyrawpressed() && !hamfake_forceQuit()) hamfake_awaitEvent();
     // And on
     while (!ctrl_anyrawpressed() && !hamfake_forceQuit()) hamfake_awaitEvent();
+    // And off...  
+    while (ctrl_anyrawpressed() && !hamfake_forceQuit()) hamfake_awaitEvent();
 #else
     // Wait for it to go off
     while (ctrl_anyrawpressed() && !hamfake_forceQuit());

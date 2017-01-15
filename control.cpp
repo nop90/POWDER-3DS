@@ -28,6 +28,7 @@ int	glb_oldframe[NUM_BUTTONS];
 #define SHORT_REPEAT		10		// 6 per sec
 #define LONG_REPEAT		20		// 3 per sec
 
+
 int	glb_repeatrate[NUM_BUTTONS] =
 {
     SHORT_REPEAT,		// UP
@@ -183,6 +184,7 @@ ctrl_hit(int button)
     
     // Now, see if we are pressed...
     curstate = ctrl_rawpressed(button);
+
     if (!curstate)
     {
 	// We know the answer, just make sure our old state is clear.
@@ -190,6 +192,7 @@ ctrl_hit(int button)
 	return false;
     }
     
+
     if (glb_oldstate[button])
     {
 	curframe = gfx_getframecount();

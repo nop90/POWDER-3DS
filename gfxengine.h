@@ -233,6 +233,11 @@ int gfx_getmoblayer(int tx, int ty);
 void gfx_setabstile(int tx, int ty, int tileno);
 void gfx_setabsoverlay(int tx, int ty, int tileno);
 void gfx_setabsmob(int tx, int ty, int tileno);
+#ifdef _3DS
+void gfx_setabstile2(int tx, int ty, int tileno);
+void gfx_setabsoverlay2(int tx, int ty, int tileno);
+void gfx_setabsmob2(int tx, int ty, int tileno);
+#endif
 
 // This clears the given line of any text.
 void gfx_cleartextline(int y, int startx=0);

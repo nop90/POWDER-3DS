@@ -131,7 +131,11 @@ void hamfake_setScrollY(int layer, int scroll);
 	hamfake_setScrollX(3, xoff);
 #define M_BG3SCRLY_SET(yoff) \
 	hamfake_setScrollY(3, yoff);
-    
+#define M_BG4SCRLX_SET(xoff) \
+	hamfake_setScrollX(4, xoff);
+#define M_BG4SCRLY_SET(yoff) \
+	hamfake_setScrollY(4, yoff);
+   
 //
 // Cloned Ham functions
 //
