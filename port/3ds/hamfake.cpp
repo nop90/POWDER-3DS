@@ -411,10 +411,12 @@ hamfake_rebuildScreen()
       // Since we composite on top, we want to do in reverse order of
       // priority.  Hence the backwards loop.
       // The last sprite is the cursor and is done at the very end.
-      for (j = MAX_SPRITES; j --> 1; )
+ 
+     for (j = MAX_SPRITES; j --> 1; )
       {
         blitSprite(glbSpriteList[j]);
       }
+
     }
 
     if (i==2 && glbVideoSurface2)
@@ -578,6 +580,7 @@ hamfake_isAnyPressed()
 int
 hamfake_peekKeyPress()
 {
+  hamfake_pollEvents();
     return 0;
 }
 
@@ -927,7 +930,7 @@ hamfake_fopen(const char *path, const char *mode)
 {
 char buf[256]; 
   // Use the local directory on these platforms.
-  if (path[0]=='/') //3DS Old Hack. Not usng romfs anymore
+  if (path[0]=='/') //3DS trick to know when not reading romfs
 	return fopen(path, mode);
   else {
 	sprintf(buf,"romfs:/%s",path);

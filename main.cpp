@@ -2689,9 +2689,9 @@ useInventory(MOB *avatar, bool quickselect)
     bool		consumed = true;
     bool		forceconsume = false;
     int			aorb = 0;
-#ifndef _NOSTYLUS
+
     STYLUSLOCK		styluslock(REGION_BOTTOMBUTTON);
-#endif    
+   
     // If we are doing quickselect, determine which key will cause
     // the quick select.
     if (quickselect)
@@ -2746,7 +2746,7 @@ useInventory(MOB *avatar, bool quickselect)
 	    consumed = forceconsume;
 	    break;
 	}
-#ifndef _NOSTYLUS	
+	
 	if (styluslock.performInventoryDrag(sx, sy, ex, ey, avatar, dirty))
 	{
 	    // No mater what, we
@@ -2798,7 +2798,7 @@ useInventory(MOB *avatar, bool quickselect)
 		}
 	    }
 	}
-#endif		
+
 	if (dirty)
 	{
 	    ITEM		*item;
@@ -2950,7 +2950,6 @@ useInventory(MOB *avatar, bool quickselect)
 	{
 	    int		button;
 
-#ifndef _NOSTYLUS
 	    // Check to see if the action menu was used.
 	    if (glbActionBar && styluslock.getbottombutton(button))
 	    {
@@ -2960,7 +2959,7 @@ useInventory(MOB *avatar, bool quickselect)
 		    apress = true;
 		}
 	    }
-#endif
+
 	}
 
 	if (!apress)
@@ -3238,9 +3237,9 @@ useInventory(MOB *avatar, bool quickselect)
 		    // Item is in main inventory, equip.
 		    // Get the user to choose a inventory slot...
 		    gfx_setinvcursor(slotx, sloty, true);
-#ifndef _NOSTYLUS
+
 		    STYLUSLOCK	styluslock(REGION_SLOTS);
-#endif
+
 		    while (1)
 		    {
 			if (!gfx_isnewframe())
@@ -3266,7 +3265,7 @@ useInventory(MOB *avatar, bool quickselect)
 			}
 
 			int		sslot;
-#ifndef _NOSTYLUS
+
 			if (styluslock.selectinventoryslot(sslot))
 			{
 			    if (sslot == -1)
@@ -3279,7 +3278,7 @@ useInventory(MOB *avatar, bool quickselect)
 			    }
 			    break;
 			}
-#endif
+
 			// Consume invalid keys.
 			hamfake_getKeyPress(false);
 
