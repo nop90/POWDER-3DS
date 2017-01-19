@@ -30,10 +30,8 @@
 #include "stylus.h"
 #include "victory.h"
 
-
 // Width of screen in characters
 #define SCREEN_WIDTH	30
-
 // Number of lines per page.
 #define PAGE_SIZE 	3
 

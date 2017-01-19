@@ -6,7 +6,7 @@
 #include <sys/stat.h>
 #include <stdio.h>
 #include <3ds.h>
-#include "sf2d.h"
+#include <citro3d.h>
 #include "hamfake.h"
 
 extern int gba_main(void);
@@ -65,15 +65,15 @@ void task_exit() {
 
 int main()
 {
-	sf2d_init(); 
-	sf2d_set_3D(false);
-	sf2d_set_vblank_wait(true);
+	// Initialize graphics
+	gfxInitDefault();
+	C3D_Init(C3D_DEFAULT_CMDBUF_SIZE);
 
 	osSetSpeedupEnable(true);
 	romfsInit();
 
-	consoleInit(GFX_BOTTOM, NULL);
-	printf("Console init...ok\n");
+//	consoleInit(GFX_BOTTOM, NULL);
+//	printf("Console init...ok\n");
 
 	task_init();
 
