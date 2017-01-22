@@ -28,5 +28,10 @@ bmp_loadExtraTileset();
 unsigned short *
 bmp_load(const char *name, int &w, int &h, bool quiet);
 
+#ifdef _3DS
+bool
+bmp_loadTileset(const char* set, int pos);
+#endif
+
 #endif
 

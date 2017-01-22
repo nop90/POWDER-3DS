@@ -101,18 +101,19 @@ volatile int	glb_framecount = 0;
 int	glb_gfxmode = -1;
 
 // Tileset defaults to Akoi Meexx.
-#ifndef _3DS
 #ifndef iPOWDER
+#ifndef _3DS
 int	glb_tileset = 4;
+#else
+int	glb_tileset = 0;
+#endif
 #else
 int	glb_tileset = 2;
 int	glb_modetilesets[2] = { 2, 2 };
 int	glb_tilesetmode = 0;
 #endif
-#else
-int	glb_tileset = 0;
-int	glb_modetilesets[1] = { 2};
-int	glb_tilesetmode = 0;
+#ifdef _3DS
+u16* bmp_powder;
 #endif
 int	glb_currentfont = 1;
 
@@ -650,7 +651,7 @@ gfx_init()
 
     int dw, dh; // unused
 	bmp_slug_and_blood = bmp_load("gfx/tridude_goodbye_hires.bmp", dw, dh, true);
-//	bmp_slug_and_blood = bmp_load("gfx/powder.bmp", dw, dh, true);
+	bmp_powder = bmp_load("gfx/powder.bmp", dw, dh, true);
 #endif
 }
 
@@ -696,6 +697,15 @@ gfx_reblitslugandblood()
     }
 #endif
     hamfake_unlockScreen(screen);
+
+#ifdef _3DS
+	screen = hamfake_lockRawScreen();
+    for (y = 0; y < PLATE_WIDTH*PLATE_HEIGHT; y++)
+    {
+	screen[y] = bmp_powder[y];
+    }
+    hamfake_unlockScreen(screen);
+#endif
 }
 
 void
@@ -1204,9 +1214,6 @@ gfx_setabsoverlay2(int tx, int ty, int tileno)
     tileidx = gfx_lockTile((TILE_NAMES)tileno, (TILE_NAMES *)&tileno);
     glb_absshadowmap2[ty * 17 + tx] = tileno;
 
-//    tx += glb_offx - 7 - 1;	// Extra -1 is for writing to -1 column
-//    ty += glb_offy - 5;
-
     tx *= 2;
     ty *= 2;
     ty += 2;
@@ -1425,6 +1432,10 @@ gfx_printcharraw(int x, int y, char c)
     // This is not tile specific as we don't scale our plate (yet)
     backplate += 8 + 16 * PLATE_WIDTH;
 #endif
+#ifdef _3DS
+	x+=8;
+#endif
+
 
     int backx = x;
     int	backoff = 0;
@@ -1481,6 +1492,9 @@ gfx_printcolourcharraw(int x, int y, char c, COLOUR_NAMES colour)
     // GBA coords and backplate is in DS coords.
 #if defined(USING_DS) || defined(USING_SDL)
     backplate += 8 + 16 * PLATE_WIDTH;
+#endif
+#ifdef _3DS
+	x+=8;
 #endif
 
     int backx = x;

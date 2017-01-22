@@ -58,7 +58,7 @@ CXXFLAGS	:= $(CFLAGS)
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=3dsx.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
-LIBS	:= -lsf2d -lcitro3d -lctru -lm
+LIBS	:= -lcitro3d -lctru -lm
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
@@ -84,6 +84,9 @@ export DEPSDIR	:=	$(CURDIR)/$(BUILD)
 CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
 SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
+PICAFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.v.pica)))
+SHLISTFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.shlist)))
+
 
 #---------------------------------------------------------------------------------
 # use CXX for linking C++ projects, CC for standard C
@@ -100,6 +103,7 @@ endif
 #---------------------------------------------------------------------------------
 
 export OFILES	:=	$(addsuffix .o,$(BINFILES)) \
+			$(PICAFILES:.v.pica=.shbin.o) $(SHLISTFILES:.shlist=.shbin.o) \
 			$(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
 
 export INCLUDE	:=	$(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
@@ -151,7 +155,7 @@ cci: $(TARGET)-strip.elf
 	@echo "built ... 3ds"
 #---------------------------------------------------------------------------------
 cia: $(TARGET)-strip.elf
-	@makerom -f cia -o $(TARGET).cia -elf $(TARGET)-strip.elf -rsf resources/$(TARGET).rsf -icon resources/icon.bin -banner resources/banner.bin -exefslogo -target t
+	@makerom -f cia -o $(TARGET).cia -elf $(TARGET)-strip.elf -rsf port/3ds/$(TARGET).rsf -icon port/3ds/icon.bin -banner port/3ds/banner.bin -exefslogo -target t
 	@echo "built ... cia"
 #---------------------------------------------------------------------------------
 else
@@ -168,6 +172,30 @@ $(OUTPUT).3dsx	:	$(OUTPUT).elf
 endif
 
 $(OUTPUT).elf	:	$(OFILES)
+
+#---------------------------------------------------------------------------------
+# rules for assembling GPU shaders
+#---------------------------------------------------------------------------------
+define shader-as
+	$(eval CURBIN := $(patsubst %.shbin.o,%.shbin,$(notdir $@)))
+	picasso -o $(CURBIN) $1
+	bin2s $(CURBIN) | $(AS) -o $@
+	echo "extern const u8" `(echo $(CURBIN) | sed -e 's/^\([0-9]\)/_\1/' | tr . _)`"_end[];" > `(echo $(CURBIN) | tr . _)`.h
+	echo "extern const u8" `(echo $(CURBIN) | sed -e 's/^\([0-9]\)/_\1/' | tr . _)`"[];" >> `(echo $(CURBIN) | tr . _)`.h
+	echo "extern const u32" `(echo $(CURBIN) | sed -e 's/^\([0-9]\)/_\1/' | tr . _)`_size";" >> `(echo $(CURBIN) | tr . _)`.h
+endef
+
+%.shbin.o : %.v.pica %.g.pica
+	@echo $(notdir $^)
+	@$(call shader-as,$^)
+
+%.shbin.o : %.v.pica
+	@echo $(notdir $<)
+	@$(call shader-as,$<)
+
+%.shbin.o : %.shlist
+	@echo $(notdir $<)
+	@$(call shader-as,$(foreach file,$(shell cat $<),$(dir $<)/$(file)))
 
 
 -include $(DEPENDS)

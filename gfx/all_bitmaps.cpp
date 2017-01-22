@@ -657,6 +657,110 @@ TILESET glb_tilesetdata[NUM_TILESETS] =
 	"Chris Lomaka",
 	8
     },
+#else
+    {
+	{
+	    0,
+	    0,
+	    0,
+	    0,
+	    0,
+	},
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	"Akoi Meexx",
+	8
+    },
+    {
+	{
+	    0,
+	    0,
+	    0,
+	    0,
+	    0,
+	},
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	"Classic",
+	8
+    },
+    {
+	{
+	    0,
+	    0,
+	    0,
+	    0,
+	    0,
+	},
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	"Adam Bolt",
+	8
+    },
+    {
+	{
+	    0,
+	    0,
+	    0,
+	    0,
+	    0,
+	},
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	"Nethackish",
+	8
+    },
+    {
+	{
+	    0,
+	    0,
+	    0,
+	    0,
+	    0,
+	},
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	"Graphical ASCII",
+	8
+    },
+    {
+	{
+	    0,
+	    0,
+	    0,
+	    0,
+	    0,
+	},
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	"Chris Lomaka",
+	8
+    },
+#endif
     {
 	{
 	    0,
@@ -674,25 +778,6 @@ TILESET glb_tilesetdata[NUM_TILESETS] =
 	"From Disk",
 	8
     }
-#else
-    {
-	{
-	    0,
-	    0,
-	    0,
-	    0,
-	    0,
-	},
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	"From Disk",
-	16
-    }
-#endif
 };
 
 TILESET	*glb_tilesets = glb_tilesetdata;

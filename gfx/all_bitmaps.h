@@ -17,11 +17,6 @@
 
 #include <mygba.h>
 
-#ifdef _3DS
-#define NUM_FONTS		5
-#define NUM_TILESETS	1
-#else
-
 #define NUM_FONTS		5
 
 #if defined(iPOWDER)
@@ -31,7 +26,6 @@
 #define NUM_TILESETS		10
 #else
 #define NUM_TILESETS		7
-#endif
 #endif
 #endif
 

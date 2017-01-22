@@ -615,3 +615,209 @@ bmp_loadExtraTileset()
 
     return true;
 }
+
+#ifdef _3DS
+bool
+bmp_loadTileset(const char* set, int pos)
+{
+    // First, load our alphabet, dungeon, and minimap.  We load them
+    // as 15 bit images.
+    u16		*a16[NUM_ALPHA], *d16, *m16, *mf16, *sprite16;
+    int		 aw, ah, dw, dh, mw, mh, sw, sh;
+    bool	 failed = false, alphafail = false;
+    int		 anum;
+    
+    int		 tilewidth = 8;
+    s16		*cd_to_pal;
+    u16		*palette;
+ 
+    int		numcol = 0;		// Total assigned colours.
+    u16		cd;
+
+    const char *aname[NUM_ALPHA] =
+    {
+	"alphabet_classic",
+	"alphabet_brass",
+	"alphabet_shadow",
+	"alphabet_light",
+	"alphabet_heavy",
+    };
+    BUF		buf;
+    
+    for (anum = 0; anum < NUM_ALPHA; anum++)
+    {
+	buf.sprintf("gfx/%s/%s.bmp", set, aname[anum]);
+	a16[anum] = bmp_load(buf.buffer(), aw, ah, true);
+	if (!a16[anum])
+	    alphafail = true;
+    }
+	buf.sprintf("gfx/%s/dungeon16.bmp", set);
+    d16 = bmp_load(buf.buffer(), dw, dh, true);
+ 	buf.sprintf("gfx/%s/mini16.bmp", set);
+    m16 = bmp_load(buf.buffer(), mw, mh, true);
+ 	buf.sprintf("gfx/%s/minif16.bmp", set);
+    mf16 = bmp_load(buf.buffer(), mw, mh, true);
+ 	buf.sprintf("gfx/%s/sprite16.bmp", set);
+    sprite16 = bmp_load(buf.buffer(), sw, sh, true);
+
+    // We now want to build a consolidated palette.
+    // We can be wasteful of memory here as this is startup and the DS
+    // has 4Mb anyways.
+    
+    // Set everything to unallocated.
+    cd_to_pal = new s16[(1<<15)];
+    memset(cd_to_pal, 0xff, sizeof(s16) * (1<<15));
+
+    // Palette maps back from palette space to raw space
+    palette = new u16[256];
+    memset(palette, 0, sizeof(u16) * 256);
+
+    numcol = 0;		// Total assigned colours.
+
+    // We always want black to map to transparent, so assign it first.
+    cd = 0;
+    cd_to_pal[cd] = numcol;
+    palette[numcol] = cd;
+    numcol++;
+
+    // Likewise, force a bright red, bright green, and bright yellow
+    // for our selfish text purposes.
+    cd = rgbtoshort(255, 128, 128);
+    cd_to_pal[cd] = numcol;
+    palette[numcol] = cd;
+    numcol++;
+    cd = rgbtoshort(255, 255, 128);
+    cd_to_pal[cd] = numcol;
+    palette[numcol] = cd;
+    numcol++;
+    cd = rgbtoshort(128, 255, 128);
+    cd_to_pal[cd] = numcol;
+    palette[numcol] = cd;
+    numcol++;
+
+    // Now, collect all colours.
+    int		overflow = 0;		// Ignored mappings.
+    int		i;
+
+    for (i = 0; i < mw * mh; i++)
+    {
+	if (cd_to_pal[m16[i]] == -1)
+	{
+	    cd_to_pal[m16[i]] = numcol;
+	    palette[numcol] = m16[i];
+	    numcol++;
+	    if (numcol > 255) { floodColours(cd_to_pal); numcol--; overflow++; }
+	}
+	if (cd_to_pal[mf16[i]] == -1)
+	{
+	    cd_to_pal[mf16[i]] = numcol;
+	    palette[numcol] = mf16[i];
+	    numcol++;
+	    if (numcol > 255) { floodColours(cd_to_pal); numcol--; overflow++; }
+	}
+    }
+    for (i = 0; i < dw * dh; i++)
+    {
+	if (cd_to_pal[d16[i]] == -1)
+	{
+	    cd_to_pal[d16[i]] = numcol;
+	    palette[numcol] = d16[i];
+	    numcol++;
+	    if (numcol > 255) { floodColours(cd_to_pal); numcol--; overflow++; }
+	}
+    }
+    for (anum = 0; anum < NUM_ALPHA; anum++)
+    {
+	for (i = 0; i < aw * ah; i++)
+	{
+	    if (cd_to_pal[a16[anum][i]] == -1)
+	    {
+		cd_to_pal[a16[anum][i]] = numcol;
+		palette[numcol] = a16[anum][i];
+		numcol++;
+		if (numcol > 255) { floodColours(cd_to_pal); numcol--; overflow++; }
+	    }
+	}
+    }
+
+    // Convert to black our magic green.
+    for (i = 0; i < numcol; i++)
+    {
+	if (palette[i] == 0x3e0)
+	    palette[i] = 0;
+    }
+
+    // Set our tileset's palette.
+    glb_tilesets[pos].palette = palette;
+    glb_tilesets[pos].tilewidth = tilewidth;
+
+    // Create tiled versions.
+    for (anum = 0; anum < NUM_ALPHA; anum++)
+    {
+	glb_tilesets[pos].alphabet[anum] = bmp_tilify(a16[anum], 
+						    aw, ah, cd_to_pal, 
+						    tilewidth, tilewidth, 1, 1);
+    }
+    glb_tilesets[pos].dungeon = bmp_tilify(d16, dw, dh, cd_to_pal, 
+						    tilewidth, tilewidth, 2, 2);
+    glb_tilesets[pos].mini = bmp_tilify(m16, mw, mh, cd_to_pal, 
+						    tilewidth, tilewidth, 2, 2);
+    glb_tilesets[pos].minif = bmp_tilify(mf16, mw, mh, cd_to_pal, 
+						    tilewidth, tilewidth, 2, 2);
+
+
+    // Now repeat the process again, this time for our sprite bitmap.
+    // Set everything to unallocated.
+    memset(cd_to_pal, 0xff, sizeof(s16) * (1<<15));
+
+    // Palette maps back from palette space to raw space
+    palette = new u16[256];
+    memset(palette, 0, sizeof(u16) * 256);
+
+    // We always want black to map to transparent, so assign it first.
+    cd_to_pal[0] = 0;
+    palette[0] = 0;
+
+    // Now, collect all colours.
+    numcol = 1;		// Total assigned colours.
+    overflow = 0;		// Ignored mappings.
+
+    for (i = 0; i < sw * sh; i++)
+    {
+	if (cd_to_pal[sprite16[i]] == -1)
+	{
+	    cd_to_pal[sprite16[i]] = numcol;
+	    palette[numcol] = sprite16[i];
+	    numcol++;
+	    if (numcol > 255) { floodColours(cd_to_pal); numcol--; overflow++; }
+	}
+    }
+
+    // We have now built our look up table.  Report any errors in building.
+    if (overflow)
+    {
+	printf("%d colours lost in truncation to 256 palette in sprites.\n", overflow);
+    }
+
+    // Convert to black our magic green.
+    for (i = 0; i < numcol; i++)
+    {
+	if (palette[i] == 0x3e0)
+	    palette[i] = 0;
+    }
+
+    glb_tilesets[pos].spritepalette = palette;
+    glb_tilesets[pos].sprite = bmp_tilify(sprite16, sw, sh, cd_to_pal, 
+						    tilewidth, tilewidth, 2, 2);
+    // Free unused structures
+    for (anum = 0; anum < NUM_ALPHA; anum++)
+	delete [] a16[anum];
+    delete [] d16;
+    delete [] m16;
+    delete [] mf16;
+    delete [] sprite16;
+    delete [] cd_to_pal;
+
+    return true;
+}
+#endif

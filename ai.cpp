@@ -1293,7 +1293,11 @@ MOB::aiUseInventory()
 	    // Verify that the new item is better.
 	    if (aiIsItemCooler(item, slot))
 	    {
+#ifdef _3DS
+		return actionEquip(item->getX(), item->getY(), slot,true); // here,if not a silent equip, on 3DS happen a not allowed memory read that cause a crash 
+#else
 		return actionEquip(item->getX(), item->getY(), slot);
+#endif
 	    }
 	}
     }
