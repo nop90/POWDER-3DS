@@ -113,6 +113,10 @@ extern int glbMapCount;
 extern int glbMobCount;
 extern int glbItemCount;
 
+#ifdef _3DS
+int		glbScreenMode = 0;
+#endif
+
 ACTION_NAMES	glb_actionbuttons[NUM_BUTTONS];
 
 #ifdef iPOWDER
@@ -424,8 +428,12 @@ loadOptions(SRAMSTREAM &is)
 
     // Load our current font
     is.readRaw((char *) &val, 1);
-    if (val >= NUM_FONTS)
-	val = 0;
+#ifdef _3DS
+	glbScreenMode = (val>>6)&1;
+	val = val& 0b00111111;
+#endif
+	if (val >= NUM_FONTS)
+		val = 0;
     gfx_switchfonts(val);
 
     is.readRaw(glbAvatarName, 23);
@@ -462,6 +470,9 @@ saveOptions(SRAMSTREAM &os)
     val = gfx_gettilesetmode(0) | (gfx_gettilesetmode(1) << 4);
     os.writeRaw((const char *) &val, 1);
     val = gfx_getfont();
+#ifdef _3DS
+	val |= glbScreenMode << 6;
+#endif
     os.writeRaw((const char *) &val, 1);
 
     // Not necessarily null terminated!
@@ -1030,7 +1041,9 @@ void
 writeYesNoBar()
 {
 #ifdef HAS_STYLUS
+
     if (!glbActionBar)
+	
 	return;
 
     int		x, sx, sy;
@@ -1077,6 +1090,7 @@ writeGlobalActionBar(bool useemptyslot)
 #endif
 
     endx = STRIPLENGTH;
+
     if (!glbActionBar)
     {
 	// Only draw if in drag mode, then only top bar.
@@ -2746,7 +2760,7 @@ useInventory(MOB *avatar, bool quickselect)
 	    consumed = forceconsume;
 	    break;
 	}
-	
+
 	if (styluslock.performInventoryDrag(sx, sy, ex, ey, avatar, dirty))
 	{
 	    // No mater what, we
@@ -3696,6 +3710,9 @@ processOptions()
 #ifdef iPOWDER
 	"Buttons",
 #endif
+#ifdef _3DS
+	"Screens",
+#endif
 	"Tiles",
 	"Opacity",
 	"Fonts",
@@ -3719,6 +3736,9 @@ processOptions()
 	OPTION_SAVE,
 #ifdef iPOWDER
 	OPTION_BUTTONS,
+#endif
+#ifdef _3DS //reusing this value for screens setup
+	OPTION_UNLOCKING,
 #endif
 	OPTION_TILES,
 	OPTION_OPACITY,
@@ -3750,6 +3770,9 @@ processOptions()
 #ifdef iPOWDER
 	"Unlocking",
 #endif
+#ifdef _3DS
+	"Screens",
+#endif
 	0,		// Full Screen.
 	0
     };
@@ -3768,10 +3791,13 @@ processOptions()
 #ifdef iPOWDER
 	OPTION_UNLOCKING,
 #endif
+#ifdef _3DS //reusing this value for screens setup 
+	OPTION_UNLOCKING,
+#endif
 	OPTION_FULLSCREEN
     };
 
-#if (defined(USING_SDL) ||defined (_3DS)) && !defined(SYS_PSP)
+#if (defined(USING_SDL)) && !defined(SYS_PSP)
     int			i;
 
     // Toggle the Full Screen option depending on our actual full
@@ -4223,6 +4249,31 @@ processOptions()
 	return;
     }
 #endif
+
+#ifdef _3DS
+    if (option == OPTION_UNLOCKING)
+    {
+	const char		*actionbar[] =
+	{
+	    "Dual screen",
+	    "Only bottom screen",
+	    0
+	};
+
+	int mode = glbScreenMode;
+	selection = gfx_selectmenu(30-20, 3, actionbar, aorb, mode); 
+	if (aorb || selection < 0)
+	{
+	    // TODO: Return to start menu rather than cancelling all!
+	    return;
+	}
+
+	glbScreenMode=selection;
+	return;
+    }
+	
+#endif
+
     if (option == OPTION_ACTIONBAR)
     {
 	const char		*actionbar[] =
@@ -6061,6 +6112,9 @@ processAllInput(ACTION_NAMES &action, SPELL_NAMES &spell, int &dx, int &dy)
 		break;
 
 	    case GFX_KEYLMB:
+#ifdef _3DS
+		if (glbScreenMode==1)
+#endif		
 		if (processDirectionStylus(dx, dy, walkonly, xmajor,
 			    avatar->canMoveDiabolically()))
 		{
@@ -6095,6 +6149,9 @@ processAllInput(ACTION_NAMES &action, SPELL_NAMES &spell, int &dx, int &dy)
 
 	    if (ctrl_hit(BUTTON_TOUCH))
 	    {
+#ifdef _3DS
+		if (glbScreenMode==1)
+#endif		
 		if (processDirectionStylus(dx, dy, walkonly, xmajor,
 			    avatar->canMoveDiabolically()))
 		{

@@ -462,7 +462,7 @@ const unsigned short *bmp_slug_and_blood = bmp_slug_and_blood_data;
 
 #else //_3DS
  const unsigned short *bmp_slug_and_blood;
- #endif
+#endif
 
 //
 // Tileset linkage:

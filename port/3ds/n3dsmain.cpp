@@ -16,15 +16,11 @@ static bool task_quit;
 static Handle task_pause_event;
 static Handle task_suspend_event;
 static aptHookCookie cookie;
-static int muspaused=0;
 
 static void task_apt_hook(APT_HookType hook, void* param) {
     switch(hook) {
         case APTHOOK_ONSUSPEND:
             svcClearEvent(task_suspend_event);
-			CSND_SetPlayState(15, 0);//Stop music audio playback.
-			csndExecCmds(0);
-			muspaused=1;
             break;
         case APTHOOK_ONSLEEP:
             svcClearEvent(task_pause_event);

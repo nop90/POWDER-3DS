@@ -90,6 +90,7 @@ bool		 glbStylusState = false;
 bool		 glbJoyState[MAX_JOY_BUTTON];
 
 extern int	glb_newframe; // from gfxengine.c
+extern int	glbScreenMode; // from main.c
 
 u64 lastframe = 0;
 
@@ -485,6 +486,7 @@ hamfake_rebuildScreen()
 
   // Clear our video surface.
   memset(glb_nativescreen, 0, HAM_SCRH * HAM_SCRW * sizeof(u16));
+  if (glbScreenMode==1)   scaleScreenFromPaletted(0);
 
   // Blit each layer in turn.
   // Hard coded layer order:
@@ -594,7 +596,7 @@ hamfake_rebuildScreen()
 
     }
 
-    if (i==2)
+    if (i==2 && glbScreenMode==0)
     {
       scaleScreenFromPaletted(0);
 	  // Clear our video surface before filling it with bottom screen data
@@ -606,7 +608,7 @@ hamfake_rebuildScreen()
   // Draw the cursor sprite
   blitSprite(glbSpriteList[0]); 
   scaleScreenFromPaletted(1);
-	C3D_FrameEnd(0);
+  C3D_FrameEnd(0);
 }
 
 // Return our internal screen.
@@ -682,10 +684,10 @@ int getJoyButton(BUTTONS button)
 void
 hamfake_pollEvents()
 {
-// we need here to put  a sleepthread call to handle game paused from home menu
-	svcSleepThread(TICKS_PER_MSEC); // 1ms
 // Handling home menu event
 	if(!aptMainLoop()) hamfake_softReset();
+// we need here to put  a sleepthread call to handle game paused from home menu
+	svcSleepThread(TICKS_PER_MSEC*20); // 20ms
 
 	hidScanInput();
 	unsigned int keyHeld = hidKeysHeld();

@@ -820,4 +820,48 @@ bmp_loadTileset(const char* set, int pos)
 
     return true;
 }
+/*
+palette bmp2dPaletted(u16* bmp; u16 magicColor)
+    // Now repeat the process again, this time for our sprite bitmap.
+    // Set everything to unallocated.
+    memset(cd_to_pal, 0xff, sizeof(s16) * (1<<15));
+
+    // Palette maps back from palette space to raw space
+    palette = new u16[256];
+    memset(palette, 0, sizeof(u16) * 256);
+
+    // We always want black to map to transparent, so assign it first.
+    cd_to_pal[0] = 0;
+    palette[0] = 0;
+
+    // Now, collect all colours.
+    numcol = 1;		// Total assigned colours.
+    overflow = 0;		// Ignored mappings.
+
+    for (i = 0; i < sw * sh; i++)
+    {
+	if (cd_to_pal[sprite16[i]] == -1)
+	{
+	    cd_to_pal[sprite16[i]] = numcol;
+	    palette[numcol] = sprite16[i];
+	    numcol++;
+	    if (numcol > 255) { floodColours(cd_to_pal); numcol--; overflow++; }
+	}
+    }
+
+    // We have now built our look up table.  Report any errors in building.
+    if (overflow)
+    {
+	printf("%d colours lost in truncation to 256 palette in sprites.\n", overflow);
+    }
+
+    // Convert to black our magic color.
+    for (i = 0; i < numcol; i++)
+    {
+	if (palette[i] == magicColor)
+	    palette[i] = 0;
+    }
+
+    return palette;
+*/
 #endif

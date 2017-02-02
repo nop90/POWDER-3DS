@@ -1434,6 +1434,7 @@ gfx_printcharraw(int x, int y, char c)
 #endif
 #ifdef _3DS
 	x+=8;
+	y+=16;
 #endif
 
 
@@ -1495,6 +1496,7 @@ gfx_printcolourcharraw(int x, int y, char c, COLOUR_NAMES colour)
 #endif
 #ifdef _3DS
 	x+=8;
+	y+=16;
 #endif
 
     int backx = x;
@@ -2782,6 +2784,7 @@ gfx_selectmenu(int x, int y, const char **menu, int &aorb, int def,
 
 		int		styluschoice;
 		bool		inbounds = false;
+
 		if (styluslock.selectmenu(styluschoice, x*TILEWIDTH, y*TILEHEIGHT, inbounds))
 		{
 			if (!inbounds)
