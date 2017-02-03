@@ -25,9 +25,13 @@
 int	glb_oldstate[NUM_BUTTONS];
 int	glb_oldframe[NUM_BUTTONS];
 
+#ifdef _3DS // compensate low framerate
+#define SHORT_REPEAT		3		// 6 per sec
+#define LONG_REPEAT		6		// 3 per sec
+#else
 #define SHORT_REPEAT		10		// 6 per sec
 #define LONG_REPEAT		20		// 3 per sec
-
+#endif
 
 int	glb_repeatrate[NUM_BUTTONS] =
 {

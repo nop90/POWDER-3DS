@@ -6344,14 +6344,14 @@ MOB::pageCharacterDump(bool ondeath, bool didwin, int truetime)
 	gfx_pager_addtext("iPOWDER Version");
 #elif defined(LINUX)
 	gfx_pager_addtext("Linux Version");
-#elif defined(_3DS)
-	gfx_pager_addtext("3DS Version");
 #else
 	gfx_pager_addtext("Unknown SDL Version");
 #endif
 #else
 #ifdef USING_DS
 	gfx_pager_addtext("NDS Version");
+#elif defined(_3DS)
+	gfx_pager_addtext("3DS Version");
 #else
 	gfx_pager_addtext("GBA Version");
 #endif
