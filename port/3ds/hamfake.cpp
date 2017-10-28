@@ -252,34 +252,19 @@ void drawTexture( int x, int y, int width, int height) {
 	float top = 0.0f;
 	float bottom = 192.0/256.0;//1.0f;
 
-/*	
-	C3D_TexEnv* env = C3D_GetTexEnv(0);
-	C3D_TexEnvSrc(env, C3D_Both, GPU_TEXTURE0, 0, 0);
-	C3D_TexEnvOp(env, C3D_Both, 0, 0, 0);
-	C3D_TexEnvFunc(env, C3D_Both, GPU_REPLACE);
-*/
-
 	// Draw a textured quad directly
-	C3D_ImmDrawBegin(GPU_TRIANGLES);
-		C3D_ImmSendAttrib(x, y, 0.5f, 0.0f); // v0=position
-		C3D_ImmSendAttrib( left, top, 0.0f, 0.0f);
-
-		C3D_ImmSendAttrib(x+width, y+height, 0.5f, 0.0f);
-		C3D_ImmSendAttrib( right, bottom, 0.0f, 0.0f);
-
-		C3D_ImmSendAttrib(x+width, y, 0.5f, 0.0f);
-		C3D_ImmSendAttrib( right, top, 0.0f, 0.0f);
-
+	C3D_ImmDrawBegin(GPU_TRIANGLE_STRIP);
 		C3D_ImmSendAttrib(x, y, 0.5f, 0.0f); // v0=position
 		C3D_ImmSendAttrib( left, top, 0.0f, 0.0f);
 
 		C3D_ImmSendAttrib(x, y+height, 0.5f, 0.0f);
 		C3D_ImmSendAttrib( left, bottom, 0.0f, 0.0f);
 
+		C3D_ImmSendAttrib(x+width, y, 0.5f, 0.0f);
+		C3D_ImmSendAttrib( right, top, 0.0f, 0.0f);
+
 		C3D_ImmSendAttrib(x+width, y+height, 0.5f, 0.0f);
 		C3D_ImmSendAttrib( right, bottom, 0.0f, 0.0f);
-
-
 	C3D_ImmDrawEnd();
 
 }
@@ -307,28 +292,6 @@ scaleScreenFromPaletted(int target)
 		*dst++ = b;
 		*dst++ = g;
 		*dst++ = r;
-	}
-
-	// ensure data is in physical ram
-	GSPGPU_FlushDataCache(gpusrc, HAM_SCRW*HAM_SCRW*4);
-
-	// Update the uniforms
-	if (target == 0) {
-		C3D_TexBind(0, &spritesheet_tex);
-		C3D_FrameDrawOn(glbVideoSurface);
-		C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER, uLoc_projection, &projection);
-		// Convert image to 3DS tiled texture format
-		C3D_SafeDisplayTransfer ((u32*)gpusrc, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), (u32*)spritesheet_tex.data, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), TEXTURE_TRANSFER_FLAGS);
-		gspWaitForPPF();
-		drawTexture( 0, 0, 400, 240);  
-	} else {
-		C3D_TexBind(0, &spritesheet_tex2);
-		C3D_FrameDrawOn(glbVideoSurface2);
-		C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER, uLoc_projection, &projection2);
-		// Convert image to 3DS tiled texture format
-		C3D_SafeDisplayTransfer ((u32*)gpusrc2, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), (u32*)spritesheet_tex2.data, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), TEXTURE_TRANSFER_FLAGS);
-		gspWaitForPPF();
-		drawTexture( 0, 0, 320, 240); 
 	}
 }
 
@@ -358,27 +321,6 @@ scaleScreenFrom15bit(int target)
 		*dst++ = r;
 	}
 
-	// ensure data is in physical ram
-	GSPGPU_FlushDataCache(gpusrc, HAM_SCRW*HAM_SCRW*4);
-
-	// Update the uniforms
-	if (target == 0) {
-		C3D_TexBind(0, &spritesheet_tex);
-		C3D_FrameDrawOn(glbVideoSurface);
-		C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER, uLoc_projection, &projection);
-		// Convert image to 3DS tiled texture format
-		C3D_SafeDisplayTransfer ((u32*)gpusrc, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), (u32*)spritesheet_tex.data, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), TEXTURE_TRANSFER_FLAGS);
-		gspWaitForPPF();
-		drawTexture( 0, 0, 400, 240);  
-	} else {
-		C3D_TexBind(0, &spritesheet_tex2);
-		C3D_FrameDrawOn(glbVideoSurface2);
-		C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER, uLoc_projection, &projection2);
-		// Convert image to 3DS tiled texture format
-		C3D_SafeDisplayTransfer ((u32*)gpusrc2, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), (u32*)spritesheet_tex2.data, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), TEXTURE_TRANSFER_FLAGS);
-		gspWaitForPPF();
-		drawTexture( 0, 0, 320, 240); 
-	}
 }
 
 //---------------------------------------------------------------------------------
@@ -409,8 +351,8 @@ static void sceneInit(void) {
 	C3D_BufInfo* bufInfo = C3D_GetBufInfo();
 	BufInfo_Init(bufInfo);
 
-	gpusrc = (u8*) linearAlloc(HAM_SCRW*HAM_SCRW*4); // 256*256 because every dim must a a power of 2
-	gpusrc2 = (u8*) linearAlloc(HAM_SCRW*HAM_SCRW*4); // 256*256 because every dim must a a power of 2
+	gpusrc = (u8*) linearAlloc(HAM_SCRW*HAM_SCRW*4); // 256*256 because every dim must be a power of 2
+	gpusrc2 = (u8*) linearAlloc(HAM_SCRW*HAM_SCRW*4); // 256*256 because every dim must be a power of 2
 
 	// Initialize the top screen render target
 	glbVideoSurface = C3D_RenderTargetCreate(240, 400, GPU_RB_RGBA8, GPU_RB_DEPTH24_STENCIL8);
@@ -425,12 +367,15 @@ static void sceneInit(void) {
 	// Load the textures
 	C3D_TexInit(&spritesheet_tex, HAM_SCRW, HAM_SCRW, GPU_RGBA8);
 	C3D_TexSetFilter(&spritesheet_tex, GPU_LINEAR, GPU_NEAREST);
-	C3D_TexBind(0, &spritesheet_tex);
+
+//	C3D_TexBind(0, &spritesheet_tex);
 
 	C3D_TexInit(&spritesheet_tex2, HAM_SCRW, HAM_SCRW, GPU_RGBA8);
 	C3D_TexSetFilter(&spritesheet_tex2, GPU_LINEAR, GPU_NEAREST);
-	C3D_TexBind(0, &spritesheet_tex2);
+//	C3D_TexBind(0, &spritesheet_tex2);
 
+
+/*
 	// Configure the first fragment shading substage to just pass through the texture color
 	// See https://www.opengl.org/sdk/docs/man2/xhtml/glTexEnv.xml for more insight
 	C3D_TexEnv* env = C3D_GetTexEnv(0);
@@ -439,7 +384,8 @@ static void sceneInit(void) {
 	C3D_TexEnvFunc(env, C3D_Both, GPU_REPLACE);
 
 	// Configure depth test to overwrite pixels with the same depth (needed to draw overlapping sprites)
-	C3D_DepthTest(true, GPU_GEQUAL, GPU_WRITE_ALL);
+//	C3D_DepthTest(true, GPU_GEQUAL, GPU_WRITE_ALL);
+*/
 }
 
 //---------------------------------------------------------------------------------
@@ -453,6 +399,39 @@ static void sceneExit(void) {
 	// Free the shader program
 	shaderProgramFree(&program);
 	DVLB_Free(vshader_dvlb);
+}
+
+void gpuDraw() {
+
+	// ensure data is in physical ram
+	GSPGPU_FlushDataCache(gpusrc, HAM_SCRW*HAM_SCRW*4);
+	GSPGPU_FlushDataCache(gpusrc2, HAM_SCRW*HAM_SCRW*4);
+
+	// Convert image to 3DS tiled texture format
+	C3D_SafeDisplayTransfer ((u32*)gpusrc, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), (u32*)spritesheet_tex.data, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), TEXTURE_TRANSFER_FLAGS);
+	gspWaitForPPF();
+
+	C3D_SafeDisplayTransfer ((u32*)gpusrc2, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), (u32*)spritesheet_tex2.data, GX_BUFFER_DIM(HAM_SCRW, HAM_SCRW), TEXTURE_TRANSFER_FLAGS);
+	gspWaitForPPF();
+
+	C3D_TexEnv* env = C3D_GetTexEnv(0);
+	C3D_TexEnvSrc(env, C3D_Both, GPU_TEXTURE0, 0, 0);
+	C3D_TexEnvOp(env, C3D_Both, 0, 0, 0);
+	C3D_TexEnvFunc(env, C3D_Both, GPU_REPLACE);
+
+    gspWaitForVBlank();
+    C3D_FrameBegin(C3D_FRAME_NONBLOCK);
+	C3D_FrameDrawOn(glbVideoSurface);
+	C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER, uLoc_projection, &projection);
+	C3D_TexBind(0, &spritesheet_tex);
+	drawTexture( 0, 0, 400, 240);  
+
+	C3D_FrameDrawOn(glbVideoSurface2);
+	C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER, uLoc_projection, &projection2);
+	C3D_TexBind(0, &spritesheet_tex2);
+	drawTexture( 0, 0, 320, 240); 
+
+	C3D_FrameEnd(0);
 }
 
 void
@@ -472,15 +451,12 @@ hamfake_rebuildScreen()
 	lastframe = sysTicks;
   }
 
-  C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
-
-  
   if (glb_videomode == 3)
   {
     scaleScreenFrom15bit(0);
     scaleScreenFrom15bit(1);
-	C3D_FrameEnd(0);
-    return;
+    gpuDraw();
+	return;
   }
 
 
@@ -608,7 +584,7 @@ hamfake_rebuildScreen()
   // Draw the cursor sprite
   blitSprite(glbSpriteList[0]); 
   scaleScreenFromPaletted(1);
-  C3D_FrameEnd(0);
+  gpuDraw();
 }
 
 // Return our internal screen.
