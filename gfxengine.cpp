@@ -942,18 +942,18 @@ gfx_refreshtiles()
 		glb_abstilemap2[y * 17 + x] = INVALID_TILEIDX;
 	    }
 #endif
+	    tile = glb_absshadowmap[y * 17 + x];
+	    if (tile != INVALID_TILEIDX)
+	    {
+		gfx_unlockTile((TILE_NAMES)tile);
+		glb_absshadowmap[y * 17 + x] = INVALID_TILEIDX;
+	    }
+#ifdef _3DS
 	    tile = glb_absshadowmap2[y * 17 + x];
 	    if (tile != INVALID_TILEIDX)
 	    {
 		gfx_unlockTile((TILE_NAMES)tile);
 		glb_absshadowmap2[y * 17 + x] = INVALID_TILEIDX;
-	    }
-#ifdef _3DS
-	    tile = glb_abstilemap2[y * 17 + x];
-	    if (tile != INVALID_TILEIDX)
-	    {
-		gfx_unlockTile((TILE_NAMES)tile);
-		glb_abstilemap2[y * 17 + x] = INVALID_TILEIDX;
 	    }
 #endif
 	    tile = glb_absmobmap[y * 17 + x];
